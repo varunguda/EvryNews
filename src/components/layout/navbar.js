@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import Time from '../elements/time';
 import Weather from '../elements/weather';
 import './styles/navbar.css';
 import linkedIn from './icons/linkedin.svg';
@@ -8,39 +9,7 @@ import youtube from './icons/movie.svg';
 import facebook from './icons/facebook-logo-2019.svg';
 import twitter from './icons/twitter.svg';
 
-export default function Navbar({ userLocation}) {
-
-    // const [userLocation, setUserLocation] = useState("");
-
-    // useEffect(() => {
-    // // check if geolocation is supported by the browser
-    // if (navigator.geolocation) {
-    //   // get the user's current position
-    //     navigator.geolocation.getCurrentPosition((position) => {
-    //     // set the user's location state
-    //     setUserLocation({
-    //       latitude: position.coords.latitude,
-    //       longitude: position.coords.longitude
-    //     });
-    //     }, (error) => {
-    //     console.error(error);
-    //     });
-    // } else {
-    //     console.error('Geolocation is not supported by this browser.');
-    // }
-    // }, []);
-
-
-    let [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
-
-    setInterval(()=>{
-        setCurrentDate(new Date().toLocaleString());
-    }, 1000);
-
-    let months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    const getMonth = (num) =>{
-        return months[num-1];
-    }
+export default function Navbar() {
 
     let [ isActive, setIsActive ] = useState(false); 
     let [ isChecked, setIsChecked ] = useState(false);
@@ -59,24 +28,16 @@ export default function Navbar({ userLocation}) {
 
   return (
     <>
-    {/* <div>
-      {userLocation ? (
-        <p>Your location: {userLocation.latitude}, {userLocation.longitude}</p>
-      ) : (
-        <p>Fetching your location...</p>
-      )}
-      {console.log(userLocation)}
-    </div> */}
     <nav className='navbar-top'>
         <div className='contact-nav'>
             <div className="top-elem1 date-time">
-                {getMonth(currentDate.slice(3,4)) + ' '+ currentDate.slice(0,2) + ', '+ currentDate.slice(5,9) + ' | '+ currentDate.slice(11)}
+                <Time />
             </div>
-            {/* {(userLocation)?console.log(userLocation):""} */}
+            <div className="top-elem2">
+                <Weather />
+            </div>
 
-            {/* <Weather userLocation={userLocation}/> */}
-
-            <div className="top-elem2 social-media">
+            <div className="top-elem3 social-media">
                 <div><a href='https://www.linkedin.com/in/varun-sai-guda-ba2544244' target='/blank'><img className='icon active-icon' srcSet={linkedIn} alt="linkedIn" title='LinkedIn'/></a></div>
                 <div><img srcSet={instagram} alt="instagram" title='Instagram' className='icon'/></div>
                 <div><img srcSet={facebook} alt="facebook" title='Facebook' className='icon'/></div>

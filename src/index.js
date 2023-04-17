@@ -9,32 +9,9 @@ import { useState } from 'react';
 
 function App(){
 
-  const [userLocation, setUserLocation] = useState(null);
-
-  useEffect(() => {
-    // check if geolocation is supported by the browser
-    if (navigator.geolocation) {
-      // get the user's current position
-      navigator.geolocation.getCurrentPosition((position) => {
-        // set the user's location state
-        setUserLocation({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude
-        });
-      }, (error) => {
-        console.error(error);
-      });
-    } else {
-      console.error('Geolocation is not supported by this browser.');
-    }
-  }, []);
-
   return(
     <>
-    <Navbar userLocation={userLocation}/>
-    {/* <div className='container'>
-    </div> */}
-    <Weather userLocation={userLocation}/>
+    <Navbar />
     </>
   )
 }
