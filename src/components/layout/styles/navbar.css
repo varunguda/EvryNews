@@ -325,6 +325,10 @@
     .top-elem1{
       display: none;
     }
+
+    .contact-nav{
+      height: 27px;
+    }
   }
 
   @media only screen and (max-width: 300px) {
