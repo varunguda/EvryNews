@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import reportWebVitals from './reportWebVitals';
 import Navbar from './components/layout/navbar';
-import Weather from './components/elements/weather';
-import { useState } from 'react';
 
 
 function App(){

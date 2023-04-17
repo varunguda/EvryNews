@@ -1,56 +1,50 @@
 import React, { useState, useEffect } from 'react';
+import './styles/weather.css';
+import LocationIcon from './icons/location-marker-svgrepo-com.svg';
+import WeatherIcon from './icons/weather-svgrepo-com (1).svg';
 
 function Weather() {
 
-  //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-  // 8eeff1aa11ee9c730b5c078f6e52d075
+  const convertCelcius = (num) => {
+    return Math.round(num - 273.15);
+  }
 
-  const [ userLocation, setUserLocation ] = useState(null);
+  const [ usersTemp , setUsersTemp ] = useState(null);
+  const [ usersLocation, setUsersLocation ] = useState(null);
 
   useEffect(()=>{
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(pos=>{
-        setUserLocation({
-          lat: pos.coords.latitude,
-          long: pos.coords.longitude
-        })
-      })
-    }
-  })
-
-  const [ city, setCity] = useState(null);
-
-  // useEffect(() => {
-    // fetch the city name based on the user's location
-    if (userLocation) {
-      const apiKey = '8eeff1aa11ee9c730b5c078f6e52d075';
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation.lat.slice(0,3)}&lon=${userLocation.lon.slice(0,3)}&appid=${apiKey}`;
-
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          // if (data.results.length > 0) {
-            // const cityName = data.results[0].components.city;
-            // setCity(cityName);
-            console.log(data);
-          // } else {
-          //   console.log('No results found.');
-          // }
-        })
-        .catch(error => {
-          console.log(error);
+        const apiKey = '8eeff1aa11ee9c730b5c078f6e52d075';
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${apiKey}`;
+  
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            setUsersTemp(convertCelcius(data.main.temp));
+            setUsersLocation(data.name)
+          })
+          .catch(error => {
+            console.log(error);
+          });
         });
-    }
-  }, [userLocation]);
+      }
+  }, [])
+
+  /* Degree: ° */
+
 
   return (
-    <div>
-      {userLocation ? (
-        <p>Your location: {userLocation.lat}, {userLocation.long}</p>
-      ) : (
-        <p>Fetching your location...</p>
-      )}
-    </div>  
+      <div className="area-weather">
+        <span className="area">
+        <img className='location-icon' src={LocationIcon} alt='location'/>
+          {usersLocation}
+        </span>
+        <span className="weather">
+        <img className='weather-icon' src={WeatherIcon} alt='weather'/>
+          {usersTemp}°C
+        </span>
+      </div>  
   );
 }
 

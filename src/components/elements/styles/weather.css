@@ -1,0 +1,30 @@
+
+/* .weather::before{
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-image: url(./icons/weather-cloud-sun-svgrepo-com.svg);
+} */
+
+.area{
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.location-icon{
+    height: 15px;
+    width: 15px;
+}
+
+.weather{
+    font-size: medium;
+}
+
+.weather-icon{
+    position: relative;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
