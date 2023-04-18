@@ -1,0 +1,52 @@
+API- https://newsapi.org/v2/everything?q=Apple&from=2023-04-18&sortBy=popularity&apiKey=API_KEY         https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY          https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=API_KEY
+
+Request Parameters-
+    category
+        business
+        entertainment
+        general
+        health
+        science
+        sports
+        technology
+    language
+    country
+
+NewsAPI Key- 538bf8f17b8e4aa884661289d0714ee1
+
+
+Sample Output-
+
+{
+"status": "ok",
+"totalResults": 2124,
+-"articles": [
+    -{
+    -"source": {
+        "id": "engadget",
+        "name": "Engadget"
+    },
+    "author": "Will Shanklin",
+    "title": "Latest Apple headset rumors say it’ll include VR workouts and sports",
+    "description": "Apple is reportedly readying a wide array of apps and services for its upcoming mixed reality headset, according toBloomberg’s Mark Gurman. The company appears to be moving forward with plans to announce its first VR / AR headset at its Worldwide Developers’ …",
+    "url": "https://www.engadget.com/latest-apple-headset-rumors-say-itll-include-vr-workouts-and-sports-192316389.html",
+    "urlToImage": "https://s.yimg.com/uu/api/res/1.2/p8m4hAcruwmCS64mu85RjQ--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-04/370e8300-de19-11ed-8df5-805de2a747af.cf.jpg",
+    "publishedAt": "2023-04-18T19:23:16Z",
+    "content": "Apple is reportedly readying a wide array of apps and services for its upcoming mixed reality headset, according toBloombergs Mark Gurman. The company appears to be moving forward with plans to annou… [+4241 chars]"
+    },
+
+    -{
+    -"source": {
+        "id": "engadget",
+        "name": "Engadget"
+    },
+    "author": "Jon Fingas",
+    "title": "Samsung's News app brings daily headlines and podcasts to Galaxy devices",
+    "description": "Samsung is replacing its Free app on Galaxy devices with a client that's more focused, if also a little familiar. The company is launching a beta News app that, somewhat like its Apple equivalent, concentrates on top headlines (here organized into morning and…",
+    "url": "https://www.engadget.com/samsungs-news-app-brings-daily-headlines-and-podcasts-to-galaxy-devices-130108893.html",
+    "urlToImage": "https://s.yimg.com/uu/api/res/1.2/xX_WV10sTm6SG4fdiv0xxw--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-04/5de18990-dde3-11ed-be7b-b4cccc8c1a88.cf.jpg",
+    "publishedAt": "2023-04-18T13:01:08Z",
+    "content": "Samsung is replacing its Free app on Galaxy devices with a client that's more focused, if also a little familiar. The company is launching a beta News app that, somewhat like its Apple equivalent, co… [+1302 chars]"
+    }
+]
+}

@@ -5,7 +5,7 @@
 
 
   .navbar-top{
-    margin-top: 3%;
+    /* margin-top: 1%; */
     height: 15%;
     position: relative;
     width: 60%;
@@ -15,7 +15,7 @@
   }
 
   .contact-nav{
-    height: 35px;
+    height: 30px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -89,30 +89,6 @@
     align-items: center;
   }
 
-  .navbar{
-    font-size: small;
-    font-weight: 450;
-    display: flex;
-    flex-direction: column;
-    height: 2.2rem;
-    width: 60%;
-    left: 20%;
-    align-items: center;
-    /* position: fixed; */
-    position: relative;
-    transition: 0.3s;
-    z-index: 4;
-  }
-  
-  .nav-navigator{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ececec;
-  }
 
   .navigator-head{
     font-family: 'Anton', sans-serif;
@@ -128,166 +104,10 @@
     transition: 0.3s;
   }
 
-  .navigator-head a{
-    text-decoration: none;
-    color: red;
-  }
-
-  a{
-    text-decoration: none;
-    color: black;
-  }
-
-  .nav-elem{
-    color: black;
-    cursor: pointer;
-    margin: auto;
-  }
-
-  a:hover{
-    color: rgb(104, 104, 104);
-  }
-  
-  .navbar::after{
-    content: '';
-    background-color: black;
-    height: 2px;
-    width: 100%;
-  }
-
-  .dropdown{
-    display: none;
-  }
-
-  #input-checkbox{
-    display: none;
-  }
-
-  .dropdown-button{
-    height: 1.5rem;
-    width: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    right: 50%;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .dropdown-button span,   .dropdown-button span::after,
-  .dropdown-button span::before{
-    height: 1px;
-    width: 0.8rem;
-    background-color: black;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-
-  .dropdown-button span::after, .dropdown-button span::before{
-    content: '';
-    display: inline-block;
-    position: absolute;
-  }
-
-
-  .dropdown-button span::after{
-    top: 1rem;
-  }
-
-  .dropdown-button span::before{
-    top: 0.5rem;
-  }
-
-  #input-checkbox:checked + .dropdown-button{
-    background-color: rgb(229, 229, 229);
-  }
-
-  #input-checkbox:checked + .dropdown-button span{
-    background-color: transparent;
-  }
-
-  #input-checkbox:checked + .dropdown-button span::after{
-    transform: rotate(-45deg);
-    top: 0.75rem;
-  }
-
-  #input-checkbox:checked + .dropdown-button span::before{
-    transform: rotate(45deg);
-    top: 0.75rem;
-  }
-
-  .dropdown-content-container{
-    display: flex;
-    width: 90%;
-    top: 2.2rem;
-    left: 0;
-    position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color:  white;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
-    overflow: hidden;
-    height: 0;
-    animation: slide-up 0.2s linear forwards;
-    z-index: 10;
-  }
-
-  .hide{
-    height: auto;
-    animation: slide-down 0.2s linear  backwards;
-  }
-
-  @keyframes slide-up{
-    from{
-      height: 250px;
-    }
-    to{
-      height: 0px;
-    }
-  }
-
-  @keyframes slide-down{
-    from{
-      height: 0px;
-    }
-    to{
-      height: 250px;
-    }
-  }
-
-
-  .dropdown-content-container::after{
-    content: '';
-    height: 90%;
-    top: 5%;
-    width: 1px;
-    background-color: #ececec;
-    position: absolute;
-    left: 37%;
-  }
-
-  .dropdown-content{
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
-  
-  .dropdown-elem{
-    padding: 0.4rem;
-    /* border-bottom: 1px solid #ececec; */
-    width: 30%;
-    cursor: pointer;
-  }
-
 
   @media only screen and (max-width: 1000px) {
     /* styles for screens smaller than 900px */
-    .navbar{
-      width: 100%;
-      left: 0;
-    }
+
     .navbar-top{
       width: 100%;
       left: 0;
@@ -297,11 +117,6 @@
   @media only screen and (max-width: 600px) {
     /* styles for screens smaller than 600px */
 
-    .navbar{
-      top: 0;
-      height: 2.5rem;
-    }
-
     .main-head{
       font-size: xx-large;
     }
@@ -310,45 +125,18 @@
       margin: 0px 7px;
     }
 
-    .nav-elem{
-      display: none;
-    }
-
-    .dropdown{
-      display: block;
-    }
-
-    .dropdown-content-container{
-      top: 2.5rem;
-    }
-
     .top-elem1{
       display: none;
     }
 
     .contact-nav{
-      height: 27px;
+      height: 30px;
     }
+
   }
 
   @media only screen and (max-width: 300px) {
-
     .navbar-top{
       display: none;
     }
-
-    .nav-navigator{
-      background-color: white;
-    }
-
-    .navigator-head{
-      flex: 1;
-      text-align: center;
-      font-size: large;
-    }
-
-    .dropdown-content-container::after{
-      display: none;
-    }
-
   }

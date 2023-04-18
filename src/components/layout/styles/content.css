@@ -1,13 +1,17 @@
 
-
-.container{
+.main-container{
     height: 200vh;
     width: 60%;
     position: relative;
-    background-color: rgb(255, 255, 158);
     left: 20%;
 }
 
-.nav{
-    height: 30px;
-}
+@media only screen and (max-width: 1000px) {
+    /* styles for screens smaller than 900px */
+
+    .main-container{
+        left: 0;
+        width: 100%;
+    }
+
+  }
