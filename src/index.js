@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import reportWebVitals from './reportWebVitals';
 import Navbar from './components/layout/navbar';
+import Content from './components/layout/content';
 
 
 function App(){
@@ -10,6 +11,7 @@ function App(){
   return(
     <>
     <Navbar />
+    <Content />
     </>
   )
 }

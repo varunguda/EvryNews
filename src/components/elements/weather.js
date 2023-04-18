@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/weather.css';
 import LocationIcon from './icons/location-marker-svgrepo-com.svg';
-import WeatherIcon from './icons/weather-svgrepo-com (1).svg';
+// import WeatherIcon from './icons/weather-svgrepo-com (1).svg';
 
 function Weather() {
 
@@ -11,6 +11,7 @@ function Weather() {
 
   const [ usersTemp , setUsersTemp ] = useState(null);
   const [ usersLocation, setUsersLocation ] = useState(null);
+  const [ weatherIconId, setWeatherIconId ] = useState(null);
 
   useEffect(()=>{
     if(navigator.geolocation){
@@ -22,7 +23,8 @@ function Weather() {
           .then(response => response.json())
           .then(data => {
             setUsersTemp(convertCelcius(data.main.temp));
-            setUsersLocation(data.name)
+            setUsersLocation(data.name);
+            setWeatherIconId(data.weather[0].icon);
           })
           .catch(error => {
             console.log(error);
@@ -41,7 +43,7 @@ function Weather() {
           {usersLocation}
         </span>
         <span className="weather">
-        <img className='weather-icon' src={WeatherIcon} alt='weather'/>
+        <img className='weather-icon' src={`https://openweathermap.org/img/wn/${weatherIconId}@2x.png`} alt='weather'/>
           {usersTemp}°C
         </span>
       </div>  

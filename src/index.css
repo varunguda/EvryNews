@@ -14,10 +14,3 @@ code {
     monospace;
 }
 
-.container{
-  height: 200vh;
-  width: 60%;
-  position: relative;
-  left: 20%;
-  background-color: aquamarine;
-}

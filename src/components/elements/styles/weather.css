@@ -1,12 +1,3 @@
-
-/* .weather::before{
-    content: '';
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    background-image: url(./icons/weather-cloud-sun-svgrepo-com.svg);
-} */
-
 .area{
     font-size: 0.7rem;
 }

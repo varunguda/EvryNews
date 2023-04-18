@@ -1,0 +1,13 @@
+
+
+.container{
+    height: 200vh;
+    width: 60%;
+    position: relative;
+    background-color: rgb(255, 255, 158);
+    left: 20%;
+}
+
+.nav{
+    height: 30px;
+}
