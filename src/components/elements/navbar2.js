@@ -28,16 +28,46 @@ export default function NavbarSecondary() {
                 <a href='/india'>India</a>
                 <Dropdown />
             </div>
-            <div className="nav-elem"><a href='/world'>World</a></div>
-            <div className="nav-elem"><a href='/business'>Business</a></div>
-            <div className="nav-elem"><a href='/tech'>Tech</a></div>
-            <div className="nav-elem"><a href='/sports'>Sports</a></div>
-            <div className="nav-elem"><a href='/cricket'>Cricket</a></div>
-            <div className="nav-elem"><a href='/entertainment'>Entertainment</a></div>
-            <div className="nav-elem"><a href='/education'>Education</a></div>
-            <div className="nav-elem"><a href='/education'>Auto</a></div>
-            <div className="nav-elem"><a href='/education'>Life & Style</a></div>
-            <div className="nav-elem"><a href='/education'>Politics</a></div>
+            <div className="nav-elem">
+                <a href='/world'>World</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/business'>Business</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/tech'>Tech</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/sports'>Sports</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/cricket'>Cricket</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/entertainment'>Entertainment</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/education'>Education</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/education'>Auto</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/education'>Life & Style</a>
+                <Dropdown />
+            </div>
+            <div className="nav-elem">
+                <a href='/education'>Politics</a>
+                <Dropdown />
+            </div>
         <div className='dropdown'>
             <input type='checkbox' id='input-checkbox' checked={isChecked} onChange={handleCheckboxChange}/>
             <label htmlFor='input-checkbox'  className='dropdown-button'>

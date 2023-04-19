@@ -1,8 +1,8 @@
 
 .nav-elem-dropdown{
-    width: 86%;
-    padding: 5%;
-    height: 240px;
+    width: 84%;
+    padding: 4% 6%;
+    height: 300px;
     position: absolute;
     top: 97%;
     left: 2%;
@@ -11,6 +11,11 @@
     border-bottom-right-radius: 10px;
     opacity: 0;
     pointer-events: none;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    pointer-events: none;
+    cursor: default;
     transition: 0.3s;
     z-index: 4;
 }
@@ -18,4 +23,13 @@
 .nav-elem:hover .nav-elem-dropdown{
     opacity: 1;
     pointer-events: auto;
+}
+
+
+.dropdown-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 10px;
+    column-gap:40px;
 }

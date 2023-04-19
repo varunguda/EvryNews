@@ -1,17 +1,1 @@
 
-.main-container{
-    height: 200vh;
-    width: 60%;
-    position: relative;
-    left: 20%;
-}
-
-@media only screen and (max-width: 1000px) {
-    /* styles for screens smaller than 900px */
-
-    .main-container{
-        left: 0;
-        width: 100%;
-    }
-
-  }
