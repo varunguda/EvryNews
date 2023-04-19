@@ -24,11 +24,11 @@ export default function Navbar() {
             </div>
 
             <div className="top-elem3 social-media">
-                <div><a href='https://www.linkedin.com/in/varun-sai-guda-ba2544244' target='/blank'><img className='icon active-icon' srcSet={linkedIn} alt="linkedIn" title='LinkedIn'/></a></div>
-                <div><img srcSet={instagram} alt="instagram" title='Instagram' className='icon'/></div>
-                <div><img srcSet={facebook} alt="facebook" title='Facebook' className='icon'/></div>
-                <div><img srcSet={twitter} alt="twitter" title='Twitter' className='icon'/></div>
-                <div><img srcSet={youtube} alt="youtube" title='Youtube' className='icon'/></div>
+                <div><a href='https://www.linkedin.com/in/varun-sai-guda-ba2544244' target='/blank'><img className='icon active-icon' src={linkedIn} alt="linkedIn" title='LinkedIn'/></a></div>
+                <div><img src={instagram} alt="instagram" title='Instagram' className='icon'/></div>
+                <div><img src={facebook} alt="facebook" title='Facebook' className='icon'/></div>
+                <div><img src={twitter} alt="twitter" title='Twitter' className='icon'/></div>
+                <div><img src={youtube} alt="youtube" title='Youtube' className='icon'/></div>
             </div>
         </div>
         <div className='navigator-head main-head'>

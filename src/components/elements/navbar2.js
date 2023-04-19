@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './styles/navbar2.css';
+
+import Dropdown from './nav-dropdown';
 
 
 export default function NavbarSecondary() {
@@ -23,7 +24,10 @@ export default function NavbarSecondary() {
             <div className="navigator-head">
                 <a href='/'>EN</a>
             </div>
-            <div className="nav-elem"><a href='/india'>India</a></div>
+            <div className="nav-elem">
+                <a href='/india'>India</a>
+                <Dropdown />
+            </div>
             <div className="nav-elem"><a href='/world'>World</a></div>
             <div className="nav-elem"><a href='/business'>Business</a></div>
             <div className="nav-elem"><a href='/tech'>Tech</a></div>
@@ -31,6 +35,9 @@ export default function NavbarSecondary() {
             <div className="nav-elem"><a href='/cricket'>Cricket</a></div>
             <div className="nav-elem"><a href='/entertainment'>Entertainment</a></div>
             <div className="nav-elem"><a href='/education'>Education</a></div>
+            <div className="nav-elem"><a href='/education'>Auto</a></div>
+            <div className="nav-elem"><a href='/education'>Life & Style</a></div>
+            <div className="nav-elem"><a href='/education'>Politics</a></div>
         <div className='dropdown'>
             <input type='checkbox' id='input-checkbox' checked={isChecked} onChange={handleCheckboxChange}/>
             <label htmlFor='input-checkbox'  className='dropdown-button'>
@@ -46,6 +53,9 @@ export default function NavbarSecondary() {
                 <div className="dropdown-elem"><a href='/cricket'>Cricket</a></div>
                 <div className="dropdown-elem"><a href='/entertainment'>Entertainment</a></div>
                 <div className="dropdown-elem"><a href='/education'>Education</a></div>
+                <div className="dropdown-elem"><a href='/education'>Auto</a></div>
+                <div className="dropdown-elem"><a href='/education'>Life & Style</a></div>
+                <div className="dropdown-elem"><a href='/education'>Politics</a></div>
             </div>
             </div>
         </div>
