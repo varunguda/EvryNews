@@ -69,7 +69,6 @@
     top: 0;
     width: 1px;
     position: absolute;
-    /* left: 22%; */
     left: 22%;
     background-color: #ececec;
   }
@@ -186,7 +185,7 @@
     background-color: black;
     height: 2px;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
   }
 
   .dropdown{

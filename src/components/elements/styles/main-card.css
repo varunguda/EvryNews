@@ -1,0 +1,27 @@
+
+.main-card-container{
+    height: 280px;
+    width: 100%;
+    position: relative;
+    background-color: rgb(185, 252, 230);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.main-card-image-container{
+    height: 100%;
+    width: 100%;
+}
+
+.main-card-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    transition: 2s ease-out;
+}
+
+.main-card-image:hover{
+    transform: scale(1.1);
+}
+
+  
