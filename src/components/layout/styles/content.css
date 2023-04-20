@@ -2,13 +2,15 @@
 .main-content-container{
     font-size: 13px;
     font-weight: 500;
-    width: 100%;
+    width: 96%;
     min-height: 100%;
     max-height: auto;
     position: relative;
     top: 2%;
+    padding: 0% 2%;
     display: flex;
-    gap: 2%;
+    justify-content: center;
+    gap: 3%;
 }
 
 .content-container-1{
@@ -17,17 +19,35 @@
     display: flex;
     justify-content: center;
 }
+
+.content-container-1::after{
+    content: '';
+    height: 100%;
+    border-left: 1px dotted rgb(152, 152, 152);
+    position: absolute;
+    left: 48.5%;
+    z-index: 3;
+}
+
 .content-container-2{
-    flex: 0.2;
-    /* background-color: aliceblue; */
+    flex: 0.15;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 25px;
+}
+
+.content-container-2::after{
+    content: '';
+    height: 100%;
+    border-left: 1px dotted rgb(152, 152, 152);
+    position: absolute;
+    right: 35%;
+    z-index: 3;
 }
 
 .content-container-3{
-    flex: 0.3;
+    flex: 0.35;
     background-color: seashell;
     display: flex;justify-content: center;
 }

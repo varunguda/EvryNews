@@ -15,13 +15,13 @@ export default function Content() {
           <MainCard />
         </div>
         <div className='content-container-2'>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
-          <MiniCard height='140px' width='80%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='140px' width='100%'/>
         </div>
         <div className='content-container-3'>
           {/* <MainCard /> */}
