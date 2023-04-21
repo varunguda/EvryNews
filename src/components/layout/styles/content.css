@@ -15,9 +15,9 @@
 
 .content-container-1{
     flex: 0.5;
-    /* background-color: antiquewhite; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .content-container-1::after{
@@ -49,6 +49,16 @@
 .content-container-3{
     flex: 0.35;
     background-color: seashell;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
+
+.container-1-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4%;
+    row-gap: 30px;
+    position: relative;
+    top: 2%;
+}

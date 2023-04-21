@@ -15,7 +15,7 @@ export default function MiniCard({ height, width}) {
       {/* <div className="card-description">
         <strong>Lorem ipsum dolor sit amet consectetur...</strong>
       </div> */}
-      <DescCard height={height} width={width} data='Lorem ipsum dolor sit amet consectetur...'/>
+      <DescCard height={height} width={width} data='Lorem ipsum dolor sit amet consectetur'/>
     </div>
   )
 }

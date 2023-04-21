@@ -1,0 +1,24 @@
+
+
+.mini-desc-card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.desc-card-image-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.desc-card-image{
+    border-radius: 7px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.desc-card-image:hover{
+    transform: scale(1.05);
+}
