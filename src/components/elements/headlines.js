@@ -20,9 +20,9 @@ export default function Headlines({ height, width }) {
       </div>
 
       <div className='headlines-list'>
-        <MiniDescCard height='auto' width='96%' data= {data}/>
-        <MiniDescCard height='auto' width='96%' data= {data}/>
-        <MiniDescCard height='auto' width='96%' data= {data}/>
+        <MiniDescCard height='50px' width='96%' data= {data}/>
+        <MiniDescCard height='50px' width='96%' data= {data}/>
+        <MiniDescCard height='50px' width='96%' data= {data}/>
       </div>
     </div>
   )

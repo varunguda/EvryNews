@@ -5,6 +5,7 @@
     background-color: seashell;
     border-radius: 5px;
     padding: 6%;
+    overflow: auto;
 }
 
 .headlines-head{
@@ -41,7 +42,6 @@
 
 .headlines-list-elem{
     position: relative;
-    white-space: nowrap;
 }
 
 .headlines-list-elem::before{

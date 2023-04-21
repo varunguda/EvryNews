@@ -4,7 +4,7 @@
     /* background-color: rgb(176, 211, 235); */
     border-radius: 7px;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     cursor: pointer;
 }
 
@@ -35,11 +35,16 @@
 .description-card-container{
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.description-card-container::-webkit-scrollbar{
+    display: none;
 }
 
 .description-card{
     height: 95%;
     width: 95%;
     margin: 2.5%;
-    overflow: hidden;
+    overflow: auto;
 }

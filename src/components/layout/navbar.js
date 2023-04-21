@@ -20,7 +20,7 @@ export default function Navbar() {
                 <Time />
             </div>
             <div className="top-elem2">
-                {/* <Weather /> */}
+                <Weather />
             </div>
 
             <div className="top-elem3 social-media">
