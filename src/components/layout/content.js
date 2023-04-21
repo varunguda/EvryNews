@@ -6,6 +6,8 @@ import NavbarSecondary from '../elements/navbar2';
 import MainCard from '../elements/main-card.js';
 import MiniCard from '../elements/mini-card.js';
 import MiniDescCard from '../elements/mini-desc-card';
+import Headlines from '../elements/headlines';
+import HeadlinesList from '../elements/headlines-list';
 
 export default function Content() {
 
@@ -18,31 +20,40 @@ export default function Content() {
         <div className='content-container-1'>
           <MainCard />
           <div className='container-1-grid'>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
-            <MiniDescCard height='50px' width='96%' data= {data}/>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div className='grid-elem'><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div><MiniDescCard height='auto' width='96%' data= {data}/></div>
+            <div><MiniDescCard height='auto' width='96%' data= {data}/></div>
           </div>
         </div>
         <div className='content-container-2'>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
-          <MiniCard height='140px' width='100%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
+          <MiniCard height='130px' width='90%'/>
         </div>
         <div className='content-container-3'>
-          {/* <MainCard /> */}
+          <Headlines height='310px' width='88%'/>
+          <HeadlinesList />
         </div>
       </div>
     </div>

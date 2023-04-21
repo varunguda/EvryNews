@@ -11,11 +11,11 @@ export default function Dropdown() {
   return (
     <div className='nav-elem-dropdown'>
       <div className="dropdown-grid">
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
         <div className='desc-card'><DescCard height='50px' width='90%' data= {data}/></div>
         <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
         <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>

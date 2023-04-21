@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
+    position: relative;
 }
 
 .desc-card-image-container{
