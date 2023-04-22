@@ -2,4 +2,45 @@
 .second-segment-container{
     position: relative;
     top: 8%;
+    padding: 0 2%;
 }
+
+
+.second-seg-head{
+    position: relative;
+    font-size: 20px;
+    width: 75px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.second-seg-head::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    border-top: 3px solid black;
+    right: 0px;
+    top: 7.5px;
+    transform: rotate(45deg);
+    transition: 0.4s;
+}
+
+.second-seg-head::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    border-top: 3px solid black;
+    right: 0px;
+    bottom: 7.5px;
+    transform: rotate(-45deg);
+    transition: 0.7s;
+}
+
+.second-seg-head:hover::after{
+    transform: rotate(225deg);
+}
+
+.second-seg-head:hover::before{
+    transform: rotate(135deg);
+}
+

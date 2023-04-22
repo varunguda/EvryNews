@@ -1,7 +1,8 @@
 
 .main-card-container{
-    height: 310px;
+    /* height: 320px; */
     width: 100%;
+    padding-bottom: 60%;
     position: relative;
     border-radius: 7px;
     overflow: hidden;

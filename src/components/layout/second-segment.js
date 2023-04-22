@@ -7,7 +7,7 @@ export default function SecondSegment() {
   return (
     <div className='second-segment-container'>
       <div className='second-seg-head-container'>
-        I
+        <div className='second-seg-head'>TECH</div>
       </div>
     </div>
   )
