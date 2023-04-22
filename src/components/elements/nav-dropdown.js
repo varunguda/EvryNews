@@ -5,34 +5,27 @@ import DescCard from './desc-card';
 import './styles/nav-dropdown.css';
 
 export default function Dropdown() {
+
+  const data = 'Lorem ipsum dolor sit amet consectetur';
+
   return (
     <div className='nav-elem-dropdown'>
       <div className="dropdown-grid">
-        <MiniCard height='130px' width='120px'/>
-        <MiniCard height='130px' width='120px'/>
-        <MiniCard height='130px' width='120px'/>
-        <MiniCard height='130px' width='120px'/>
-        <MiniCard height='130px' width='120px'/>
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <hr style={{width: "119px" ,borderTop: "dotted 1px"}} />
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
-        <DescCard height='50px' width='120px'/>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <strong><MiniCard height='140px' width='100%'/></strong>
+        <div className='desc-card'><DescCard height='50px' width='90%' data= {data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
       </div>
     </div>
   )

@@ -9,9 +9,10 @@
     height: 15%;
     width: 60%;
     position: relative;
+    width: 60%;
     left: 20%;
     right: 20%;
-    /* margin-top: 1%; */
+    font-size: x-small;
   }
 
   .contact-nav{
@@ -69,7 +70,6 @@
     top: 0;
     width: 1px;
     position: absolute;
-    /* left: 22%; */
     left: 22%;
     background-color: #ececec;
   }
@@ -154,14 +154,15 @@
     height: 100%;
     flex: auto;
     cursor: pointer;
+  }
+
+  .nav-elem a{
+    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .nav-elem a{
-    position: relative;
   }
   
   .nav-elem a::after {
@@ -171,7 +172,7 @@
     border-right: 5px solid transparent;
     border-bottom: 5px solid black;
     position: absolute;
-    bottom: -71%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -185,7 +186,7 @@
     background-color: black;
     height: 2px;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
   }
 
   .dropdown{
@@ -317,29 +318,39 @@
 
   .main-container{
     height: 200vh;
-    width: 60%;
+    width: 70%;
     position: relative;
-    left: 20%;
+    left: 15%;
 }
 
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1000px) {
     /* styles for screens smaller than 1200px */
     
     .navbar-top{
-      width: 100%;
-      left: 0;
+      width: 90%;
+      left: 5%;
     }
 
     .main-container{
-      width: 100%;
-      left: 0;
+      width: 90%;
+      left: 5%;
     }
 
   }
 
   @media only screen and (max-width: 700px) {
     /* styles for screens smaller than 700px */
+
+    .navbar-top{
+      width: 100%;
+      left: 0%;
+    }
+
+    .main-container{
+      width: 100%;
+      left: 0%;
+    }
 
     .main-head{
       font-size: xx-large;
