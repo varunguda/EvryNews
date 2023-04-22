@@ -1,7 +1,6 @@
 
 
 .card-container{
-    /* background-color: rgb(176, 211, 235); */
     border-radius: 7px;
     position: relative;
     overflow: auto;
@@ -46,5 +45,5 @@
     height: 95%;
     width: 95%;
     margin: 2.5%;
-    overflow: auto;
+    overflow: hidden;
 }

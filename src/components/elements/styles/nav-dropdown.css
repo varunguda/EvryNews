@@ -21,6 +21,14 @@
     z-index: 4;
 }
 
+.nav-elem-dropdown::after{
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100%;
+    border-top: 2px solid black;
+}
+
 .nav-elem:hover .nav-elem-dropdown{
     opacity: 1;
     pointer-events: auto;
