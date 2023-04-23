@@ -5,6 +5,9 @@
     position: relative;
     overflow: auto;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-image-container{

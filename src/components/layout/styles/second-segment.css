@@ -1,16 +1,20 @@
 
 .second-segment-container{
+    height: 50%;
+    width: 100%;
     position: relative;
     top: 8%;
     padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
 }
-
 
 .second-seg-head{
     position: relative;
     font-size: 20px;
-    width: 75px;
     font-weight: 800;
+    width: fit-content;
     cursor: pointer;
 }
 
@@ -19,8 +23,8 @@
     position: absolute;
     width: 10px;
     border-top: 3px solid black;
-    right: 0px;
     top: 7.5px;
+    right: -15px;
     transform: rotate(45deg);
     transition: 0.4s;
 }
@@ -30,8 +34,8 @@
     position: absolute;
     width: 10px;
     border-top: 3px solid black;
-    right: 0px;
     bottom: 7.5px;
+    right: -15px;
     transform: rotate(-45deg);
     transition: 0.7s;
 }
@@ -44,3 +48,39 @@
     transform: rotate(135deg);
 }
 
+.section{
+    flex: 1;
+}
+
+.sec-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec-container-segment{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sec-container-segment::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 1px dotted rgb(152, 152, 152);
+    top: -15px;
+}
+
+.sec-container-segment::after{
+    content: '';
+    position: absolute;
+    height: 50%;
+    border-left: 1px dotted rgb(152, 152, 152);
+    left: 50%;
+}
