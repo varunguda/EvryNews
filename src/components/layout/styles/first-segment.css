@@ -3,7 +3,7 @@
     width: 96%;
     height: auto;
     position: relative;
-    top: 2%;
+    top: 40px;
     padding: 0% 2%;
     display: flex;
     justify-content: center;
@@ -79,5 +79,5 @@
     border-top: 1px dotted  rgb(152, 152, 152);
     border-bottom: 1px dotted  rgb(152, 152, 152);
     position: absolute;
-    bottom: -4%;
+    bottom: -50px;
 }

@@ -50,3 +50,7 @@
     margin: 2.5%;
     overflow: hidden;
 }
+  
+.description-card-container  div:hover{
+    color: rgb(81, 81, 81);
+  }

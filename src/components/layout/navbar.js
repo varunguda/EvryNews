@@ -32,7 +32,7 @@ export default function Navbar() {
             </div>
         </div>
         <div className='navigator-head main-head'>
-            <span style={{color: "rgb(201, 0, 0)"}}>E</span>VRY<span style={{color: 'rgb(201, 0, 0)'}}>N</span>EWS
+            <span style={{color: "var(--logo-color-theme)"}}>E</span>VRY<span style={{color: 'var(--logo-color-theme)'}}>N</span>EWS
         </div>
     </nav>
     </>

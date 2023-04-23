@@ -317,14 +317,13 @@
 
 
   .main-container{
-    height: 200vh;
+    height: 300vh;
     width: 70%;
     position: relative;
     left: 15%;
     font-size: 13px;
-    font-weight: 500;
-}
-
+    font-weight: 450;
+  }
 
   @media only screen and (max-width: 1000px) {
     /* styles for screens smaller than 1200px */

@@ -1,16 +1,16 @@
 
 .second-segment-container{
-    height: 50%;
-    width: 100%;
+    height: auto;
+    width: 96%;
     position: relative;
-    top: 8%;
+    top: 140px;
     padding: 0 2%;
     display: flex;
     justify-content: space-between;
     gap: 4%;
 }
 
-.second-seg-head{
+.section-head{
     position: relative;
     font-size: 20px;
     font-weight: 800;
@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-.second-seg-head::after{
+.section-head::after{
     content: '';
     position: absolute;
     width: 10px;
@@ -29,7 +29,7 @@
     transition: 0.4s;
 }
 
-.second-seg-head::before{
+.section-head::before{
     content: '';
     position: absolute;
     width: 10px;
@@ -40,11 +40,11 @@
     transition: 0.7s;
 }
 
-.second-seg-head:hover::after{
+.section-head:hover::after{
     transform: rotate(225deg);
 }
 
-.second-seg-head:hover::before{
+.section-head:hover::before{
     transform: rotate(135deg);
 }
 
@@ -80,7 +80,20 @@
 .sec-container-segment::after{
     content: '';
     position: absolute;
-    height: 50%;
+    top: 10%;
+    height: 80%;
     border-left: 1px dotted rgb(152, 152, 152);
     left: 50%;
+}
+
+.second-segment-container::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -50px;
+    border-top: 1px dotted rgb(152, 152, 152);
+    border-bottom: 1px dotted rgb(152, 152, 152);
 }
