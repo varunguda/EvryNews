@@ -5,6 +5,7 @@
 
   
   .navbar-top{
+    color: var(--primary-text-color);
     font-size: x-small;
     height: 15%;
     width: 60%;
@@ -147,6 +148,10 @@
 
   a{
     text-decoration: none;
+    color: var(--primary-text-color);
+  }
+
+  a:hover{
     color: black;
   }
   
@@ -319,10 +324,11 @@
   .main-container{
     height: 300vh;
     width: 70%;
+    color: var(--primary-text-color);
     position: relative;
     left: 15%;
     font-size: 13px;
-    font-weight: 450;
+    font-weight: 500;
   }
 
   @media only screen and (max-width: 1000px) {

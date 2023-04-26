@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;450;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
 
 :root{
   --logo-color-theme : rgb(201, 0, 0);
+  --primary-text-color: #565360;
+  --labled-text-color: #908E9B;
+  --disabled-text-color: #E1DFE9;
 }
 
 body {
