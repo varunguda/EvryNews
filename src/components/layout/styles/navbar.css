@@ -16,7 +16,7 @@
     font-size: x-small;
   }
 
-  .contact-nav{
+  .content-nav{
     height: 30px;
     position: relative;
     display: flex;
@@ -132,6 +132,15 @@
     z-index: 10;
   }
 
+  .nav-elem a{
+    text-decoration: none;
+    color: var(--primary-hover-color);
+  }
+
+  .nav-elem a:hover{
+    color: black;
+  }
+
   .navigator-head{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
@@ -144,15 +153,6 @@
     background-color: red;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  }
-
-  a{
-    text-decoration: none;
-    color: var(--primary-text-color);
-  }
-
-  a:hover{
-    color: black;
   }
   
   .nav-elem {
@@ -371,7 +371,7 @@
       display: none;
     }
 
-    .contact-nav{
+    .content-nav{
       height: 30px;
     }
 

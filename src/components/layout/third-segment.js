@@ -10,6 +10,9 @@ export default function ThirdSegment() {
             <div className='section-head'>
             INDIA
             </div>
+            <div className='carousel'>
+              
+            </div>
         </div>
     </div>
   )

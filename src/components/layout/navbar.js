@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <>
     <nav className='navbar-top'>
-        <div className='contact-nav'>
+        <div className='content-nav'>
             <div className="top-elem1 date-time">
                 <Time />
             </div>

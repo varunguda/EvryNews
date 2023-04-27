@@ -52,5 +52,5 @@
 }
   
 .description-card-container  div:hover{
-    color: var(--labled-text-color);
+    color: var(--primary-hover-color);
   }
