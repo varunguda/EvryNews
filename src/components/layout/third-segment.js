@@ -2,6 +2,7 @@
 import React from 'react';
 
 import './styles/third-segment.css';
+import NewsCarousel from '../elements/carousel';
 
 export default function ThirdSegment() {
   return (
@@ -10,9 +11,7 @@ export default function ThirdSegment() {
             <div className='section-head'>
             INDIA
             </div>
-            <div className='carousel'>
-              
-            </div>
+            <NewsCarousel />
         </div>
     </div>
   )

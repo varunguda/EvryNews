@@ -9,7 +9,7 @@ export default function SecondSegment() {
   return (
     <div className='second-segment-container'>
       <div className='section'>
-        <div className='section-head'><div>TECH</div></div>
+        <div className='section-head'>TECH</div>
         <div className='sec-container'>
           <MiniCard height='160px' width='100%' direction= 'row' data='Ipsum nau skalaana magna eu laborum cupidatat.'/>
           <div className='sec-container-segment'>
