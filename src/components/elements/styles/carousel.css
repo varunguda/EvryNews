@@ -1,7 +1,11 @@
 
 
 .carousel-container{
-    width: 100%;
+    width: 99%;
     margin-top: 30px;
     position: relative;
+}
+
+.react-multiple-carousel__arrow{
+    z-index: 2;
 }
