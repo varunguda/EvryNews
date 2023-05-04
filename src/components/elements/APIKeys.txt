@@ -1,0 +1,3 @@
+NewsAPI Key: 538bf8f17b8e4aa884661289d0714ee1
+WeatherAPI Key: df15ff9af4eb419e853205844231504
+OpenWeatherAPI Key: 8eeff1aa11ee9c730b5c078f6e52d075

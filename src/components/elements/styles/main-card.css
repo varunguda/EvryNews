@@ -1,11 +1,11 @@
 
 .main-card-container{
-    /* height: 320px; */
     width: 100%;
-    padding-bottom: 60%;
+    /* padding-bottom: 60%; */
     position: relative;
     border-radius: 7px;
     overflow: hidden;
+    font-size: 40px;
 }
 
 .main-card-image-container{
@@ -29,7 +29,7 @@
 
 
 .main-card-description{
-    font-size: x-large;
+    font-size: 2rem;
     font-weight: 900;
     color: white;
     padding: 10px;

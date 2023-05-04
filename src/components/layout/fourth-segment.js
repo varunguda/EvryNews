@@ -14,10 +14,12 @@ export default function FourthSegment() {
         </div>
         <div className='fourth-sec-container'>
             <div className='section section1'>
-                <MainCard />
+                <MainCard width='50%' height='200px'/>
             </div>
             <div className='section section2'>
-                gg
+                <div className='test-container'>
+
+                </div>
             </div>
         </div>
 
