@@ -14,7 +14,7 @@ export default function FourthSegment() {
         </div>
         <div className='fourth-sec-container'>
             <div className='section section1'>
-                <MainCard width='50%' height='200px'/>
+                <MainCard width='50%' height='200px' small = {true}/>
             </div>
             <div className='section section2'>
                 <div className='test-container'>
