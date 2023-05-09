@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;450;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+:root{
+  --logo-color-theme : rgb(201, 0, 0);
+  --primary-text-color: black;
+  --primary-hover-color: #5b5b5b;
+  --labled-text-color: #908E9B;
+  --disabled-text-color: #E1DFE9;
+}
+
+::selection{
+  color: white;
+  background-color: rgb(26, 97, 126);
+}
 
 body {
   margin: 0;
@@ -13,4 +26,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
