@@ -82,3 +82,16 @@
     position: absolute;
     bottom: -4%;
 }
+
+.test-div{
+    background-color: salmon;
+    height: 0%;
+    padding-bottom: 100%;
+    width: 100%;
+    position: relative;
+    top: 3%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 30%;
+}
