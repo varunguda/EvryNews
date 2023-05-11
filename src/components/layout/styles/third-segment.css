@@ -11,7 +11,7 @@
 .third-segment-container::after{
     content: '';
     position: absolute;
-    bottom: -50px;
+    bottom: -30px;
     height: 2px;
     width: 100%;
     left: 0;

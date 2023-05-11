@@ -33,13 +33,13 @@ export default function NewsCarousel() {
               responsive={responsive}
               centerMode = {true}
             >
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur.Culpa in nostrud voluptate fugiat deserunt proident'}/>
-              <MiniCard height='200px' width='80%' data={'Eiusmod minim id pariatur voluptate.In aliquip proident pariatur elit labore eiusmod laborum.Labore velit cillum'}/>
-              <MiniCard height='200px' width='80%' data={'Aute velit id nostrud id eu elit id eu id incididunt consectetur mollit sit.Tempor elit duis tempor'}/>
-              <MiniCard height='200px' width='80%' data={'Dolore dolore sint minim proident nostrud anim consequat fugiat ea officia velit'}/>
-              <MiniCard height='200px' width='80%' data={'Dolore dolore sint minim proident nostrud anim consequat fugiat ea officia velit '}/>
-              <MiniCard height='200px' width='80%' data={'Sint id cillum minim ullamco eu qui quis commodo.Amet reprehenderit in mollit sin'}/>
-              <MiniCard height='200px' width='80%' data={'Sint id cillum minim ullamco eu qui quis commodo.Amet reprehenderit in mollit sint quis amet cu'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
             </Carousel>
         </div>
     )

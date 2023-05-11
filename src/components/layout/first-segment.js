@@ -17,7 +17,7 @@ export default function FirstSegment() {
     return (
     <div className='first-segment-container'>
         <div className='content-container-1'>
-          <MainCard height= '320px' width='100%' small = {false}/>
+          <MainCard height= '320px' width='100%'/>
           <div className='container-1-grid'>
             <div className='grid-elem'><MiniDescCard height='50px' width='96%' data= {data}/></div>
             <div className='grid-elem'><MiniDescCard height='50px' width='96%' data= {data}/></div>
@@ -53,9 +53,6 @@ export default function FirstSegment() {
         <div className='content-container-3'>
           <Headlines height='300px' width='88%'/>
           <HeadlinesList />
-          <div className='test-div'>
-            
-          </div>
         </div>
     </div>
   )

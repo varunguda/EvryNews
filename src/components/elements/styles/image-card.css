@@ -1,0 +1,20 @@
+
+.image-card-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.image-card-image-container{
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.image-card-image{
+    border-radius: 7px;
+    transition: 0.5s;
+}
+
+.image-card-image:hover{
+    transform: scale(1.1);
+}
