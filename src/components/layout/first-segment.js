@@ -52,7 +52,7 @@ export default function FirstSegment() {
         </div>
         <div className='content-container-3'>
           <Headlines height='300px' width='88%'/>
-          <HeadlinesList />
+          <HeadlinesList length={6}/>
         </div>
     </div>
   )

@@ -28,7 +28,7 @@ export default function FourthSegment() {
                     </div>
                 </div>
                 <div className='section-segment'>
-                    <HeadlinesList/>
+                    <HeadlinesList length={2}/>
                 </div>
             </div>
             <div className='section section2'>
