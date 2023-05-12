@@ -2,18 +2,21 @@ import React, { useEffect } from 'react';
 
 import './styles/headlines.css';
 
-export default function HeadlinesList({ dataArr }) {
+export default function HeadlinesList({ dataArr, containerId }) {
 
-  // useEffect(()=>{
+  useEffect(()=>{
 
-  //   const headlinesList = document.getElementsByClassName
-  //   for(let i=0; i<dataArr.length; i++){
-
-  //   }
-  // },[])
+    for(let i=0; i<dataArr.length; i++){
+      const headlinesList = document.getElementById(`${containerId}`);
+      let listElem = document.createElement('div');
+      listElem.className = 'headlines-list-elem';
+      listElem.innerHTML = dataArr[i];
+      headlinesList.appendChild(listElem);
+    }
+  },[])
 
   return (
-    <div className='headlines-list-container'>
+    <div id={containerId} className='headlines-list-container'>
     </div>
   )
 }
