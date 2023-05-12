@@ -13,7 +13,7 @@ export default function HeadlinesList({ dataArr }) {
   // },[])
 
   return (
-    <div className='headlines-list-container'>6573211`121`
+    <div className='headlines-list-container'>
     </div>
   )
 }
