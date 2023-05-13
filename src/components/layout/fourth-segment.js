@@ -28,7 +28,7 @@ export default function FourthSegment() {
                     </div>
                 </div>
                 <div className='section-segment'>
-                    <HeadlinesList length={2}/>
+                    <HeadlinesList dataArr={['Sit nisi incididunt fugiat consectetur dolore.','Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={2}/>
                 </div>
             </div>
             <div className='section section2'>

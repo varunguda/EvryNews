@@ -16,7 +16,7 @@ export default function Content() {
       <FirstSegment />
       <SecondSegment />
       <ThirdSegment />
-      {/* <FourthSegment /> */}
+      <FourthSegment />
     </div>
   )
 }

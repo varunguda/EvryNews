@@ -52,7 +52,7 @@ export default function FirstSegment() {
         </div>
         <div className='content-container-3'>
           <Headlines height='300px' width='88%'/>
-          <HeadlinesList dataArr={['Sit nisi incididunt fugiat consectetur dolore.','Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={0}/>
+          <HeadlinesList dataArr={['Sit nisi incididunt fugiat consectetur dolore.','Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={1}/>
         </div>
     </div>
   )

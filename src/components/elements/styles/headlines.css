@@ -42,6 +42,7 @@
 .headlines-list-elem{
     position: relative;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .headlines-list-elem::-webkit-scrollbar{
