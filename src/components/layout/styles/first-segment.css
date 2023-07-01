@@ -72,7 +72,7 @@
     bottom: -25%;
 }
 
-.first-segment-container::after{
+.main-segment-container::after{
     content: '';
     width: 100%;
     height: 2px;

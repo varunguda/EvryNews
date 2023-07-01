@@ -6,7 +6,7 @@ import NewsCarousel from '../elements/carousel';
 
 export default function ThirdSegment() {
   return (
-    <div className='third-segment-container'>
+    <div className='third-segment-container main-segment-container'>
         <div className='third-seg-section'>
             <div className='section-head'>
             INDIA

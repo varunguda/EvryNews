@@ -7,6 +7,7 @@ import FirstSegment from './first-segment.js';
 import SecondSegment from './second-segment';
 import ThirdSegment from './third-segment';
 import FourthSegment from './fourth-segment';
+import FifthSegment from './fifth-segment';
 
 export default function Content() {
 
@@ -17,6 +18,7 @@ export default function Content() {
       <SecondSegment />
       <ThirdSegment />
       <FourthSegment />
+      <FifthSegment />
     </div>
   )
 }

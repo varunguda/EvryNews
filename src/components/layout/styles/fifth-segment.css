@@ -1,0 +1,14 @@
+
+.fifth-segment-container{
+    top: 400px;
+}
+
+.fifth-sec-container{
+    display: flex;
+    gap: 4%;
+}
+
+.section-segment{
+    position: relative;
+    width: 100%;
+}

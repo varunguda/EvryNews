@@ -7,14 +7,3 @@
     height: auto;
     width: 96%;
 }
-
-.third-segment-container::after{
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    height: 2px;
-    width: 100%;
-    left: 0;
-    border-top: 1px dotted rgb(152, 152, 152);
-    border-bottom: 1px dotted rgb(152, 152, 152);
-}

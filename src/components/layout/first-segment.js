@@ -15,7 +15,7 @@ export default function FirstSegment() {
   const data = 'Cupidatat aliquip nulla nulla laboris proident enim';
 
     return (
-    <div className='first-segment-container'>
+    <div className='first-segment-container main-segment-container'>
         <div className='content-container-1'>
           <MainCard height= '320px' width='100%'/>
           <div className='container-1-grid'>

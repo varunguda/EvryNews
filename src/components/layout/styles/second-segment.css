@@ -16,6 +16,11 @@
     font-weight: 800;
     width: fit-content;
     cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.second-section-head{
+    margin-bottom: 0;
 }
 
 .section-head::after{
@@ -77,23 +82,7 @@
     top: -15px;
 }
 
-.sec-container-segment::after{
-    content: '';
-    position: absolute;
-    top: 10%;
-    height: 80%;
-    border-left: 1px dotted rgb(152, 152, 152);
-    left: 50%;
-}
 
 .second-segment-container::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    left: 0;
     bottom: -50px;
-    border-top: 1px dotted rgb(152, 152, 152);
-    border-bottom: 1px dotted rgb(152, 152, 152);
 }

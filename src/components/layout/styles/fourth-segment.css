@@ -1,11 +1,14 @@
 
 
-.fourth-segment-container{
+.segment-container{
     position: relative;
-    top: 300px;
     padding: 0 2%;
     height: auto;
     width: 96%;
+}
+
+.fourth-segment-container{
+    top: 300px;
 }
 
 .fourth-segment-container::after{
@@ -24,14 +27,10 @@
     gap: 4%;
 }
 
-.fourth-segment-section-head{
-    margin-bottom: 30px;
-}
 
 .fourth-segment-small-head{
     font-size: 1rem;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
 }
 
 .fourth-segment-small-head::after{

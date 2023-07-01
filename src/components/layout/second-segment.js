@@ -7,9 +7,9 @@ import DescCard from '../elements/desc-card';
 
 export default function SecondSegment() {
   return (
-    <div className='second-segment-container'>
+    <div className='second-segment-container main-segment-container'>
       <div className='section'>
-        <div className='section-head'>TECH</div>
+        <div className='section-head second-section-head'>TECH</div>
         <div className='sec-container'>
           <MiniCard height='160px' width='100%' direction= 'row' data='Ipsum nau skalaana magna eu laborum cupidatat.'/>
           <div className='sec-container-segment'>
@@ -19,7 +19,7 @@ export default function SecondSegment() {
         </div>
       </div>
       <div className='section'>
-        <div className='section-head'>AUTO</div>
+        <div className='section-head second-section-head'>AUTO</div>
         <div className='sec-container'>
           <MiniCard height='160px' width='100%' direction= 'row' data='Ipsum nau skalaana magna eu laborum cupidatat.'/>
             <div className='sec-container-segment'>
@@ -29,7 +29,7 @@ export default function SecondSegment() {
         </div>
       </div>
       <div className='section'>
-        <div className='section-head'>TRENDING</div>
+        <div className='section-head second-section-head'>TRENDING</div>
         <div className='sec-container'>
           <MiniCard height='160px' width='100%' direction= 'row' data='Ipsum nau skalaana magna eu laborum cupidatat.'/>
             <div className='sec-container-segment'>
