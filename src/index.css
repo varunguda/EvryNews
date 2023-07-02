@@ -6,6 +6,7 @@
   --primary-hover-color: #5b5b5b;
   --labled-text-color: #908E9B;
   --disabled-text-color: #E1DFE9;
+  --border-color: rgb(152,152,152);
 }
 
 ::selection{

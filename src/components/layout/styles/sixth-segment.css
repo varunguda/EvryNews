@@ -1,0 +1,15 @@
+.sixth-segment-container{
+    top: 480px;
+}
+
+.sixth-sec-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px 30px;
+}
+
+.sixth-seg-sec{
+    display: flex;
+    flex-direction: column;
+}

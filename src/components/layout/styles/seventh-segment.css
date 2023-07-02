@@ -1,0 +1,30 @@
+.seventh-segment-container{
+    top: 320px;
+}
+
+.seventh-seg-sec{
+    display: flex;
+    flex-direction: column;
+}
+
+.seventh-sec-container{
+    display: flex;
+    gap: 4%;
+}
+
+.seventh-sec-container .section1{
+    flex: 0.7;
+}
+.seventh-sec-container .section2{
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seventh-sec-container .section-second-part{
+    display: flex;
+    justify-content: space-between;
+    gap: 6%;
+}
+

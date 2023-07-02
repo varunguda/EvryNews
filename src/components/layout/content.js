@@ -8,6 +8,8 @@ import SecondSegment from './second-segment';
 import ThirdSegment from './third-segment';
 import FourthSegment from './fourth-segment';
 import FifthSegment from './fifth-segment';
+import SixthSegment from './sixth-segment';
+import SeventhSegment from './seventh-segment';
 
 export default function Content() {
 
@@ -19,6 +21,12 @@ export default function Content() {
       <ThirdSegment />
       <FourthSegment />
       <FifthSegment />
+      <SixthSegment />
+      <div style={{marginTop:'330px'}}>
+        <ThirdSegment />
+      </div>
+      <SeventhSegment />
+  
     </div>
   )
 }

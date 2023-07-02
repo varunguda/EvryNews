@@ -37,7 +37,6 @@
 .description-card-container{
     position: relative;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .description-card-container::-webkit-scrollbar{
@@ -47,10 +46,9 @@
 .description-card{
     height: 95%;
     width: 95%;
-    margin: 2.5%;
     overflow: hidden;
 }
   
 .description-card-container  div:hover{
     color: var(--primary-hover-color);
-  }
+}

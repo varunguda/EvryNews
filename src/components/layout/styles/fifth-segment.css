@@ -1,6 +1,6 @@
 
 .fifth-segment-container{
-    top: 400px;
+    top: 390px;
 }
 
 .fifth-sec-container{
@@ -11,4 +11,37 @@
 .section-segment{
     position: relative;
     width: 100%;
+}
+
+.section-part{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.section-second-part{
+    position: relative;
+    top: 20px;
+    gap: 40px;
+}
+
+.fifth-seg-sec{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-part .description-card-container{
+    display: flex;
+}
+
+.section-part .description-card-container::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    right: -20px;
+    border-left: 1px dotted var(--border-color);
+}
+
+.section-part .description-card-container:last-child:after{
+    display: none;
 }
