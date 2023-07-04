@@ -7,12 +7,12 @@ import MainCard from '../elements/main-card';
 import HeadlinesList from '../elements/headlines-list';
 import DescCard from '../elements/desc-card';
 
-export default function FifthSegment(){
+export default function FifthSegment({ title, containerId }){
     return(
 
-    <div className='fifth-segment-container main-segment-container segment-container'>
+    <div className='fifth-segment-container main-segment-container  segment-container'>
         <div className='section-head fifth-segment-section-head'>
-            WORLD
+            {title}
         </div>
         <div className='fifth-sec-container'>
             <div className='section section1 fifth-seg-sec'>
@@ -21,7 +21,7 @@ export default function FifthSegment(){
                         <MainCard width='95%' height='200px' small = {true}/>
                     </div>
                     <div className='section-segment'>
-                        <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={3}/>
+                        <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={containerId}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
@@ -34,6 +34,5 @@ export default function FifthSegment(){
 
             </div>
         </div>
-        
     </div>
 )}

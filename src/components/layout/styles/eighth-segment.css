@@ -1,0 +1,10 @@
+
+.eighth-segment-container{
+    top: 530px;
+}
+
+.eighth-sec-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}

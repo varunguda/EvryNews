@@ -6,11 +6,11 @@ import HeadlinesList from '../elements/headlines-list';
 import MiniCard from '../elements/mini-card';
 import MiniDescCard from '../elements/mini-desc-card';
 
-export default function SeventhSegment() {
+export default function SeventhSegment({ title, containerId }) {
   return (
     <div className='seventh-segment-container main-segment-container segment-container'>
         <div className='section-head seventh-segment-section-head'>
-            SPORTS
+            {title}
         </div>
         <div className='seventh-sec-container'>
             <div className='section section1 seventh-seg-sec'>
@@ -19,7 +19,7 @@ export default function SeventhSegment() {
                         <MainCard width='95%' height='200px' small = {true}/>
                     </div>
                     <div className='section-segment'>
-                        <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={4}/>
+                        <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={containerId}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">

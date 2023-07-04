@@ -10,6 +10,7 @@ import FourthSegment from './fourth-segment';
 import FifthSegment from './fifth-segment';
 import SixthSegment from './sixth-segment';
 import SeventhSegment from './seventh-segment';
+import EighthSegment from './eighth-segment';
 
 export default function Content() {
 
@@ -20,13 +21,22 @@ export default function Content() {
       <SecondSegment />
       <ThirdSegment />
       <FourthSegment />
-      <FifthSegment />
+      <FifthSegment title="world" containerId={3}/>
       <SixthSegment />
-      <div style={{marginTop:'330px'}}>
+      <div style={{marginTop:'510px'}}>
         <ThirdSegment />
       </div>
-      <SeventhSegment />
-  
+      <SeventhSegment title="SPORTS" containerId={4}/>
+      <div style={{marginTop:'120px'}}>
+        <SeventhSegment title="TRAVEL" containerId={5}/>
+      </div>
+      <EighthSegment title='politics'/>
+      <div style={{marginTop:'110px'}}>
+        <FifthSegment title='Business' containerId={6}/>
+      </div>
+      <div style={{marginTop:'130px'}}>
+        <EighthSegment title='EDUCATION'/>
+      </div>
     </div>
   )
 }

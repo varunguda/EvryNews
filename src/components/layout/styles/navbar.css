@@ -322,7 +322,7 @@
 
 
   .main-container{
-    height: 300vh;
+    height: auto;
     width: 70%;
     color: var(--primary-text-color);
     position: relative;

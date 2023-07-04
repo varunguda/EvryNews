@@ -24,7 +24,7 @@ export default function Navbar() {
             </div>
 
             <div className="top-elem3 social-media">
-                <div><a href='https://www.linkedin.com/in/varun-sai-guda-ba2544244' target='/blank'><img className='icon active-icon' src={linkedIn} alt="linkedIn" title='LinkedIn'/></a></div>
+                <div><a href='https://www.linkedin.com/in/varunguda' target='/blank'><img className='icon active-icon' src={linkedIn} alt="linkedIn" title='LinkedIn'/></a></div>
                 <div><img src={instagram} alt="instagram" title='Instagram' className='icon'/></div>
                 <div><img src={facebook} alt="facebook" title='Facebook' className='icon'/></div>
                 <div><img src={twitter} alt="twitter" title='Twitter' className='icon'/></div>
