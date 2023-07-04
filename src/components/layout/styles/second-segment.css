@@ -87,3 +87,16 @@
 .second-segment-container::after{
     bottom: -50px;
 }
+
+.sec-container-segment .description-card-container::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -10px;
+    border-left: 1px dotted var(--border-color);
+}
+
+.sec-container-segment .description-card-container:last-child::after{
+    display: none;
+}

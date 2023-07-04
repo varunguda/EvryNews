@@ -8,3 +8,11 @@
     justify-content: space-between;
     gap: 30px;
 }
+
+.last-segment .eighth-segment-container{
+    padding-bottom: 60px;
+}
+
+.last-segment .eighth-segment-container::after{
+    display: none;
+}

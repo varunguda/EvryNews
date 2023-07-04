@@ -19,12 +19,12 @@ export default function FourthSegment() {
                 <div className='section-segment'>
                     <MainCard width='95%' height='200px' small = {true}/>
                     <div className='section-grid'>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='140px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
                     </div>
                 </div>
                 <div className='section-segment'>
@@ -38,15 +38,15 @@ export default function FourthSegment() {
                     </span> TERTAINMENT PHOTOS
                 </div>
                 <div className='entertainment-section'>
-                    <ImageCard height='190px' width='100%' data='Arman made appearence at delhi airport' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='190px' width='100%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Arman made appearence at delhi airport' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ import FifthSegment from './fifth-segment';
 import SixthSegment from './sixth-segment';
 import SeventhSegment from './seventh-segment';
 import EighthSegment from './eighth-segment';
+import FooterSegment from './footer';
 
 export default function Content() {
 
@@ -34,9 +35,10 @@ export default function Content() {
       <div style={{marginTop:'110px'}}>
         <FifthSegment title='Business' containerId={6}/>
       </div>
-      <div style={{marginTop:'130px'}}>
+      <div className='last-segment' style={{marginTop:'130px'}}>
         <EighthSegment title='EDUCATION'/>
       </div>
+      <FooterSegment />
     </div>
   )
 }

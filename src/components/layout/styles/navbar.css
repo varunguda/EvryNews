@@ -126,7 +126,7 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 5px;
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     border-top: 1px solid #ececec;
     box-shadow: rgba(0, 0.1, 0, 0.1) 0px -1px 5px -1px inset;
     z-index: 10;
