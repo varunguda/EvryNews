@@ -12,9 +12,6 @@ Request Parameters-
     language
     country
 
-NewsAPI Key- 538bf8f17b8e4aa884661289d0714ee1
-
-
 Sample Output-
 
 {
