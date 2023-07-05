@@ -2,8 +2,8 @@
 import React from 'react';
 
 import './styles/second-segment.css';
-import MiniCard from '../elements/mini-card.js';
-import DescCard from '../elements/desc-card';
+import MiniCard from '../mini-card.js';
+import DescCard from '../desc-card';
 
 export default function SecondSegment() {
   return (

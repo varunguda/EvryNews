@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import './styles/eighth-segment.css';
 
-import MiniCard from '../elements/mini-card';
+import MiniCard from '../mini-card';
 
 export default function EighthSegment({ title }) {
   return (

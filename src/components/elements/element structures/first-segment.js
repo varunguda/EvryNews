@@ -4,11 +4,11 @@ import React from 'react';
 
 import './styles/first-segment.css';
 
-import MainCard from '../elements/main-card.js';
-import MiniCard from '../elements/mini-card.js';
-import MiniDescCard from '../elements/mini-desc-card';
-import Headlines from '../elements/headlines';
-import HeadlinesList from '../elements/headlines-list';
+import MainCard from '../main-card.js';
+import MiniCard from '../mini-card.js';
+import MiniDescCard from '../mini-desc-card';
+import Headlines from '../headlines';
+import HeadlinesList from '../headlines-list';
 
 export default function FirstSegment() {
 

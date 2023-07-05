@@ -2,7 +2,7 @@
 import React from 'react';
 
 import './styles/third-segment.css';
-import NewsCarousel from '../elements/carousel';
+import NewsCarousel from '../carousel';
 
 export default function ThirdSegment() {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './styles/seventh-segment.css';
-import MainCard from '../elements/main-card';
-import HeadlinesList from '../elements/headlines-list';
-import MiniCard from '../elements/mini-card';
-import MiniDescCard from '../elements/mini-desc-card';
+import MainCard from '../main-card';
+import HeadlinesList from '../headlines-list';
+import MiniCard from '../mini-card';
+import MiniDescCard from '../mini-desc-card';
 
 export default function SeventhSegment({ title, containerId }) {
   return (

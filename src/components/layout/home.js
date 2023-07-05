@@ -2,22 +2,21 @@ import React from 'react';
 
 import './styles/navbar.css';
 
-import NavbarSecondary from '../elements/navbar2';
-import FirstSegment from './first-segment.js';
-import SecondSegment from './second-segment';
-import ThirdSegment from './third-segment';
-import FourthSegment from './fourth-segment';
-import FifthSegment from './fifth-segment';
-import SixthSegment from './sixth-segment';
-import SeventhSegment from './seventh-segment';
-import EighthSegment from './eighth-segment';
-import FooterSegment from './footer';
 
-export default function Content() {
+import FirstSegment from '../elements/element structures/first-segment.js';
+import SecondSegment from '../elements/element structures/second-segment';
+import ThirdSegment from '../elements/element structures/third-segment';
+import FourthSegment from '../elements/element structures/fourth-segment';
+import FifthSegment from '../elements/element structures/fifth-segment';
+import SixthSegment from '../elements/element structures/sixth-segment';
+import SeventhSegment from '../elements/element structures/seventh-segment';
+import EighthSegment from '../elements/element structures/eighth-segment';
+import FooterSegment from '../elements/element structures/footer';
+
+export default function Home() {
 
   return (
-    <div className='main-container'>
-      <NavbarSecondary />
+    <>
       <FirstSegment />
       <SecondSegment />
       <ThirdSegment />
@@ -39,6 +38,6 @@ export default function Content() {
         <EighthSegment title='EDUCATION'/>
       </div>
       <FooterSegment />
-    </div>
+    </>
   )
 }

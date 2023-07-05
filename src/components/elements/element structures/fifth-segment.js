@@ -3,9 +3,9 @@
 import React from 'react';
 
 import './styles/fifth-segment.css';
-import MainCard from '../elements/main-card';
-import HeadlinesList from '../elements/headlines-list';
-import DescCard from '../elements/desc-card';
+import MainCard from '../main-card';
+import HeadlinesList from '../headlines-list';
+import DescCard from '../desc-card';
 
 export default function FifthSegment({ title, containerId }){
     return(

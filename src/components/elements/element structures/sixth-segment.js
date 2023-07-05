@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './styles/sixth-segment.css';
-import MainCard from '../elements/main-card';
-import DescCard from '../elements/desc-card';
+import MainCard from '../main-card';
+import DescCard from '../desc-card';
 
 export default function SixthSegment() {
   return (

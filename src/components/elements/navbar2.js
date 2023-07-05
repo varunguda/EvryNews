@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Dropdown from './nav-dropdown';
-
 
 export default function NavbarSecondary() {
   let [ isActive, setIsActive ] = useState(false); 
@@ -22,50 +22,50 @@ export default function NavbarSecondary() {
       <nav className="navbar">
         <div className="nav-navigator">
             <div className="navigator-head">
-                <a href='/'>EN</a>
+                <Link to='/'>EN</Link>
             </div>
             <div className="nav-elem">
-                <a href='/india'>India</a>
+                <Link to='india'>India</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/world'>World</a>
+                <Link to='world'>World</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/business'>Business</a>
+                <Link to='business'>Business</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/tech'>Tech</a>
+                <Link to='tech'>Tech</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/sports'>Sports</a>
+                <Link to='sports'>Sports</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/cricket'>Cricket</a>
+                <Link to='cricket'>Cricket</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/entertainment'>Entertainment</a>
+                <Link to='entertainment'>Entertainment</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/education'>Education</a>
+                <Link to='education'>Education</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/education'>Auto</a>
+                <Link to='auto'>Auto</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/education'>Life & Style</a>
+                <Link to='lifestyle'>Life & Style</Link>
                 <Dropdown />
             </div>
             <div className="nav-elem">
-                <a href='/education'>Politics</a>
+                <Link to='politics'>Politics</Link>
                 <Dropdown />
             </div>
         <div className='dropdown'>
@@ -75,21 +75,21 @@ export default function NavbarSecondary() {
             </label>
             <div className={`dropdown-content-container ${(isActive)? "show":""}`}>
             <div className='dropdown-content'>
-                <div className="dropdown-elem"><a href='/india'>India</a></div>
-                <div className="dropdown-elem"><a href='/world'>World</a></div>
-                <div className="dropdown-elem"><a href='/business'>Business</a></div>
-                <div className="dropdown-elem"><a href='/tech'>Tech</a></div>
-                <div className="dropdown-elem"><a href='/sports'>Sports</a></div>
-                <div className="dropdown-elem"><a href='/cricket'>Cricket</a></div>
-                <div className="dropdown-elem"><a href='/entertainment'>Entertainment</a></div>
-                <div className="dropdown-elem"><a href='/education'>Education</a></div>
-                <div className="dropdown-elem"><a href='/education'>Auto</a></div>
-                <div className="dropdown-elem"><a href='/education'>Life & Style</a></div>
-                <div className="dropdown-elem"><a href='/education'>Politics</a></div>
+                <div className="dropdown-elem"><Link to='india'>India</Link></div>
+                <div className="dropdown-elem"><Link to='world'>World</Link></div>
+                <div className="dropdown-elem"><Link to='business'>Business</Link></div>
+                <div className="dropdown-elem"><Link to='tech'>Tech</Link></div>
+                <div className="dropdown-elem"><Link to='sports'>Sports</Link></div>
+                <div className="dropdown-elem"><Link to='cricket'>Cricket</Link></div>
+                <div className="dropdown-elem"><Link to='entertainment'>Entertainment</Link></div>
+                <div className="dropdown-elem"><Link to='education'>Education</Link></div>
+                <div className="dropdown-elem"><Link to='auto'>Auto</Link></div>
+                <div className="dropdown-elem"><Link to='lifestyle'>Life & Style</Link></div>
+                <div className="dropdown-elem"><Link to='politics'>Politics</Link></div>
             </div>
             </div>
         </div>
         </div>
-    </nav>
+      </nav>
   )
 }

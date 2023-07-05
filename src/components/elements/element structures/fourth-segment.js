@@ -3,10 +3,10 @@
 import React from 'react';
 
 import './styles/fourth-segment.css';
-import MiniCard from '../elements/mini-card';
-import MainCard from '../elements/main-card';
-import HeadlinesList from '../elements/headlines-list';
-import ImageCard from '../elements/image-card';
+import MiniCard from '../mini-card';
+import MainCard from '../main-card';
+import HeadlinesList from '../headlines-list';
+import ImageCard from '../image-card';
 
 export default function FourthSegment() {
   return (
