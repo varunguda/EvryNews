@@ -1,0 +1,23 @@
+
+.pages-main-container{
+    position: relative;
+}
+
+.page-container{
+    padding: 20px;
+}
+
+.page-counter{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.page-number{
+    padding: 5px 10px;
+    border: 1px solid black;
+    color: black;
+    margin: 0px 5px;
+    cursor: pointer;
+}

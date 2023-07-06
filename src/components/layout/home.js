@@ -30,12 +30,12 @@ export default function Home() {
       <div style={{marginTop:'120px'}}>
         <SeventhSegment title="TRAVEL" containerId={5}/>
       </div>
-      <EighthSegment title='politics'/>
+      <EighthSegment title='EDUCATION' top='530px'/>
       <div style={{marginTop:'110px'}}>
         <FifthSegment title='Business' containerId={6}/>
       </div>
-      <div className='last-segment' style={{marginTop:'130px'}}>
-        <EighthSegment title='EDUCATION'/>
+      <div className='last-segment'>
+        <EighthSegment title='EDUCATION' top="590px"/>
       </div>
       <FooterSegment />
     </>

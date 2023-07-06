@@ -14,7 +14,6 @@ export default function Time() {
 
   return (
       <div>
-        {console.log(currentDate)}
         {currentDate}
     </div>
   )

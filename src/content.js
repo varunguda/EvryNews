@@ -19,8 +19,8 @@ export default function Content() {
         <NavbarSecondary />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='india' element={<India />} />
-          <Route path='world' element={<India />} />
+          <Route path='india' element={<India alp='A'/>} />
+          {/* <Route path='world' element={<India />} />
           <Route path='business' element={<India />} />
           <Route path='tech' element={<India />} />
           <Route path='sports' element={<India />} />
@@ -29,7 +29,13 @@ export default function Content() {
           <Route path='education' element={<India />} />
           <Route path='auto' element={<India />} />
           <Route path='lifestyle' element={<India />} />
-          <Route path='politics' element={<India />} />
+          <Route path='politics' element={<India />} /> */}
+          {/* <Route path='india' element={<India alp="A"/>} /> */}
+          <Route path='india/2' element={<India alp="B"/>} />
+          <Route path='india/3' element={<India alp="C"/>} />
+          <Route path='india/4' element={<India alp='D'/>} />
+          <Route path='india/5' element={<India alp='E'/>} />
+          <Route path='india/6' element={<India alp='F'/>} />
         </Routes>
       </Router>
     </div>
