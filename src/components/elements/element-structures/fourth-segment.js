@@ -1,6 +1,5 @@
-
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/fourth-segment.css';
 import MiniCard from '../mini-card';
@@ -34,7 +33,7 @@ export default function FourthSegment() {
             <div className='section section2'>
                 <div className='section-head fourth-segment-small-head'>
                     <span className="navigator-head" style={{fontSize: '13px', marginLeft: '0%'}}>
-                        <a>EN</a>
+                        <Link to='/'>EN</Link>
                     </span> TERTAINMENT PHOTOS
                 </div>
                 <div className='entertainment-section'>
