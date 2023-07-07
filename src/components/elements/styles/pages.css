@@ -25,5 +25,26 @@
 .page-number.active-page-number {
     color: white;
     background-color: black;
-  }
-  
+}
+
+.page-content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px 40px;
+}
+
+.page-content .description-card-container::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    border-top: 1px dotted var(--border-color);
+}
+
+.page-content .description-card-container:last-child:after,
+.page-content .description-card-container:nth-last-child(2):after,
+.page-content .description-card-container:nth-last-child(3):after
+{
+    display: none;
+}

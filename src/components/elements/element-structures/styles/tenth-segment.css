@@ -1,3 +1,11 @@
 .tenth-segment-container{
-    top: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tenth-seg-first-part{
+    flex: 0.75;
+}
+.tenth-seg-second-part{
+    flex: 0.25;
 }

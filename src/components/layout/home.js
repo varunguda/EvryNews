@@ -22,7 +22,7 @@ export default function Home() {
       <ThirdSegment />
       <FourthSegment />
       <FifthSegment title="world" containerId={3}/>
-      <SixthSegment />
+      <SixthSegment title='Sports' top='660px'/>
       <div style={{marginTop:'510px'}}>
         <ThirdSegment />
       </div>
@@ -35,9 +35,9 @@ export default function Home() {
         <FifthSegment title='Business' containerId={6}/>
       </div>
       <div className='last-segment'>
-        <EighthSegment title='EDUCATION' top="590px"/>
+        <EighthSegment title='EDUCATION' top="660px"/>
       </div>
-      <FooterSegment />
+      <FooterSegment top="670px"/>
     </>
   )
 }

@@ -26,6 +26,6 @@
     border-top: 1px dotted var(--border-color);
 }
 
-.description-grid .description-card-container:last-child::after, .description-card-container:nth-child(7)::after{
+.description-grid .description-card-container:last-child::after, .ninth-segment-container .description-card-container:nth-child(7)::after{
     display: none;
 }

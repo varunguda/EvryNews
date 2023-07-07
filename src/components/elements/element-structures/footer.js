@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './styles/footer.css';
 
-export default function FooterSegment() {
+export default function FooterSegment({ top }) {
+
   return (
-    <div className='footer-segment-container segment-container'>
+    <div className='footer-segment-container segment-container' style={{top:top}}>
         <div className='site-logo'>
             <div className="navigator-head" style={{fontSize:'21px'}}>
                 <Link to='/'>EN</Link>
@@ -21,17 +22,17 @@ export default function FooterSegment() {
                 <div className="detail-head">
                     CATEGORIES
                 </div>
-                <Link className='detail-link' to='india'>India</Link>
-                <Link className='detail-link' to='world'>World</Link>
-                <Link className='detail-link' to='business'>Business</Link>
-                <Link className='detail-link' to='tech'>Tech</Link>
-                <Link className='detail-link' to='sports'>Sports</Link>
-                <Link className='detail-link' to='cricket'>Cricket</Link>
-                <Link className='detail-link' to='entertainment'>Entertainment</Link>
-                <Link className='detail-link' to='education'>Education</Link>
-                <Link className='detail-link' to='auto'>Auto</Link>
-                <Link className='detail-link' to='lifestyle'>Life & Style</Link>
-                <Link className='detail-link' to='politics'>Politics</Link>
+                <Link className='detail-link' to='/india'>India</Link>
+                <Link className='detail-link' to='/world'>World</Link>
+                <Link className='detail-link' to='/business'>Business</Link>
+                <Link className='detail-link' to='/tech'>Tech</Link>
+                <Link className='detail-link' to='/sports'>Sports</Link>
+                <Link className='detail-link' to='/cricket'>Cricket</Link>
+                <Link className='detail-link' to='/entertainment'>Entertainment</Link>
+                <Link className='detail-link' to='/education'>Education</Link>
+                <Link className='detail-link' to='/auto'>Auto</Link>
+                <Link className='detail-link' to='/lifestyle'>Life & Style</Link>
+                <Link className='detail-link' to='/politics'>Politics</Link>
             </div>
 
             <div className='details-section'>

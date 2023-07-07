@@ -4,12 +4,12 @@ import './styles/sixth-segment.css';
 import MainCard from '../main-card';
 import DescCard from '../desc-card';
 
-export default function SixthSegment() {
+export default function SixthSegment({ title, top }) {
   return (
-    <div className='sixth-segment-container main-segment-container segment-container'>
-        <div className='section-head sixth-segment-section-head'>
-            WORLD
-        </div>
+    <div className='sixth-segment-container main-segment-container segment-container' style={{top:top}}>
+        {(title)?<div className='section-head sixth-segment-section-head'>
+            {title}
+        </div>:''}
         <div className='sixth-sec-container'>
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
