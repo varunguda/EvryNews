@@ -185,7 +185,13 @@
   .nav-elem:hover > a::after {
     display: block;
   }
-  
+
+  .active-nav-elem{
+    font-weight: bold !important;
+    color: black !important;
+    text-transform: uppercase !important;
+  }
+
   .navbar::after{
     content: '';
     background-color: black;
