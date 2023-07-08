@@ -10,11 +10,11 @@ import MiniDescCard from '../mini-desc-card';
 import Headlines from '../headlines';
 import HeadlinesList from '../headlines-list';
 
-export default function FirstSegment() {
+export default function FirstSegment( { elements }) {
 
   const data = 'Cupidatat aliquip nulla nulla laboris proident enim';
 
-    return (
+  return (
     <div className='first-segment-container main-segment-container'>
         <div className='content-container-1'>
           <MainCard height= '320px' width='100%'/>
@@ -42,13 +42,9 @@ export default function FirstSegment() {
           </div>
         </div>
         <div className='content-container-2'>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
-          <MiniCard height='130px' width='90%'/>
+          {elements.map((element)=>{
+            return <MiniCard key={element.url} imageUrl={element.urlToImage} title={element.title.slice(0,75)} desc={element.description} height='130px' width='90%'/>
+          })}
         </div>
         <div className='content-container-3'>
           <Headlines height='300px' width='88%'/>

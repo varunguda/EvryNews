@@ -6,13 +6,14 @@ import DescCard from './desc-card';
 
 // https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
 
-export default function MiniCard({ height, width, direction, data }) {
+export default function MiniCard({ height, width, direction, url, imageUrl, desc, title }) {
   return (
-    <div className='card-container' style={{height: `${height}`, width: `${width}`, flexDirection: direction?`${direction}`:`column`}}>
-      <div className="card-image-container" style={{ height: '60%', width: '100%'}}>
-        <img alt='mini-card' src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' className='card-image'/>
+    <figure className='card-container' style={{flexDirection: direction?`${direction}`:`column`}}>
+      <div className="card-image-container" style={{ height: '100px', width: '100%'}}>
+        <img alt='mini-card' src={imageUrl} className='card-image'/>
       </div>
-        <DescCard height='40%' width='100%' data= {data?`${data}`:'Lorem ipsum dolor comsu nsit amet conset'}/>
-    </div>
+        {/* <DescCard height='40%' width='100%' data= {title?`${title}`:'Lorem ipsum dolor comsu nsit amet conset'}/> */}
+        <figcaption style={{height:'65px', width:'95%'}}>{title}...</figcaption>
+    </figure>
   )
 }

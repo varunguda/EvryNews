@@ -1,9 +1,11 @@
 
 
 .card-container{
+    height: 165px;
+    width: 160px;
     border-radius: 7px;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -48,7 +50,8 @@
     width: 95%;
     overflow: hidden;
 }
-  
+
+
 .description-card-container  div:hover{
     color: var(--primary-hover-color);
 }
