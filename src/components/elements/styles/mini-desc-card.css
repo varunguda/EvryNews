@@ -11,6 +11,7 @@
 .desc-card-image-container{
     position: relative;
     overflow: hidden;
+    border-radius: 7px;
 }
 
 .desc-card-image{

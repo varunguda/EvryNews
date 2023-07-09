@@ -9,8 +9,8 @@
     font-size: x-small;
     height: 15%;
     position: relative;
-    width: 70%;
-    left: 15%;
+    width: 80%;
+    left: 10%;
     right: 20%;
     font-size: x-small;
   }
@@ -328,10 +328,10 @@
 
   .main-container{
     height: auto;
-    width: 70%;
+    width: 80%;
     color: var(--primary-text-color);
     position: relative;
-    left: 15%;
+    left: 10%;
     font-size: 13px;
     font-weight: 500;
   }

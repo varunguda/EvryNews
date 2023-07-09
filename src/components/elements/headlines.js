@@ -6,7 +6,7 @@ import MiniDescCard from './mini-desc-card';
 
 export default function Headlines({ height, width }) {
 
-  const data = 'Nostrud proident aliquip ullamco reprehenderit elit'
+  const data = 'Nostrud proident aliquip ullamco reprehenderit elitDeserunt ipsum aute adipisicing ad laboris in sunt incididunt consequat adipisicing ad.'
 
   return (
     <div className='headlines-container' style={{ height:`${height}`, width: `${width}`}}>
@@ -19,9 +19,9 @@ export default function Headlines({ height, width }) {
       </div>
 
       <div className='headlines-list'>
-        <MiniDescCard height='50px' width='96%' data= {data}/>
-        <MiniDescCard height='50px' width='96%' data= {data}/>
-        <MiniDescCard height='50px' width='96%' data= {data}/>
+        <MiniDescCard height='54px' width='96%' data= {data}/>
+        <MiniDescCard height='54px' width='96%' data= {data}/>
+        <MiniDescCard height='54px' width='96%' data= {data}/>
       </div>
     </div>
   )

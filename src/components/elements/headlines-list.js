@@ -15,7 +15,7 @@ export default function HeadlinesList({ dataArr, containerId }) {
     for (let i = 0; i < dataArr.length; i++) {
       let listElem = document.createElement('div');
       listElem.className = 'headlines-list-elem';
-      listElem.innerHTML = dataArr[i].length > 37 ? dataArr[i].slice(0, 37) + '...' : dataArr[i];
+      listElem.innerHTML = dataArr[i];
       headlinesList.appendChild(listElem);
     }
   }, [dataArr, containerId]);

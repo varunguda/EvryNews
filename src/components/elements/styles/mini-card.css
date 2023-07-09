@@ -1,8 +1,5 @@
 
-
-.card-container{
-    height: 165px;
-    width: 160px;
+.mini-card-container{
     border-radius: 7px;
     position: relative;
     overflow: hidden;
@@ -12,9 +9,13 @@
     align-items: center;
 }
 
+.card-container a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
 .card-image-container{
-    height: 55%;
-    width: 100%;
+    position: relative;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -36,6 +37,15 @@
     margin: 5%;
 }
 
+.mini-card-caption {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /*Adjust the number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
 .description-card-container{
     position: relative;
     cursor: pointer;
@@ -49,6 +59,11 @@
     height: 95%;
     width: 95%;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /*Adjust the number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
