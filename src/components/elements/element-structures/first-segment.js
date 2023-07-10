@@ -10,41 +10,29 @@ import MiniDescCard from '../mini-desc-card';
 import Headlines from '../headlines';
 import HeadlinesList from '../headlines-list';
 
-export default function FirstSegment( { elements, category }) {
+export default function FirstSegment( { popArticles, category }) {
 
-  const data = 'Cupidatat aliquip nulla nulla laboris proident enim Irure excepteur voluptate magna consectetur proident.';
-
+  
   return (
     <div className='first-segment-container main-segment-container'>
         <div className='content-container-1'>
           <MainCard height= '360px' width='100%'/>
           <div className='container-1-grid'>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div className='grid-elem'><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div><MiniDescCard height='54px' width='96%' data= {data}/></div>
-            <div><MiniDescCard height='54px' width='96%' data= {data}/></div>
+          {popArticles && popArticles.length > 0 ? (
+            popArticles.map((article) => (
+              <div className='grid-elem'>
+                <MiniDescCard key={article.publishedAt} height='54px' width='96%' article={article} />
+              </div>
+            ))
+          ) : (
+            <p>No articles available</p>
+          )}
           </div>
         </div>
         <div className='content-container-2'>
-          {elements.map((element)=>{
+          {/* {elements.map((element)=>{
             return <MiniCard key={element.url} height='155px' width='100%' url={element.url} imageUrl={element.urlToImage} title={element.title} desc={element.description}/>
-          })}
+          })} */}
         </div>
         <div className='content-container-3'>
           <Headlines height='300px' width='88%' category={category}/>
