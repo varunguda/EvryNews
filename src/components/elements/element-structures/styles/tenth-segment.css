@@ -1,11 +1,12 @@
 .tenth-segment-container{
     display: flex;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .tenth-seg-first-part{
-    flex: 0.75;
+    flex: 0.70;
 }
 .tenth-seg-second-part{
-    flex: 0.25;
+    flex: 0.30;
 }

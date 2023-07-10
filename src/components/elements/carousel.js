@@ -1,46 +1,111 @@
+
 import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
 import MiniCard from './mini-card';
 
-import './styles/carousel.css';
+// const responsive = {
+//   0: { items: 1 },
+//   568: { items: 3 },
+//   1024: { items: 5}
+// };
 
+// const items = [
+//     <div className="item" data-value="1">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="2">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="3">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="4">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="5">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="6">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="7">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="8">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="9">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+//     <div className="item" data-value="10">
+//       <MiniCard height='155px' width='86%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+//     </div>,
+// ];
 
-export default function NewsCarousel() {
+// export default function NewsCarousel(){
+//   return(
+//     <AliceCarousel
+//         mouseTracking
+//         items={items}
+//         responsive={responsive}
+//         controlsStrategy="alternate"
+//     />
+// )};
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3 // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2 // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1 // optional, default to 1.
-    }
-  };
-      
+// import React from 'react';
+// import AliceCarousel from 'react-alice-carousel';
+// import 'react-alice-carousel/lib/alice-carousel.css';
 
-    return (
-        <div className='carousel-container'>
-            <Carousel
-              responsive={responsive}
-              centerMode = {true}
-            >
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-              <MiniCard height='200px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
-            </Carousel>
-        </div>
-    )
+const handleDragStart = (e) => e.preventDefault();
+
+const responsive = {
+  0: { items: 2 },
+  568: { items: 4 },
+  1024: { items: 5}
+};
+
+const items = [
+  <div className="item" data-value="1">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="2">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="3">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="4">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="5">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="6">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="7">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="8">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="9">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+  <div className="item" data-value="10">
+    <MiniCard height='155px' width='80%' data={'Eu ullamco laboris duis est adipisicing pariatur isad ah maisjud joadgva pujwinus'}/>
+  </div>,
+];
+
+export default function NewsCarousel(){
+  return (
+    <AliceCarousel 
+    mouseTracking 
+    items={items}
+    responsive={responsive}
+    disableDotsControls={true}
+    />
+  );
 }

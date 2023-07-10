@@ -19,6 +19,7 @@
     font-size: 11px;
     color: red;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .headlines-list{

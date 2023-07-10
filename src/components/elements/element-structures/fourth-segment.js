@@ -15,18 +15,16 @@ export default function FourthSegment() {
         </div>
         <div className='fourth-sec-container'>
             <div className='section section1'>
-                <div className='section-segment'>
-                    <MainCard width='95%' height='200px' small = {true}/>
+                <div className='section-first-segment section-segment'>
+                    <MainCard width='100%' height='240px' small = {true}/>
                     <div className='section-grid'>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='120px' width='95%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
                     </div>
                 </div>
-                <div className='section-segment'>
+                <div className='section-sec-segment section-segment'>
                     <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={2}/>
                 </div>
             </div>
@@ -37,7 +35,7 @@ export default function FourthSegment() {
                     </span> TERTAINMENT PHOTOS
                 </div>
                 <div className='entertainment-section'>
-                    <ImageCard height='180px' width='95%' data='Arman made appearence at delhi airport' />
+                    <ImageCard height='180px' width='95%' data='Arman made appearence at delhi airport yesterdat' />
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
@@ -45,7 +43,7 @@ export default function FourthSegment() {
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
                     <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
+                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitatiMagna cupidatat mollit aliquip eiusmod quis ipsum reprehenderit adipisicing commodo nulla.' />
                 </div>
             </div>
         </div>

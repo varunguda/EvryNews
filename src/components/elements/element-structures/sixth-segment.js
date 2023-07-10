@@ -14,67 +14,67 @@ export default function SixthSegment({ title, top }) {
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
             <div className='sixth-seg-sec'>
                 <div className='sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
             <div className='sixth-seg-sec'>
                 <div className='section-part sixth-sec-part'>
                     <div className='section-segment'>
-                        <MainCard width='100%' height='200px' small = {true}/>
+                        <MainCard width='100%' height='230px' small = {true}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit iia' height='54px' width='45%'/>
                 </div>
             </div>
         </div>

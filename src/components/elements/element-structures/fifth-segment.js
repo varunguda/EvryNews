@@ -17,17 +17,17 @@ export default function FifthSegment({ title, containerId }){
         <div className='fifth-sec-container'>
             <div className='section section1 fifth-seg-sec'>
                 <div className='section-part'>
-                    <div className='section-segment'>
-                        <MainCard width='95%' height='200px' small = {true}/>
+                    <div className='section-segment section-first-segment'>
+                        <MainCard width='100%' height='240px' small = {true}/>
                     </div>
-                    <div className='section-segment'>
+                    <div className='section-segment section-sec-segment'>
                         <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={containerId}/>
                     </div>
                 </div>
                 <div className="section-part section-second-part">
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='60px' width='45%'/>
-                    <DescCard data='Ut exercitation officia officia occaecat sit duis in consecte' height='60px' width='45%'/>
-                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='60px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='45%'/>
+                    <DescCard data='Ut exercitation officia officia occaecat sit duis in consecte' height='54px' width='45%'/>
+                    <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='45%'/>
                 </div>
             </div>
             <div className="section section2">

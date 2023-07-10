@@ -11,7 +11,7 @@ export default function TenthSegment({ alp, top, category }) {
           <Pages alp={alp} category={category} height='780px' width='100%'/>
         </div>
         <div className="tenth-seg-second-part">
-          <Headlines height='300px'/>
+          <Headlines height='300px' category={category}/>
         </div>
     </div>
   )

@@ -10,7 +10,7 @@ import MiniDescCard from '../mini-desc-card';
 import Headlines from '../headlines';
 import HeadlinesList from '../headlines-list';
 
-export default function FirstSegment( { elements }) {
+export default function FirstSegment( { elements, category }) {
 
   const data = 'Cupidatat aliquip nulla nulla laboris proident enim Irure excepteur voluptate magna consectetur proident.';
 
@@ -47,7 +47,7 @@ export default function FirstSegment( { elements }) {
           })}
         </div>
         <div className='content-container-3'>
-          <Headlines height='300px' width='88%'/>
+          <Headlines height='300px' width='88%' category={category}/>
           <HeadlinesList dataArr={['Sit nisi incididunt fugiat consectetur dolore.','Mollit mollit eu amet officia.Nulla quis laboris adipisicing aute anim exercitation nisi consectetur incididunt enim ut nisi voluptate.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.Magna minim anim occaecat laboris non exercitation in.']} containerId={1}/>
         </div>
     </div>

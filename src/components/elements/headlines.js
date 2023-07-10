@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/headlines.css';
 import MiniDescCard from './mini-desc-card';
 
-export default function Headlines({ height, width }) {
+export default function Headlines({ height, width, category }) {
 
   const data = 'Nostrud proident aliquip ullamco reprehenderit elitDeserunt ipsum aute adipisicing ad laboris in sunt incididunt consequat adipisicing ad.'
 
@@ -15,6 +15,7 @@ export default function Headlines({ height, width }) {
           <Link to='/'>EN</Link>
         </div>
         <div>
+        <a className='read-more'>{(category)?`${category} TOP HEADLINES`:'TOP HEADLINES'}</a>
         </div>
       </div>
 

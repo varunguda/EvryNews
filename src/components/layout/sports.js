@@ -103,7 +103,7 @@ export default function Sports({ category }) {
 
   return (
     <>
-      <FirstSegment elements={elements}/>
+      <FirstSegment category={category} elements={elements}/>
       <TenthSegment top='180px' category={category}/>
       <FooterSegment top='250px'/>
     </>
