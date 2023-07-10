@@ -15,7 +15,7 @@ export default function Headlines({ height, width, category }) {
           <Link to='/'>EN</Link>
         </div>
         <div>
-        <a className='read-more'>{(category)?`${category} TOP HEADLINES`:'TOP HEADLINES'}</a>
+        <a className='read-more'>{(category)?`TOP HEADLINES IN ${category}`:'TOP HEADLINES'}</a>
         </div>
       </div>
 

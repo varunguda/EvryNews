@@ -44,7 +44,6 @@ export default function FooterSegment({ top }) {
                 <a className='detail-link' href='/'>Twitter</a>
                 <a className='detail-link' href='/'>Youtube</a>
                 <a className='detail-link' href='/'>Facebook</a>
-                <a className='detail-link' href='/'>Cricket</a>
             </div>
 
             <div className='details-section'>
