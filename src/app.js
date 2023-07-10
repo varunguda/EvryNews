@@ -10,6 +10,7 @@ export default function App() {
 
     return(
       <div>
+        {console.}
         <Navbar />
         <Content />
       </div>
