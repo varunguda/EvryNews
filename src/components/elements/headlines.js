@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/headlines.css';
 import MiniDescCard from './mini-desc-card';
 
-export default function Headlines({ height, width, category }) {
-
-  const data = 'Nostrud proident aliquip ullamco reprehenderit elitDeserunt ipsum aute adipisicing ad laboris in sunt incididunt consequat adipisicing ad.'
+export default function Headlines({ height, width, category, articles }) {
 
   return (
     <div className='headlines-container' style={{ height:`${height}`, width: `${width}`}}>
@@ -15,14 +13,21 @@ export default function Headlines({ height, width, category }) {
           <Link to='/'>EN</Link>
         </div>
         <div>
-        <a className='read-more'>{(category)?`TOP HEADLINES IN ${category}`:'TOP HEADLINES'}</a>
+        <div className='read-more'>{(category)?`TOP HEADLINES IN ${category}`:'TOP HEADLINES'}</div>
         </div>
       </div>
 
       <div className='headlines-list'>
-        <MiniDescCard height='54px' width='96%' data= {data}/>
-        <MiniDescCard height='54px' width='96%' data= {data}/>
-        <MiniDescCard height='54px' width='96%' data= {data}/>
+        {(articles)?
+          articles.map((article)=>{
+            return <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title}/>
+          })
+          :(
+            [...Array(3)].map((index)=>{
+              return  <MiniDescCard key={index} height='54px' width='96%'/>
+            })
+          )
+        }
       </div>
     </div>
   )

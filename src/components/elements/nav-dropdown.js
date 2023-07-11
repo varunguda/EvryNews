@@ -16,16 +16,16 @@ export default function Dropdown() {
         <strong><MiniCard height='150px' width='100%'/></strong>
         <strong><MiniCard height='150px' width='100%'/></strong>
         <strong><MiniCard height='150px' width='100%'/></strong>
-        <div className='desc-card'><DescCard height='50px' width='90%' data= {data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='90%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data= {data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
       </div>
     </div>
   )

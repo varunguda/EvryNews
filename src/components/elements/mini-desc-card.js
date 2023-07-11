@@ -5,13 +5,21 @@ import React from 'react';
 import './styles/mini-desc-card.css';
 import DescCard from './desc-card';
 
-export default function MiniDescCard({ height, width, article }) {
+export default function MiniDescCard({ height, width, imageUrl, url, title }) {
   return (
+    <a href={(url)?url:'/'} target='_blank' style={{color: 'black'}}>
     <div className='mini-desc-card-container' style={{width: `${width}`, height: `${height}`}}>
-      <DescCard height={`${height}`} width='65%' data= {(article)?article.title:'no title'}/>
-      <div className='desc-card-image-container' style={{width: `35%`, height: '100%'}}>
-        <img className='desc-card-image' src={(article)?article.urlToImage:"https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"} alt='mini-desc-card'/>
-      </div>
+
+        <DescCard height={`${height}`} width='65%' data= {(title)?title:''}/>
+        
+        <div className='desc-card-image-container' style={{width: `35%`, height: '100%'}}>
+          {
+            (imageUrl)?
+              <img className='desc-card-image' src={(imageUrl)?imageUrl:'./site-logo-image.png'} alt='mini-desc-card'/>:
+              <div className="image-placeholder placeholder"></div>
+          }
+        </div>
     </div>
+    </a>
   )
 }

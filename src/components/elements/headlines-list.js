@@ -2,23 +2,43 @@ import React, { useEffect } from 'react';
 
 import './styles/headlines.css';
 
-export default function HeadlinesList({ dataArr, containerId }) {
-  useEffect(() => {
-    const headlinesList = document.getElementById(`${containerId}`);
+export default function HeadlinesList({ length, articles, containerId }) {
+  // useEffect(() => {
+  //   const headlinesList = document.getElementById(`${containerId}`);
 
-    // Remove previously added elements
-    // while (headlinesList.firstChild) {
-    //   headlinesList.removeChild(headlinesList.firstChild);
-    // }
+  //   (articles)?(
+  //     articles.map((article)=>{
+  //       let listElem = document.createElement('div');
+  //       listElem.className = 'headlines-list-elem';
+  //       listElem.innerHTML = article.title;
+  //       headlinesList.innerHTML = '';
+  //       headlinesList.appendChild(listElem);
+  //     })
+  //   )
+  //   :(
+  //     [...Array(length)].map(()=>{
+  //       let listElem = document.createElement('div');
+  //       listElem.classList.add('placeholder');
+  //       listElem.classList.add('text-placeholder');
+  //       headlinesList.appendChild(listElem);
+  //     })
+  //   )
+  // }, []);
 
-    // Add new elements
-    for (let i = 0; i < dataArr.length; i++) {
-      let listElem = document.createElement('div');
-      listElem.className = 'headlines-list-elem';
-      listElem.innerHTML = dataArr[i];
-      headlinesList.appendChild(listElem);
+  return (
+  <div id={containerId} className='headlines-list-container'>
+    {
+      (articles)?(
+        articles.map((article)=>{
+          return <div key={article.url} className="headlines-list-elem">{article.title}</div>
+        })
+      )
+      :(
+        [...Array(length)].map((index)=>{
+          return <div key={index} className="text-placeholder placeholder"></div>
+        })
+      )
     }
-  }, [dataArr, containerId]);
-
-  return <div id={containerId} className='headlines-list-container'></div>;
+  </div>
+  )
 }

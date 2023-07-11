@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 53px;
 }
 
 .content-container-2::after{

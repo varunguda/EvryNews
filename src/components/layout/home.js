@@ -13,29 +13,49 @@ import EighthSegment from '../elements/element-structures/eighth-segment';
 import FooterSegment from '../elements/element-structures/footer';
 
 export default function Home() {
+  
+  const [politicsArticles, setPoliticsArticles] = useState([]);
 
-  // const [popArticles, setPopArticles] = useState([]);
+  const [ topArticles, setTopArticles ] = useState([]);
 
-  // useEffect(()=>{
-  //   fetchArticles();
-  // },[]);
+  const [ popArticles, setPopArticles ] = useState([]);
 
-  // const fetchArticles = async  () =>{
-  //   try{
-  //     let response = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1');
-  //     let jsonData = await response.json();
-  //     setPopArticles(jsonData.articles);
-  //   }
-  //   catch(error){
-  //     console.log(`Error fetching data: ${error}`)
-  //   }
-  // }
+  const fetchNewsArticles = async (api, fetchFn) =>{
+    try{
+      let response = await fetch(api);
+      let jsonData = await response.json();
+      fetchFn(jsonData.articles);
+    }catch(err){
+      console.log('Error while fetching the data:' + err);
+    }
+  }
 
-  {console.log('a')}
+  const fetchIoArticles = async (api, fetchFn) =>{
+    try{
+      let response = await fetch(api);
+      let jsonData = await response.json();
+      fetchFn(jsonData.results)
+    }catch(err){
+      console.log('Error while fetching the data:' + err);
+    }
+  }
+
+  useEffect(()=>{
+    fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
+
+    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setTopArticles)
+
+    fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopArticles);
+
+  },[])
 
   return (
     <>
-      <FirstSegment/>
+      <FirstSegment 
+      politicsArticles={politicsArticles.slice(0,2)}
+      topArticles={topArticles}
+      popArticles = {popArticles}
+      />
       <SecondSegment />
       <ThirdSegment />
       <FourthSegment />

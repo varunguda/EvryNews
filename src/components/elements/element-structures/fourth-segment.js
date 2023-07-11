@@ -18,14 +18,13 @@ export default function FourthSegment() {
                 <div className='section-first-segment section-segment'>
                     <MainCard width='100%' height='240px' small = {true}/>
                     <div className='section-grid'>
-                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
-                        <MiniCard height='155px' width='100%' data='cupida cupidatat cupidatat dolar incididunt dolor'/>
+                        {/* {[...Array(4)].map((index)=>{
+                            return <MiniCard key={index} height='155px' width='100%'/>
+                        })} */}
                     </div>
                 </div>
                 <div className='section-sec-segment section-segment'>
-                    <HeadlinesList dataArr={['Mollit mollit eu amet officia.','Velit sunt cillum deserunt anim velit proident anim anim proident reprehenderit eu irure Lorem.']} containerId={2}/>
+                    <HeadlinesList length={3} containerId={2}/>
                 </div>
             </div>
             <div className='section section2'>

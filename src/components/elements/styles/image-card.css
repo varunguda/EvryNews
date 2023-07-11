@@ -6,6 +6,7 @@
 }
 
 .image-card-image-container{
+    position: relative;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -13,6 +14,8 @@
 .image-card-image{
     border-radius: 7px;
     transition: 0.5s;
+    height: 100%;
+    width: 100%;
 }
 
 .image-card-image:hover{
