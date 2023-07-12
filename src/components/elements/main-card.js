@@ -22,7 +22,7 @@ export default function MainCard({ height, width, small, articles }) {
             <div className="main-card-image-container">
                 {
                     (articles) ?
-                        <img className={`main-card-image`} src={(articles && articles[0].image_url)?articles[0].image_url: ''} alt='main-card' /> :
+                        <img className={`main-card-image`} src={(articles && articles[0].image_url)?articles[0].image_url: './site-logo-b&w.png'} alt='main-card' /> :
                         <div className="image-placeholder placeholder" />
                 }
             </div>
@@ -40,7 +40,7 @@ export default function MainCard({ height, width, small, articles }) {
             <div className="main-card-image-container">
                 {
                     (articles) ?
-                        <img className={`main-card-image`} src={(articles && articles[1].image_url)?articles[1].image_url: ''} alt='main-card' /> :
+                        <img className={`main-card-image`} src={(articles && articles[1].image_url)?articles[1].image_url: './site-logo-b&w.png'} alt='main-card' /> :
                         <div className="image-placeholder placeholder" />
                 }
             </div>

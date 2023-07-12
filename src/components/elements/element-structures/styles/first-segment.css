@@ -74,6 +74,12 @@
     bottom: -15px;
 }
 
+.first-segment-container .grid-elem:last-child::after,
+.first-segment-container .grid-elem:nth-last-child(2):after
+{
+    display: none;
+}
+
 .main-segment-container::after{
     content: '';
     width: 100%;

@@ -12,7 +12,7 @@ export default function MiniCard({direction, width, height, url, imageUrl, title
       <div className="card-image-container" style={{ height: '68%', width: '100%'}}>
           {
             (imageUrl)?
-            (<img alt='mini-card' src={imageUrl} className='card-image'/>):
+            (<img alt='mini-card' src={(imageUrl)?imageUrl:'./site-logo-b&w.png'} className='card-image'/>):
           <div className="image-placeholder placeholder"></div>
         }
       </div>

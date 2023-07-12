@@ -41,11 +41,13 @@ export default function Home() {
   }
 
   useEffect(()=>{
-    fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
+    // fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setTopArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setTopArticles)
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopArticles);
+
+
 
   },[])
 
@@ -56,26 +58,18 @@ export default function Home() {
       topArticles={topArticles}
       popArticles = {popArticles}
       />
-      <SecondSegment />
-      <ThirdSegment />
-      <FourthSegment />
-      <FifthSegment title="world" containerId={3}/>
-      <SixthSegment title='Sports' top='660px'/>
-      <div style={{marginTop:'510px'}}>
-        <ThirdSegment />
-      </div>
-      <SeventhSegment title="SPORTS" containerId={4}/>
-      <div style={{marginTop:'120px'}}>
-        <SeventhSegment title="TRAVEL" containerId={5}/>
-      </div>
-      <EighthSegment title='EDUCATION' top='530px'/>
-      <div style={{marginTop:'110px'}}>
-        <FifthSegment title='Business' containerId={6}/>
-      </div>
-      <div className='last-segment'>
-        <EighthSegment title='EDUCATION' top="660px"/>
-      </div>
-      <FooterSegment top="670px"/>
+      <SecondSegment top='180px'/>
+      <ThirdSegment category='india' top='290px'/>
+      <FourthSegment category='entertainment' top='420px'/>
+      <FifthSegment category="world" top='560px'/>
+      <SixthSegment category='cricket' top='690px'/>
+      <ThirdSegment category='politics' top='820px'/>
+      <SeventhSegment category="Business" top='950px'/>
+      <SeventhSegment category="Tech" top='1070px'/>
+      <EighthSegment category='sports' top='1200px'/>
+      <FifthSegment category='Auto' top='1330px'/>
+      <EighthSegment category='Education' top="1460px"/>
+      <FooterSegment top="1528px"/>
     </>
   )
 }

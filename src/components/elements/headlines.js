@@ -20,7 +20,7 @@ export default function Headlines({ height, width, category, articles }) {
       <div className='headlines-list'>
         {(articles)?
           articles.map((article)=>{
-            return <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title}/>
+            return <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
           })
           :(
             [...Array(3)].map((index)=>{

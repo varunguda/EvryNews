@@ -7,13 +7,15 @@ import MainCard from '../main-card';
 import HeadlinesList from '../headlines-list';
 import DescCard from '../desc-card';
 
-export default function FifthSegment({ title, containerId }){
+export default function FifthSegment({ category, containerId, top }){
     return(
 
-    <div className='fifth-segment-container main-segment-container  segment-container'>
-        <div className='section-head fifth-segment-section-head'>
-            {title}
-        </div>
+    <div className='fifth-segment-container main-segment-container  segment-container' style={{top: top}}>
+        {category?(
+            <div className='section-head fifth-segment-section-head'>
+                {category}
+            </div>
+        ):''}
         <div className='fifth-sec-container'>
             <div className='section section1 fifth-seg-sec'>
                 <div className='section-part'>

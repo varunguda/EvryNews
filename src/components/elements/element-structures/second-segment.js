@@ -5,9 +5,9 @@ import './styles/second-segment.css';
 import MiniCard from '../mini-card.js';
 import DescCard from '../desc-card';
 
-export default function SecondSegment() {
+export default function SecondSegment({ top }) {
   return (
-    <div className='second-segment-container main-segment-container'>
+    <div className='second-segment-container main-segment-container' style={{ top: top}}>
       <div className='section'>
         <div className='section-head second-section-head'>TECH</div>
         <div className='sec-container'>

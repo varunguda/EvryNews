@@ -6,7 +6,7 @@ import './styles/footer.css';
 export default function FooterSegment({ top }) {
 
   return (
-    <div className='footer-segment-container segment-container' style={{top:top}}>
+    <div className='footer-segment-container segment-container' style={{marginTop:top}}>
         <div className='site-logo'>
             <div className="navigator-head" style={{fontSize:'21px'}}>
                 <Link to='/'>EN</Link>

@@ -6,12 +6,15 @@ import HeadlinesList from '../headlines-list';
 import MiniCard from '../mini-card';
 import MiniDescCard from '../mini-desc-card';
 
-export default function SeventhSegment({ title, containerId }) {
+export default function SeventhSegment({ category, containerId, top }) {
   return (
-    <div className='seventh-segment-container main-segment-container segment-container'>
-        <div className='section-head seventh-segment-section-head'>
-            {title}
-        </div>
+    <div className='seventh-segment-container main-segment-container segment-container' style={{top: top}}>
+        {category?(
+            <div className='section-head seventh-segment-section-head'>
+                {category}
+            </div>
+        ):''
+        }
         <div className='seventh-sec-container'>
             <div className='section section1 seventh-seg-sec'>
                 <div className='section-part'>

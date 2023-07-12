@@ -48,16 +48,6 @@
     text-overflow: ellipsis;
 }
 
-/* .main-card-container::before{
-    content: '';
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    top: 0;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.191), rgba(0, 0, 0, 0));
-    z-index: 1;
-} */
-
 .main-card{
     transition: 1.3s;
 }

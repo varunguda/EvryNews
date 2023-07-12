@@ -10,10 +10,10 @@ import MiniDescCard from '../mini-desc-card';
 import Headlines from '../headlines';
 import HeadlinesList from '../headlines-list';
 
-export default function FirstSegment( { popArticles ,topArticles, category, politicsArticles }) {
+export default function FirstSegment( { popArticles ,topArticles, category, politicsArticles, top }) {
   
   return (
-    <div className='first-segment-container main-segment-container'>
+    <div className='first-segment-container main-segment-container' style={{top: top}}>
       
         <div className='content-container-1'>
           {(politicsArticles && politicsArticles.length>0)?
@@ -25,13 +25,13 @@ export default function FirstSegment( { popArticles ,topArticles, category, poli
           {topArticles && topArticles.length > 0 ? (
             topArticles.map((article) => (
               <div className='grid-elem'>
-                <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title}/>
+                <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
               </div>
             ))
           ):
           (
             [...Array(20)].map((index) => {
-              return <MiniDescCard key={index} height='54px' width='96%' />
+              return <MiniDescCard key={index} height='54px' width='96%'/>
             })
           )
           }

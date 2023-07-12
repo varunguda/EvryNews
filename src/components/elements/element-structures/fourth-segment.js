@@ -7,12 +7,14 @@ import MainCard from '../main-card';
 import HeadlinesList from '../headlines-list';
 import ImageCard from '../image-card';
 
-export default function FourthSegment() {
+export default function FourthSegment({ category, top }) {
   return (
-    <div className='fourth-segment-container main-segment-container segment-container'>
-        <div className='section-head fourth-segment-section-head'>
-            ENTERTAINMENT
-        </div>
+    <div className='fourth-segment-container main-segment-container segment-container' style={{top:top}}>
+        {category?(
+            <div className='section-head fourth-segment-section-head'>
+                {category}
+            </div>
+        ):''}
         <div className='fourth-sec-container'>
             <div className='section section1'>
                 <div className='section-first-segment section-segment'>

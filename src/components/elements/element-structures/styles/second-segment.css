@@ -3,11 +3,11 @@
     height: auto;
     width: 96%;
     position: relative;
-    top: 170px;
+    left: 0;
     padding: 0 2%;
     display: flex;
     justify-content: space-between;
-    gap: 4%;
+    gap: 45px;
 }
 
 .section-head{

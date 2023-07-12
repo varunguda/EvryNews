@@ -327,7 +327,7 @@
 
 
   .main-container{
-    height: auto;
+    min-height:auto;
     width: 80%;
     color: var(--primary-text-color);
     position: relative;

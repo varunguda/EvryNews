@@ -1,20 +1,16 @@
 
 .segment-container{
     position: relative;
+    left: 0;
     padding: 0 2%;
     height: auto;
     width: 96%;
-}
-
-.fourth-segment-container{
-    top: 410px;
 }
 
 .fourth-sec-container{
     display: flex;
     gap: 4%;
 }
-
 
 .fourth-segment-small-head{
     font-size: 1rem;
