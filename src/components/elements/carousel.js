@@ -36,8 +36,8 @@ export default function NewsCarousel({ articles }){
     }
   }, [articles]);
   
-  [...Array(10)].map((index)=>{
-    items.push(
+  [...Array(10)].map((_,index)=>{
+    return items.push(
       <MiniCard
         key={index}
         height='155px'

@@ -11,7 +11,7 @@ import SeventhSegment from '../elements/element-structures/seventh-segment';
 import EighthSegment from '../elements/element-structures/eighth-segment';
 import FooterSegment from '../elements/element-structures/footer';
 
-export default function Home({ politicsArticles, popularArticles, trendArticles, indiaArticles, entertainmentArticles, worldArticles, cricketArticles, techArticles }) {
+export default function Home({ politicsArticles, popularArticles, trendArticles, indiaArticles, entertainmentArticles, worldArticles, cricketArticles, techArticles, sportsArticles, autoArticles, healthArticles, businessArticles }) {
   
   return (
     <>
@@ -25,12 +25,12 @@ export default function Home({ politicsArticles, popularArticles, trendArticles,
       <FourthSegment category='entertainment' top='420px' articles={entertainmentArticles}/>
       <FifthSegment category="world" top='560px' articles={worldArticles}/>
       <SixthSegment category='cricket' top='690px' articles={cricketArticles}/>
-      <ThirdSegment category='politics' top='820px'/>
-      <SeventhSegment category="Business" top='950px'/>
-      <SeventhSegment category="Tech" top='1070px' articles={techArticles.slice(5)}/>
-      <EighthSegment category='sports' top='1200px'/>
-      <FifthSegment category='Auto' top='1330px'/>
-      <EighthSegment category='Education' top="1460px"/>
+      <ThirdSegment category='politics' top='820px' articles={politicsArticles.slice(0,8)}/>
+      <SeventhSegment category="Business" top='950px' articles={businessArticles}/>
+      <SeventhSegment category="Tech" top='1070px' articles={techArticles.slice(4)}/>
+      <EighthSegment category='sports' top='1200px' articles={sportsArticles}/>
+      <FifthSegment category='Auto' top='1330px' articles={autoArticles}/>
+      <EighthSegment category='Health' top="1460px" articles={healthArticles}/>
       <FooterSegment top="1528px"/>
     </>
   )

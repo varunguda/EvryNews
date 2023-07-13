@@ -19,15 +19,15 @@ export default function MainCard({ height, width, small, articles }) {
         <div className={`main-card main-card-1 ${(showCard1)? "":"hide"}`}>
             <div className="main-card-image-container">
                 {
-                    (articles && articles[0]) ?
-                        (<img className={`main-card-image`} src={(articles[0])?articles[0].urlToImage: './site-logo-b&w.png'} alt='main-card' /> )
+                    (articles && articles.length>0) ?
+                        (<img className={`main-card-image`} src={(articles[0].urlToImage)?articles[0].urlToImage: './site-logo-b&w.png'} alt='main-card' /> )
                         :(
                         <div className="image-placeholder placeholder" />
                         )
                 }
             </div>
             {
-                (articles && articles[0])?
+                (articles && articles.length>0)?
                 (<div className='main-card-description' style={{ fontSize: (small)?'1.2rem':'2rem'}}>
                     <div className="main-card-caption">
                         {(articles[0])?articles[0].title:''}
@@ -41,13 +41,13 @@ export default function MainCard({ height, width, small, articles }) {
         <div className={`main-card main-card-2 ${(showCard1) ? "hide" : ""}`}>
             <div className="main-card-image-container">
                 {
-                    (articles && articles[1]) ?
-                        <img className={`main-card-image`} src={(articles[1])?(articles[1].urlToImage): './site-logo-b&w.png'} alt='main-card' /> :
+                    (articles && articles.length>0) ?
+                        <img className={`main-card-image`} src={(articles[1].urlToImage)?(articles[1].urlToImage): './site-logo-b&w.png'} alt='main-card' /> :
                         <div className="image-placeholder placeholder" />
                 }
             </div>
             {
-                (articles && articles[1]) ?
+                (articles && articles.length>0) ?
                     (<div className='main-card-description' style={{ fontSize: (small) ? '1.2rem' : '2rem' }}>
                         <div className="main-card-caption">
                             {(articles[1]) ? articles[1].title : ''}

@@ -39,6 +39,8 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
 
   const [ techArticles, setTechArticles ] = useState([]);
 
+  const [ sportsArticles, setSportsArticles ] = useState([]);
+
   useEffect(()=>{
     // fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
 
@@ -56,6 +58,8 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
 
     // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
 
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles)
+
   },[])
 
 
@@ -64,10 +68,11 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
       <Router>
         <NavbarSecondary 
           indiaArticles={popularArticles.slice(27,43)}
-          // politicsArticles={politicsArticles.slice(2,17)}
           worldArticles={worldArticles.slice(10,25)}
           cricketArticles={cricketArticles.slice(0,15)}
           techArticles = {techArticles.slice(0,15)}
+          sportsArticles={sportsArticles.slice(0,15)}
+          politicsArticles={politicsArticles.slice(2,17)}
         />
         <Routes>
           <Route 
@@ -82,6 +87,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
             worldArticles={worldArticles.slice(0,10)}
             cricketArticles={cricketArticles.slice(15,39)}
             techArticles={techArticles}
+            sportsArticles={sportsArticles.slice(14,20)}
             />}
           />
           <Route path='/india' element={<India category='india'/>} />

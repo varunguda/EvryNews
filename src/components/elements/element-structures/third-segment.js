@@ -16,7 +16,7 @@ export default function ThirdSegment({ top, category, articles }) {
             ):''
           }
           {
-            (articles)?(
+            (articles && articles.length>0)?(
               <NewsCarousel articles={articles}/>
             ):(
               <NewsCarousel />

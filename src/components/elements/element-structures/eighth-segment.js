@@ -4,19 +4,24 @@ import './styles/eighth-segment.css';
 
 import MiniCard from '../mini-card';
 
-export default function EighthSegment({ category , top }) {
+export default function EighthSegment({ category , top, articles  }) {
   return (
     <div className='eighth-segment-container main-segment-container segment-container' style={{top: top}}>
         {category?(<div className='section-head seventh-segment-section-head'>
             {category}
         </div>):''}
         <div className="eighth-sec-container">
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
-          <MiniCard data="China's car market saw little impact of Covid in 2020" height='140px' width='100%'/>
+          {
+            (articles && articles.length>0)?(
+              articles.map((article)=>{
+                return <MiniCard key={article.url} height='150px' width='100%' article={article} imageUrl={article.urlToImage} title={article.title} url={article.url}/> 
+              })
+            ):(
+              [...Array(6)].map((_,index)=>{
+                  return <MiniCard key={index} height='150px' width='100%'/>
+              })
+            )
+          }
         </div>
     </div>
   )

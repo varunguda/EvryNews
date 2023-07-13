@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Dropdown from './nav-dropdown';
 
-export default function NavbarSecondary({ indiaArticles, politicsArticles, worldArticles, cricketArticles, techArticles }) {
+export default function NavbarSecondary({ indiaArticles, politicsArticles, worldArticles, cricketArticles, techArticles, sportsArticles, businessArticles, entertainmentArticles, educationArticles, autoArticles, healthArticles }) {
   let [ isActive, setIsActive ] = useState(false); 
   let [ isChecked, setIsChecked ] = useState(false);
 
@@ -53,7 +53,13 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
             </div>
             <div className="nav-elem">
                 <Link to='/business' className={(pathIsActive('/business'))?"active-nav-elem":''}>Business</Link>
-                <Dropdown />
+                {
+                    (businessArticles && businessArticles.length>0)?(
+                        <Dropdown articles={businessArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/tech' className={(pathIsActive('/tech'))?"active-nav-elem":''}>Tech</Link>
@@ -67,7 +73,13 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
             </div>
             <div className="nav-elem">
                 <Link to='/sports' className={(pathIsActive('/sports'))?"active-nav-elem":''}>Sports</Link>
-                <Dropdown />
+                {
+                    (sportsArticles && sportsArticles.length > 0)?(
+                        <Dropdown articles={sportsArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/cricket' className={(pathIsActive('/cricket'))?"active-nav-elem":''}>Cricket</Link>
@@ -81,19 +93,43 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
             </div>
             <div className="nav-elem">
                 <Link to='/entertainment' className={(pathIsActive('/entertainment'))?"active-nav-elem":''}>Entertainment</Link>
-                <Dropdown />
+                {
+                    (entertainmentArticles && entertainmentArticles.length > 0)?(
+                        <Dropdown articles={entertainmentArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/education' className={(pathIsActive('/education'))?"active-nav-elem":''}>Education</Link>
-                <Dropdown />
+                {
+                    (educationArticles && educationArticles.length > 0)?(
+                        <Dropdown articles={educationArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/auto' className={(pathIsActive('/auto'))?"active-nav-elem":''}>Auto</Link>
-                <Dropdown />
+                {
+                    (autoArticles && autoArticles.length > 0)?(
+                        <Dropdown articles={autoArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
-                <Link to='/lifestyle' className={(pathIsActive('/lifestyle'))?"active-nav-elem":''}>Life & Style</Link>
-                <Dropdown />
+                <Link to='/health' className={(pathIsActive('/lifestyle'))?"active-nav-elem":''}>Life & Health</Link>
+                {
+                    (healthArticles && healthArticles.length > 0)?(
+                        <Dropdown articles={healthArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/politics' className={(pathIsActive('/politics'))?"active-nav-elem":''}>Politics</Link>

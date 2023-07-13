@@ -4,7 +4,6 @@ import React from 'react';
 import './styles/second-segment.css';
 import MiniCard from '../mini-card.js';
 import DescCard from '../desc-card';
-import MainCard from '../main-card';
 
 export default function SecondSegment({ top, techArticles, autoArticles, trendArticles }) {
   return (
