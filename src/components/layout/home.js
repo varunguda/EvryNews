@@ -16,11 +16,11 @@ export default function Home({ politicsArticles, popularArticles, trendArticles,
   return (
     <>
       <FirstSegment 
-      politicsArticles={politicsArticles}
+      politicsArticles={politicsArticles.slice(0,2)}
       trendArticles={trendArticles}
       popularArticles = {popularArticles}
       />
-      <SecondSegment top='180px' techArticles={techArticles.slice(5,8)} />
+      <SecondSegment top='180px' techArticles={techArticles.slice(5,8)} trendArticles={trendArticles.slice(0,3)} autoArticles={autoArticles.slice(10,13)} />
       <ThirdSegment category='india' top='290px' articles={indiaArticles}/>
       <FourthSegment category='entertainment' top='420px' articles={entertainmentArticles}/>
       <FifthSegment category="world" top='560px' articles={worldArticles}/>

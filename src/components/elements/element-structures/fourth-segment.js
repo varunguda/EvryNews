@@ -28,7 +28,7 @@ export default function FourthSegment({ category, top, articles }) {
                     <div className='section-grid'>
                         {
                             (articles && articles.length>0)?(articles.slice(2, 6).map((article) => (
-                                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url}/>
+                                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url} article={article}/>
                             ))):(
                                 [...Array(4)].map((index)=>{
                                     return <MiniCard key={index} height='155px' width='100%'/>
@@ -56,7 +56,7 @@ export default function FourthSegment({ category, top, articles }) {
                 <div className='entertainment-section'>
                     {
                     (articles && articles.length>0)?(
-                        (articles.slice(10,19).map((article)=>{
+                        (articles.slice(10).map((article)=>{
                             return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%'/>
                         }))
                         ):(

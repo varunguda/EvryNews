@@ -2,8 +2,8 @@
 .sixth-sec-container{
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 60px 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 20px;
 }
 
 .sixth-seg-sec{

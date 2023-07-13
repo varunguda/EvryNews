@@ -29,6 +29,7 @@ export default function NewsCarousel({ articles }){
             imageUrl={article.urlToImage}
             title={article.title}
             url={article.url}
+            article={article}
           />
         );
         i+=1

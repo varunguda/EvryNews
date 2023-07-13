@@ -39,7 +39,7 @@ export default function FirstSegment( { popularArticles ,trendArticles, category
         <div className='content-container-2'>
         {popularArticles && popularArticles.length > 0 ? (
             popularArticles.slice(3,9).map((article) => (
-                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title}/>
+                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
             ))
           ):
           (
