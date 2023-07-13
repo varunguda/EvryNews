@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Dropdown from './nav-dropdown';
 
-export default function NavbarSecondary() {
+export default function NavbarSecondary({ indiaArticles, politicsArticles }) {
   let [ isActive, setIsActive ] = useState(false); 
   let [ isChecked, setIsChecked ] = useState(false);
 
@@ -33,7 +33,13 @@ export default function NavbarSecondary() {
             </div>
             <div className="nav-elem">
                 <Link to='/india' className={(pathIsActive('/india'))?"active-nav-elem":''}>India</Link>
-                <Dropdown />
+                {
+                    (indiaArticles)?(
+                        <Dropdown articles={indiaArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
             <div className="nav-elem">
                 <Link to='/world' className={(pathIsActive('/world'))?"active-nav-elem":''}>World</Link>
@@ -73,7 +79,13 @@ export default function NavbarSecondary() {
             </div>
             <div className="nav-elem">
                 <Link to='/politics' className={(pathIsActive('/politics'))?"active-nav-elem":''}>Politics</Link>
-                <Dropdown />
+                {
+                    (politicsArticles)?(
+                        <Dropdown articles={politicsArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
             </div>
         <div className='dropdown'>
             <input type='checkbox' id='input-checkbox' checked={isChecked} onChange={handleCheckboxChange}/>

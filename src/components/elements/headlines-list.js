@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import './styles/headlines.css';
 
-export default function HeadlinesList({ length, articles, containerId }) {
+export default function HeadlinesList({ length, articles }) {
   // useEffect(() => {
   //   const headlinesList = document.getElementById(`${containerId}`);
 
@@ -26,7 +26,7 @@ export default function HeadlinesList({ length, articles, containerId }) {
   // }, []);
 
   return (
-  <div id={containerId} className='headlines-list-container'>
+  <div className='headlines-list-container'>
     {
       (articles)?(
         articles.map((article)=>{

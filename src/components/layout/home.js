@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
 import './styles/navbar.css';
 import FirstSegment from '../elements/element-structures/first-segment.js';
@@ -12,55 +11,18 @@ import SeventhSegment from '../elements/element-structures/seventh-segment';
 import EighthSegment from '../elements/element-structures/eighth-segment';
 import FooterSegment from '../elements/element-structures/footer';
 
-export default function Home() {
+export default function Home({ politicsArticles, popularArticles, trendArticles, indiaArticles, entertainmentArticles}) {
   
-  const [politicsArticles, setPoliticsArticles] = useState([]);
-
-  const [ topArticles, setTopArticles ] = useState([]);
-
-  const [ popArticles, setPopArticles ] = useState([]);
-
-  const fetchNewsArticles = async (api, fetchFn) =>{
-    try{
-      let response = await fetch(api);
-      let jsonData = await response.json();
-      fetchFn(jsonData.articles);
-    }catch(err){
-      console.log('Error while fetching the data:' + err);
-    }
-  }
-
-  const fetchIoArticles = async (api, fetchFn) =>{
-    try{
-      let response = await fetch(api);
-      let jsonData = await response.json();
-      fetchFn(jsonData.results)
-    }catch(err){
-      console.log('Error while fetching the data:' + err);
-    }
-  }
-
-  useEffect(()=>{
-    // fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
-
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setTopArticles)
-
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopArticles);
-
-
-
-  },[])
-
   return (
     <>
       <FirstSegment 
-      politicsArticles={politicsArticles.slice(0,2)}
-      topArticles={topArticles}
-      popArticles = {popArticles}
+      politicsArticles={politicsArticles}
+      trendArticles={trendArticles}
+      popularArticles = {popularArticles}
       />
       <SecondSegment top='180px'/>
-      <ThirdSegment category='india' top='290px'/>
-      <FourthSegment category='entertainment' top='420px'/>
+      <ThirdSegment category='india' top='290px' articles={indiaArticles}/>
+      <FourthSegment category='entertainment' top='420px' articles={entertainmentArticles}/>
       <FifthSegment category="world" top='560px'/>
       <SixthSegment category='cricket' top='690px'/>
       <ThirdSegment category='politics' top='820px'/>

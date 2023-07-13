@@ -6,6 +6,8 @@
 }
 
 .image-card-image-container{
+    height: 70%;
+    width: 100%;
     position: relative;
     border-radius: 7px;
     overflow: hidden;
@@ -21,3 +23,35 @@
 .image-card-image:hover{
     transform: scale(1.1);
 }
+
+.image-card-description{
+    height: 30%;
+    width: 100%;
+    position: relative;
+}
+
+/* .image-card-container{
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card-image-container{
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.image-card-image{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.image-card-image:hover{
+    transform: scale(1.1);
+} */

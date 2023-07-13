@@ -4,28 +4,34 @@ import MiniCard from './mini-card';
 import DescCard from './desc-card';
 import './styles/nav-dropdown.css';
 
-export default function Dropdown() {
-
-  const data = 'Lorem ipsum dolor sit amet consectetur Ut qui do officia amet proident quis exercitation ex exercitation.';
+export default function Dropdown({ articles }) {
 
   return (
     <div className='nav-elem-dropdown'>
       <div className="dropdown-grid">
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <strong><MiniCard height='150px' width='100%'/></strong>
-        <div className='desc-card'><DescCard height='50px' width='100%' data= {data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
-        <div className='desc-card'><DescCard height='50px' width='100%' data={data}/></div>
+        {
+          (articles)?(
+            articles.slice(0,5).map((article)=>{
+              return <strong><MiniCard key={article.url} height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title}/></strong>
+            })
+          ):(
+            [...Array(5)].map((index)=>{
+              return <strong><MiniCard key={index} height='150px' width='100%'/></strong>
+            })
+          )
+        }
+
+        {
+          (articles)?(
+            articles.slice(5,15).map((article)=>{
+              return <div className='desc-card'><DescCard key={article.url} height='50px' width='100%' data= {article.title}/></div>
+            })
+          ):(
+            [...Array(10)].map((index)=>{
+              return <div className='desc-card'><DescCard key={index}  height='50px' width='100%'/></div>
+            })
+          )
+        }
       </div>
     </div>
   )

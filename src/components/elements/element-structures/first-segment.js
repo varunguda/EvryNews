@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 import './styles/first-segment.css';
@@ -10,7 +8,7 @@ import MiniDescCard from '../mini-desc-card';
 import Headlines from '../headlines';
 import HeadlinesList from '../headlines-list';
 
-export default function FirstSegment( { popArticles ,topArticles, category, politicsArticles, top }) {
+export default function FirstSegment( { popularArticles ,trendArticles, category, politicsArticles, top }) {
   
   return (
     <div className='first-segment-container main-segment-container' style={{top: top}}>
@@ -22,8 +20,8 @@ export default function FirstSegment( { popArticles ,topArticles, category, poli
           }
 
           <div className='container-1-grid'>
-          {topArticles && topArticles.length > 0 ? (
-            topArticles.map((article) => (
+          {trendArticles && trendArticles.length > 0 ? (
+            trendArticles.map((article) => (
               <div className='grid-elem'>
                 <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
               </div>
@@ -39,8 +37,8 @@ export default function FirstSegment( { popArticles ,topArticles, category, poli
         </div>
 
         <div className='content-container-2'>
-        {popArticles && popArticles.length > 0 ? (
-            popArticles.slice(3,9).map((article) => (
+        {popularArticles && popularArticles.length > 0 ? (
+            popularArticles.slice(3,9).map((article) => (
                 <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title}/>
             ))
           ):
@@ -51,11 +49,11 @@ export default function FirstSegment( { popArticles ,topArticles, category, poli
           )
           }
         </div>
-          {(popArticles && popArticles.length > 0)?
+          {(popularArticles && popularArticles.length > 0)?
             (
               <div className='content-container-3'>
-                <Headlines height='300px' width='88%' category={category} articles={popArticles.slice(0,3)}/>
-                <HeadlinesList length={10} containerId={1} articles={popArticles.slice(9,27)}/>
+                <Headlines height='300px' width='88%' category={category} articles={popularArticles.slice(0,3)}/>
+                <HeadlinesList length={18} containerId={1} articles={popularArticles.slice(9,27)}/>
               </div>
             )
             :(

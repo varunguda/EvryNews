@@ -7,7 +7,7 @@ import MainCard from '../main-card';
 import HeadlinesList from '../headlines-list';
 import ImageCard from '../image-card';
 
-export default function FourthSegment({ category, top }) {
+export default function FourthSegment({ category, top, articles }) {
   return (
     <div className='fourth-segment-container main-segment-container segment-container' style={{top:top}}>
         {category?(
@@ -18,15 +18,33 @@ export default function FourthSegment({ category, top }) {
         <div className='fourth-sec-container'>
             <div className='section section1'>
                 <div className='section-first-segment section-segment'>
-                    <MainCard width='100%' height='240px' small = {true}/>
+                    {
+                        (articles && articles.length>0)?(
+                            <MainCard width='100%' height='240px' small = {true} articles={articles.slice(0,2)}/>
+                        ):(
+                            <MainCard width='100%' height='240px' small = {true}/>
+                        )
+                    }
                     <div className='section-grid'>
-                        {/* {[...Array(4)].map((index)=>{
-                            return <MiniCard key={index} height='155px' width='100%'/>
-                        })} */}
+                        {
+                            (articles && articles.length>0)?(articles.slice(2, 6).map((article) => (
+                                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url}/>
+                            ))):(
+                                [...Array(4)].map((index)=>{
+                                    return <MiniCard key={index} height='155px' width='100%'/>
+                                })
+                            )
+                        }
                     </div>
                 </div>
                 <div className='section-sec-segment section-segment'>
-                    <HeadlinesList length={3} containerId={2}/>
+                    {
+                        (articles && articles.length>0)?(
+                            <HeadlinesList length={4} articles={articles.slice(6,10)}/>
+                            ):(
+                            <HeadlinesList length={3}/>
+                        )
+                    }
                 </div>
             </div>
             <div className='section section2'>
@@ -36,15 +54,17 @@ export default function FourthSegment({ category, top }) {
                     </span> TERTAINMENT PHOTOS
                 </div>
                 <div className='entertainment-section'>
-                    <ImageCard height='180px' width='95%' data='Arman made appearence at delhi airport yesterdat' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitati' />
-                    <ImageCard height='180px' width='95%' data='Nisi magna sint labore est ea exercitatiMagna cupidatat mollit aliquip eiusmod quis ipsum reprehenderit adipisicing commodo nulla.' />
+                    {
+                    (articles && articles.length>0)?(
+                        (articles.slice(10,19).map((article)=>{
+                            return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%'/>
+                        }))
+                        ):(
+                            [...Array(9)].map((index)=>{
+                                return <ImageCard key={index} height='160px' width='100%'/>
+                            })
+                        )
+                    }
                 </div>
             </div>
         </div>
