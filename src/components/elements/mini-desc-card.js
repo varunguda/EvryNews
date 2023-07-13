@@ -7,7 +7,8 @@ import DescCard from './desc-card';
 
 export default function MiniDescCard({ height, width, imageUrl, url, title, article }) {
   return (
-    <a href={(url)?url:'/'} target='_blank' style={{color: 'black'}}>
+    <a href={(article)?url:'/'} target='_blank' rel='noreferrer' style={{color: 'black', textDecoration:'none'}}>
+
     <div className='mini-desc-card-container' style={{width: `${width}`, height: `${height}`}}>
 
         <DescCard height={`${height}`} width='65%' data= {(title)?title:''}/>

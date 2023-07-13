@@ -16,7 +16,7 @@ export default function FourthSegment({ category, top, articles }) {
             </div>
         ):''}
         <div className='fourth-sec-container'>
-            <div className='section section1'>
+            <div className='section1'>
                 <div className='section-first-segment section-segment'>
                     {
                         (articles && articles.length>0)?(
@@ -40,14 +40,14 @@ export default function FourthSegment({ category, top, articles }) {
                 <div className='section-sec-segment section-segment'>
                     {
                         (articles && articles.length>0)?(
-                            <HeadlinesList length={4} articles={articles.slice(6,10)}/>
+                            <HeadlinesList length={5} articles={articles.slice(6,11)}/>
                             ):(
                             <HeadlinesList length={3}/>
                         )
                     }
                 </div>
             </div>
-            <div className='section section2'>
+            <div className='section2'>
                 <div className='section-head fourth-segment-small-head'>
                     <span className="navigator-head" style={{fontSize: '13px', marginLeft: '0%'}}>
                         <Link to='/'>EN</Link>

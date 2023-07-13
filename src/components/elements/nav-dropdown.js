@@ -10,9 +10,9 @@ export default function Dropdown({ articles }) {
     <div className='nav-elem-dropdown'>
       <div className="dropdown-grid">
         {
-          (articles)?(
+          (articles && articles.length>0)?(
             articles.slice(0,5).map((article)=>{
-              return <strong><MiniCard key={article.url} height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title}/></strong>
+              return <strong><MiniCard key={article.url} height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title} article={article}/></strong>
             })
           ):(
             [...Array(5)].map((index)=>{
@@ -22,7 +22,7 @@ export default function Dropdown({ articles }) {
         }
 
         {
-          (articles)?(
+          (articles && articles.length>0)?(
             articles.slice(5,15).map((article)=>{
               return <div className='desc-card'><DescCard key={article.url} height='50px' width='100%' data= {article.title}/></div>
             })

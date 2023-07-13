@@ -33,6 +33,12 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
 
   const [ entertainmentArticles, setEntertainmentArticles ] = useState([])
 
+  const [worldArticles, setWorldArticles ] = useState([]);
+
+  const [ cricketArticles, setCricketArticles ] = useState([]);
+
+  const [ techArticles, setTechArticles ] = useState([]);
+
   useEffect(()=>{
     // fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
 
@@ -42,7 +48,13 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
 
     // fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setIndiaArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
 
   },[])
 
@@ -53,6 +65,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
         <NavbarSecondary 
           indiaArticles={popularArticles.slice(27,43)}
           // politicsArticles={politicsArticles.slice(2,17)}
+          worldArticles={worldArticles.slice(10,25)}
+          cricketArticles={cricketArticles.slice(0,15)}
+          techArticles = {techArticles.slice(0,15)}
         />
         <Routes>
           <Route 
@@ -64,6 +79,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
             trendArticles={trendArticles}
             indiaArticles={indiaArticles}
             entertainmentArticles={entertainmentArticles}
+            worldArticles={worldArticles.slice(0,10)}
+            cricketArticles={cricketArticles.slice(15,39)}
+            techArticles={techArticles}
             />}
           />
           <Route path='/india' element={<India category='india'/>} />

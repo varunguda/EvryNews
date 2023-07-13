@@ -25,17 +25,17 @@
 }
 
 .section1{
-    /* flex: 0.63; */
+    position: relative;
     width: 63%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    position: relative;
 }
 
 .section2{
     width: 37%;
-    /* flex: 0.37; */
+    height: 100%;
     position: relative;
     right: 0;
 }
@@ -72,5 +72,5 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap:20px 25px;
+    gap:40px 25px;
 }
