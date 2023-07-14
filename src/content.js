@@ -47,7 +47,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
   const [ educationArticles, setEducationArticles ] = useState([]);
 
-  const [ businessArticles, setBusinessArticles ] = useState([]);
+  const [ topBusinessArticles, setTopBusinessArticles ] = useState([]);
+
+  const [ businessArticles, setBusinessArticles] = useState([]);
 
   useEffect(()=>{
 
@@ -75,7 +77,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
     // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopBusinessArticles)
+    
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
 
   },[])
 
@@ -93,7 +97,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
           educationArticles={educationArticles.slice(0,15)}
           autoArticles={autoArticles.slice(3,18)}
           healthArticles={healthArticles.slice(2,15).concat(healthArticles.slice(0,2))}
-          businessArticles={businessArticles.slice(5,20)}
+          businessArticles={topBusinessArticles.slice(5,20)}
           entertainmentArticles={entertainmentArticles.slice(0,15)}
         />
 
@@ -113,7 +117,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
             sportsArticles={sportsArticles.slice(14,20)}
             autoArticles={autoArticles.slice(18,28).concat(autoArticles.slice(0,3))}
             healthArticles={healthArticles.slice(14,20)}
-            businessArticles={businessArticles.slice(0,17)}
+            businessArticles={topBusinessArticles.slice(0,17)}
             />}
           />
 
@@ -128,7 +132,8 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
                   {<India
                    category='india'
                    articles={indiaArticles.slice(10,20).concat(indiaArticles.slice(0,10))}
-                   pageArticles={popularArticles.slice(20*index,20*(index+1))}
+                   topHeadlines={popularArticles.slice(0,3)}
+                   pageArticles={popularArticles.slice(3).slice(20*index,20*(index+1))}
                    totalPages={pageCount(popularArticles.length)}
                    />} 
                   />
@@ -140,16 +145,60 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
                   element=
                   {<India
                    category='india'
-                   articles={indiaArticles.slice(10,20).concat(indiaArticles.slice(0,10))}
-                   pageArticles={popularArticles.slice()}
-                   totalPages={1}
                    />} 
                   />
             )
           }
 
-          <Route path='/world' element={<World category='world'/>} />
-          <Route path='/business' element={<Business category='business'/>} />
+
+          {
+            (businessArticles && businessArticles.length>0)?(
+              [...Array(pageCount(topBusinessArticles.slice(3,17).concat(businessArticles).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/business${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Business
+                   category='business'
+                   pageArticles={topBusinessArticles.slice(3,17).concat(businessArticles).slice(20*index,20*(index+1))}
+                   topHeadlines={topBusinessArticles.slice(0,3)}
+                   totalPages={pageCount(topBusinessArticles.slice(3,17).concat(businessArticles).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/business' element= {<Business category='business'/>} />
+            )
+          }
+
+
+          {
+            (worldArticles && worldArticles.length>0)?(
+              [...Array(pageCount(worldArticles.length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/world${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<World
+                   category='world'
+                   pageArticles={worldArticles.slice(27).slice(20*index,20*(index+1))}
+                   articles={worldArticles.slice(3,27)}
+                   topHeadlines={worldArticles.slice(0,3)}
+                   totalPages={pageCount(worldArticles.slice(27).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/world' element= {<World category='world'/>} />
+            )
+          }
+
+
+
           <Route path='/tech' element={<Tech category='tech'/>} />
           <Route path='/sports' element={<Sports category='sports'/>} />
           <Route path='/cricket' element={<Cricket category='cricket'/>} />

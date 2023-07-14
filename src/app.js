@@ -29,7 +29,7 @@ export default function App() {
   }
 
   const pageCount = (num) =>{
-    return (Math.round(num/20)<=(num/20))?Math.round(num/20):Math.round(num/20)+1
+    return (Math.round(num/20)<=(num/20))?Math.round(num/20)+1:Math.round(num/20)
   }
 
     return(

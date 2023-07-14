@@ -31,12 +31,16 @@ export default function Pages({ height, width, category, articles, totalPages })
             </div>
             <div className='page-counter'>
               {
-                [...Array(totalPages)].map((_,index)=>{
-                  return (
-                    <NavLink key={index} to={`/${category}${(index>0)?('/'+(index+1)):''}`} className={`page-number ${(isActive(`/${category}${(index>0)?('/'+(index+1)):''}`)?'active-page-number':'')}`}>
-                      {index+1}
-                    </NavLink>)
-                })
+                (totalPages && totalPages>0)?(
+                  [...Array(totalPages)].map((_,index)=>{
+                    return (
+                      <NavLink key={index} to={`/${category}${(index>0)?('/'+(index+1)):''}`} className={`page-number ${(isActive(`/${category}${(index>0)?('/'+(index+1)):''}`)?'active-page-number':'')}`}>
+                        {index+1}
+                      </NavLink>)
+                  })
+                  ):(
+                    ''
+                  )
               }
             </div>
       </div>
