@@ -10,9 +10,9 @@ export default function TenthSegment({ top, category, articles }) {
         <div className="tenth-seg-first-part">
           {
             (articles && articles.length>0)?(
-              <Pages category={category} height='780px' width='100%' articles={articles.slice(3)}/>
+              <Pages category={category} height='700px' width='100%' articles={articles.slice(3)}/>
             ):(
-              <Pages category={category} height='780px' width='100%'/>
+              <Pages category={category} height='700px' width='100%'/>
             )
           }
         </div>

@@ -37,9 +37,6 @@ export default function Pages({ height, width, category, articles }) {
               <DescCard height='54px' width='100%'/>
               <DescCard height='54px' width='100%'/>
               <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
             </div>
             <div className='page-counter'>
                 <NavLink to={`/${category}`} className={`page-number ${(isActive(`/${category}`)?'active-page-number':'')}`}>

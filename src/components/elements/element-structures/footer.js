@@ -31,7 +31,7 @@ export default function FooterSegment({ top }) {
                 <Link className='detail-link' to='/entertainment'>Entertainment</Link>
                 <Link className='detail-link' to='/education'>Education</Link>
                 <Link className='detail-link' to='/auto'>Auto</Link>
-                <Link className='detail-link' to='/lifestyle'>Life & Style</Link>
+                <Link className='detail-link' to='/lifestyle'>Life & Health</Link>
                 <Link className='detail-link' to='/politics'>Politics</Link>
             </div>
 

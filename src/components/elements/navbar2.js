@@ -148,17 +148,17 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
             </label>
             <div className={`dropdown-content-container ${(isActive)? "show":""}`}>
             <div className='dropdown-content'>
-                <div className="dropdown-elem"><Link to='india'>India</Link></div>
-                <div className="dropdown-elem"><Link to='world'>World</Link></div>
-                <div className="dropdown-elem"><Link to='business'>Business</Link></div>
-                <div className="dropdown-elem"><Link to='tech'>Tech</Link></div>
-                <div className="dropdown-elem"><Link to='sports'>Sports</Link></div>
-                <div className="dropdown-elem"><Link to='cricket'>Cricket</Link></div>
-                <div className="dropdown-elem"><Link to='entertainment'>Entertainment</Link></div>
-                <div className="dropdown-elem"><Link to='education'>Education</Link></div>
-                <div className="dropdown-elem"><Link to='auto'>Auto</Link></div>
-                <div className="dropdown-elem"><Link to='lifestyle'>Life & Style</Link></div>
-                <div className="dropdown-elem"><Link to='politics'>Politics</Link></div>
+                <div className="dropdown-elem"><Link to='/india'>India</Link></div>
+                <div className="dropdown-elem"><Link to='/world'>World</Link></div>
+                <div className="dropdown-elem"><Link to='/business'>Business</Link></div>
+                <div className="dropdown-elem"><Link to='/tech'>Tech</Link></div>
+                <div className="dropdown-elem"><Link to='/sports'>Sports</Link></div>
+                <div className="dropdown-elem"><Link to='/cricket'>Cricket</Link></div>
+                <div className="dropdown-elem"><Link to='/entertainment'>Entertainment</Link></div>
+                <div className="dropdown-elem"><Link to='/education'>Education</Link></div>
+                <div className="dropdown-elem"><Link to='/auto'>Auto</Link></div>
+                <div className="dropdown-elem"><Link to='/health'>Life & Health</Link></div>
+                <div className="dropdown-elem"><Link to='/politics'>Politics</Link></div>
             </div>
             </div>
         </div>
