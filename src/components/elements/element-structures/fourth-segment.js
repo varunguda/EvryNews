@@ -30,7 +30,7 @@ export default function FourthSegment({ category, top, articles }) {
                             (articles && articles.length>0)?(articles.slice(2, 6).map((article) => (
                                 <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url} article={article}/>
                             ))):(
-                                [...Array(4)].map((index)=>{
+                                [...Array(4)].map((_,index)=>{
                                     return <MiniCard key={index} height='155px' width='100%'/>
                                 })
                             )
@@ -60,7 +60,7 @@ export default function FourthSegment({ category, top, articles }) {
                             return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%'/>
                         }))
                         ):(
-                            [...Array(9)].map((index)=>{
+                            [...Array(9)].map((_,index)=>{
                                 return <ImageCard key={index} height='160px' width='100%'/>
                             })
                         )

@@ -12,11 +12,11 @@ export default function Dropdown({ articles }) {
         {
           (articles && articles.length>0)?(
             articles.slice(0,5).map((article)=>{
-              return <strong><MiniCard key={article.url} height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title} article={article}/></strong>
+              return <strong key={article.url}><MiniCard height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title} article={article}/></strong>
             })
           ):(
-            [...Array(5)].map((index)=>{
-              return <strong><MiniCard key={index} height='150px' width='100%'/></strong>
+            [...Array(5)].map((_,index)=>{
+              return <strong key={index}><MiniCard height='150px' width='100%'/></strong>
             })
           )
         }
@@ -24,11 +24,11 @@ export default function Dropdown({ articles }) {
         {
           (articles && articles.length>0)?(
             articles.slice(5,15).map((article)=>{
-              return <div className='desc-card'><DescCard key={article.url} height='50px' width='100%' data= {article.title}/></div>
+              return <div className='desc-card' key={article.url}><DescCard height='50px' width='100%' data= {article.title}/></div>
             })
           ):(
-            [...Array(10)].map((index)=>{
-              return <div className='desc-card'><DescCard key={index}  height='50px' width='100%'/></div>
+            [...Array(10)].map((_,index)=>{
+              return <div className='desc-card' key={index}><DescCard height='50px' width='100%'/></div>
             })
           )
         }

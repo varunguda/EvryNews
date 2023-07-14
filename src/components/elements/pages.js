@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import './styles/pages.css';
 import DescCard from './desc-card';
 
-export default function Pages({ height, width, category }) {
+export default function Pages({ height, width, category, articles }) {
 
   const location = useLocation();
   
@@ -17,29 +17,29 @@ export default function Pages({ height, width, category }) {
     <div className='pages-main-container' style={{height:height, width:width}}>
         <div className="page-container">
             <div className="page-content">
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
-              <DescCard data='Exercitation Lorem esse amet officia ipsum velit proident anim in.' height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
+              <DescCard height='54px' width='100%'/>
             </div>
             <div className='page-counter'>
                 <NavLink to={`/${category}`} className={`page-number ${(isActive(`/${category}`)?'active-page-number':'')}`}>
@@ -63,6 +63,5 @@ export default function Pages({ height, width, category }) {
             </div>
       </div>
     </div>
-
-)
+  )
 }

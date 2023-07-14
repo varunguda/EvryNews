@@ -15,17 +15,13 @@ export default function Home({ politicsArticles, popularArticles, trendArticles,
   
   return (
     <>
-      <FirstSegment 
-      politicsArticles={politicsArticles.slice(0,2)}
-      trendArticles={trendArticles}
-      popularArticles = {popularArticles}
-      />
+      <FirstSegment articles={politicsArticles.slice(0,2).concat(trendArticles.slice(0,20), popularArticles.slice(0,27))}/>
       <SecondSegment top='180px' techArticles={techArticles.slice(5,8)} trendArticles={trendArticles.slice(0,3)} autoArticles={autoArticles.slice(10,13)} />
       <ThirdSegment category='india' top='290px' articles={indiaArticles}/>
       <FourthSegment category='entertainment' top='420px' articles={entertainmentArticles}/>
       <FifthSegment category="world" top='560px' articles={worldArticles}/>
       <SixthSegment category='cricket' top='690px' articles={cricketArticles}/>
-      <ThirdSegment category='politics' top='820px' articles={politicsArticles.slice(0,8)}/>
+      <ThirdSegment category='politics' top='820px' articles={politicsArticles}/>
       <SeventhSegment category="Business" top='950px' articles={businessArticles}/>
       <SeventhSegment category="Tech" top='1070px' articles={techArticles.slice(4)}/>
       <EighthSegment category='sports' top='1200px' articles={sportsArticles}/>

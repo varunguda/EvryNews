@@ -20,6 +20,7 @@
     color: black;
     margin: 0px 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .page-number.active-page-number {

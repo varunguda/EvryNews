@@ -51,31 +51,31 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
 
   useEffect(()=>{
 
-    fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
+    // fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setTrendArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setIndiaArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setIndiaArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTrendArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
 
-    fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
     
-    fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
 
-    fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
 
   },[])
 
@@ -96,6 +96,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
           businessArticles={businessArticles.slice(5,20)}
           entertainmentArticles={entertainmentArticles.slice(0,15)}
         />
+
         <Routes>
           <Route 
           path='/' 
@@ -108,14 +109,23 @@ export default function Content({ fetchNewsArticles, fetchIoArticles}) {
             entertainmentArticles={entertainmentArticles.slice(0,19)}
             worldArticles={worldArticles.slice(0,10)}
             cricketArticles={cricketArticles.slice(15,39)}
-            techArticles={techArticles}
+            techArticles={techArticles.slice(0,20)}
             sportsArticles={sportsArticles.slice(14,20)}
             autoArticles={autoArticles.slice(18,28).concat(autoArticles.slice(0,3))}
             healthArticles={healthArticles.slice(14,20)}
             businessArticles={businessArticles.slice(0,17)}
             />}
           />
-          <Route path='/india' element={<India category='india'/>} />
+
+          <Route 
+          path='/india' 
+          element=
+            {<India
+             category='india'
+             articles={indiaArticles.slice(10,20).concat(indiaArticles.slice(0,10),popularArticles)}
+             />} 
+          />
+
           <Route path='/india/2' element={<India category='india'/>} />
           <Route path='/india/3' element={<India category='india'/>} />
           <Route path='/india/4' element={<India category='india'/>} />

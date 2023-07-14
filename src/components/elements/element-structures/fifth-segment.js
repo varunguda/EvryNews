@@ -45,7 +45,7 @@ export default function FifthSegment({ category, top, articles }){
                                     return <DescCard key={article.url} height='54px' width='45%' data={article.title}/>
                                 })
                         ):(
-                            [...Array(3)].map((index)=>{
+                            [...Array(3)].map((_,index)=>{
                                 return <DescCard key={index} height='54px' width='45%' />
                             })        
                         )

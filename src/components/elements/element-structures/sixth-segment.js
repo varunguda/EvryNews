@@ -16,7 +16,7 @@ export default function SixthSegment({ category , top, articles }) {
         {
             [...Array(6)].map((_,index)=>{
                 return (
-                    <div className='sixth-seg-sec'>
+                    <div className='sixth-seg-sec' key={index}>
                         <div className='section-part sixth-sec-part'>
                             <div className='section-segment'>
                                 {

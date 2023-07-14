@@ -34,7 +34,7 @@ export default function HeadlinesList({ length, articles }) {
         })
       )
       :(
-        [...Array(length)].map((index)=>{
+        [...Array(length)].map((_,index)=>{
           return <div key={index} className="text-placeholder placeholder"></div>
         })
       )

@@ -23,7 +23,7 @@ export default function Headlines({ height, width, category, articles }) {
             return <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
           })
           :(
-            [...Array(3)].map((index)=>{
+            [...Array(3)].map((_,index)=>{
               return  <MiniDescCard key={index} height='54px' width='96%'/>
             })
           )
