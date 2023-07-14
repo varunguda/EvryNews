@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import './styles/pages.css';
 import DescCard from './desc-card';
 
-export default function Pages({ height, width, category, articles }) {
+export default function Pages({ height, width, category, articles, totalPages }) {
 
   const location = useLocation();
   
@@ -17,46 +17,27 @@ export default function Pages({ height, width, category, articles }) {
     <div className='pages-main-container' style={{height:height, width:width}}>
         <div className="page-container">
             <div className="page-content">
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
-              <DescCard height='54px' width='100%'/>
+              {
+                (articles && articles.length>0)?(
+                  articles.map((article)=>{
+                    return <DescCard key={article.url} height='54px' width='100%' data={article.title} url={article.url}/>
+                  })
+                ):(
+                  [...Array(20)].map((_,index)=>{
+                    return <DescCard key={index} height='54px' width='100%'/>
+                  })
+                )
+              }
             </div>
             <div className='page-counter'>
-                <NavLink to={`/${category}`} className={`page-number ${(isActive(`/${category}`)?'active-page-number':'')}`}>
-                  1
-                </NavLink>
-                <NavLink to={`/${category}/2`} className={`page-number ${(isActive(`/${category}/2`)?'active-page-number':'')}`}>
-                  2
-                </NavLink>
-                <NavLink to={`/${category}/3`} className={`page-number ${(isActive(`/${category}/3`)?'active-page-number':'')}`}>
-                  3
-                </NavLink>
-                <NavLink to={`/${category}/4`} className={`page-number ${(isActive(`/${category}/4`)?'active-page-number':'')}`}>
-                  4
-                </NavLink>
-                <NavLink to={`/${category}/5`} className={`page-number ${(isActive(`/${category}/5`)?'active-page-number':'')}`}>
-                  5
-                </NavLink>
-                <NavLink to={`/${category}/6`} className={`page-number ${(isActive(`/${category}/6`)?'active-page-number':'')}`}>
-                  6
-                </NavLink>
+              {
+                [...Array(totalPages)].map((_,index)=>{
+                  return (
+                    <NavLink key={index} to={`/${category}${(index>0)?('/'+(index+1)):''}`} className={`page-number ${(isActive(`/${category}${(index>0)?('/'+(index+1)):''}`)?'active-page-number':'')}`}>
+                      {index+1}
+                    </NavLink>)
+                })
+              }
             </div>
       </div>
     </div>

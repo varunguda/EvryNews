@@ -28,12 +28,17 @@ export default function App() {
     }
   }
 
+  const pageCount = (num) =>{
+    return (Math.round(num/20)<=(num/20))?Math.round(num/20):Math.round(num/20)+1
+  }
+
     return(
       <div>
         <Navbar />
         <Content 
         fetchNewsArticles={fetchNewsArticles}
         fetchIoArticles={fetchIoArticles}
+        pageCount={pageCount}
         />
       </div>
     )

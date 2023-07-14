@@ -30,8 +30,8 @@
 
 .page-content{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 30px 40px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
 }
 
 .page-content .description-card-container::after{
@@ -39,7 +39,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -10px;
+    bottom: -20px;
     border-top: 1px dotted var(--border-color);
 }
 

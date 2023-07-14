@@ -5,7 +5,7 @@ import EighthSegment from '../elements/element-structures/eighth-segment';
 import TenthSegment from '../elements/element-structures/tenth-segment';
 import FooterSegment from '../elements/element-structures/footer';
 
-export default function LifeStyle( { category } ) {
+export default function Health( { category } ) {
   return (
     <>
       <NinthSegment />
