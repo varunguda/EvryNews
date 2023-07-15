@@ -27,7 +27,7 @@ export default function Entertainment( { category, articles, topHeadlines, total
 
       {
         (topHeadlines && topHeadlines.length>0)?(
-          <TenthSegment  top='43s0px' category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
+          <TenthSegment  top='430px' category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
         ):(
           <TenthSegment  top='430px' category={category}/>
         )

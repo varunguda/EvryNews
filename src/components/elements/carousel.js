@@ -6,8 +6,6 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import MiniCard from './mini-card';
 
 export default function NewsCarousel({ articles }){
-
-  const handleDragStart = (e) => e.preventDefault();
   
   const responsive = {
     0: { items: 2 },
