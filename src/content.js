@@ -19,7 +19,7 @@ import Entertainment from './components/layout/entertainment';
 import Education from './components/layout/education';
 import Auto from './components/layout/auto';
 import Health from './components/layout/health';
-import Politics from './components/layout/politics';
+import Movie from './components/layout/movie';
 
 export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}) {
 
@@ -31,7 +31,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
   const [ indiaArticles, setIndiaArticles ] = useState([]);
 
-  const [ entertainmentArticles, setEntertainmentArticles ] = useState([])
+  const [ topEntertainmentArticles, setTopEntertainmentArticles ] = useState([]);
+
+  const [ entertainmentArticles, setEntertainmentArticles ] = useState([]);
 
   const [ worldArticles, setWorldArticles ] = useState([]);
 
@@ -39,9 +41,15 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
   const [ techArticles, setTechArticles ] = useState([]);
 
+  const [ topTechArticles, setTopTechArticles ] = useState([]);
+
   const [ sportsArticles, setSportsArticles ] = useState([]);
 
+  const [ topSportsArticles, setTopSportsArticles ] = useState([]);
+
   const [ autoArticles, setAutoArticles ] = useState([]);
+
+  const [ topHealthArticles, setTopHealthArticles ] = useState([]);
 
   const [ healthArticles, setHealthArticles ] = useState([]);
 
@@ -50,6 +58,9 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
   const [ topBusinessArticles, setTopBusinessArticles ] = useState([]);
 
   const [ businessArticles, setBusinessArticles] = useState([]);
+
+  const [ movieArticles, setMovieArticles ] = useState([]);
+
 
   useEffect(()=>{
 
@@ -61,25 +72,35 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
     // fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTrendArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopEntertainmentArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=enetrtainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
 
     // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
 
     // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopTechArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=technology&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
 
     // fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
+
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopSportsArticles)
 
     // fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
     
     // fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopHealthArticles)
+
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=health&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
 
     // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopBusinessArticles)
     
     // fetchNewsArticles('https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
+
+    fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=538bf8f17b8e4aa884661289d0714ee1', setMovieArticles);
 
   },[])
 
@@ -92,13 +113,13 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
           worldArticles={worldArticles.slice(10,25)}
           cricketArticles={cricketArticles.slice(0,15)}
           techArticles = {techArticles.slice(0,15)}
-          sportsArticles={sportsArticles.slice(0,15)}
-          politicsArticles={politicsArticles.slice(0,15)}
+          sportsArticles={topSportsArticles.slice(5,20)}
+          movieArticles={movieArticles.slice(20,35)}
           educationArticles={educationArticles.slice(0,15)}
-          autoArticles={autoArticles.slice(3,18)}
-          healthArticles={healthArticles.slice(2,15).concat(healthArticles.slice(0,2))}
+          autoArticles={autoArticles.slice(30,45)}
+          healthArticles={topHealthArticles.slice(2,15).concat(healthArticles.slice(0,2))}
           businessArticles={topBusinessArticles.slice(5,20)}
-          entertainmentArticles={entertainmentArticles.slice(0,15)}
+          entertainmentArticles={topEntertainmentArticles.slice(0,15)}
         />
 
         <Routes>
@@ -110,13 +131,13 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
             popularArticles={popularArticles.slice(0,27)}
             trendArticles={trendArticles.slice(0,20)}
             indiaArticles={indiaArticles.slice(0,10)}
-            entertainmentArticles={entertainmentArticles.slice(0,19)}
+            entertainmentArticles={topEntertainmentArticles.slice(0,19)}
             worldArticles={worldArticles.slice(0,10)}
             cricketArticles={cricketArticles.slice(15,39)}
             techArticles={techArticles.slice(0,20)}
             sportsArticles={sportsArticles.slice(14,20)}
             autoArticles={autoArticles.slice(18,28).concat(autoArticles.slice(0,3))}
-            healthArticles={healthArticles.slice(14,20)}
+            healthArticles={topHealthArticles.slice(14,20)}
             businessArticles={topBusinessArticles.slice(0,17)}
             />}
           />
@@ -176,7 +197,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
           {
             (worldArticles && worldArticles.length>0)?(
-              [...Array(pageCount(worldArticles.length))].map((_,index)=>{
+              [...Array(pageCount(worldArticles.slice(27).length))].map((_,index)=>{
                 return (
                   <Route 
                   key={index}
@@ -198,15 +219,196 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
           }
 
 
+          {
+            (techArticles && techArticles.length>0)?(
+              [...Array(pageCount(techArticles.length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/tech${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Tech
+                   category='tech'
+                   articles={topTechArticles.slice(10,20).concat(topTechArticles.slice(0,10))}
+                   topHeadlines={topTechArticles.slice(0,3)}
+                   pageArticles={techArticles.slice(20*index,20*(index+1))}
+                   totalPages={pageCount(techArticles.length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/tech' element= {<Tech category='tech'/>} />
+            )
+          }
 
-          <Route path='/tech' element={<Tech category='tech'/>} />
-          <Route path='/sports' element={<Sports category='sports'/>} />
-          <Route path='/cricket' element={<Cricket category='cricket'/>} />
-          <Route path='/entertainment' element={<Entertainment category='entertainment'/>} />
-          <Route path='/education' element={<Education category='education'/>} />
-          <Route path='/auto' element={<Auto category='auto'/>} />
-          <Route path='/health' element={<Health category='health'/>} />
-          <Route path='/politics' element={<Politics category='politics'/>} />
+
+          {
+            (sportsArticles && sportsArticles.length>0)?(
+              [...Array(pageCount(sportsArticles.slice(32).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/sports${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Sports
+                   category='sports'
+                   articles={topSportsArticles.slice(3,20).concat(sportsArticles.slice(0,32))}
+                   topHeadlines={topSportsArticles.slice(0,3)}
+                   pageArticles={sportsArticles.slice(32).slice(20*index,20*(index+1))}
+                   totalPages={pageCount(sportsArticles.slice(32).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/sports' element= {<Sports category='sports'/>} />
+            )
+          }
+
+
+          {
+            (cricketArticles && cricketArticles.length>0)?(
+              [...Array(pageCount(cricketArticles.slice(3,30).concat(cricketArticles.slice(54)).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/cricket${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Cricket
+                   category='cricket'
+                   articles={cricketArticles.slice(30,54)}
+                   topHeadlines={cricketArticles.slice(0,3)}
+                   pageArticles={cricketArticles.slice(3,30).concat(cricketArticles.slice(54)).slice(20*index,20*(index+1))}
+                   totalPages={pageCount(cricketArticles.slice(3,30).concat(cricketArticles.slice(54)).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/cricket' element= {<Cricket category='cricket'/>} />
+            )
+          }
+
+          {
+            (entertainmentArticles && entertainmentArticles.length>0)?(
+              [...Array(pageCount(topEntertainmentArticles.slice(0,20).concat(entertainmentArticles.slice(47)).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/entertainment${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Entertainment
+                   category='entertainment'
+                   articles={entertainmentArticles.slice(3,47)}
+                   topHeadlines={entertainmentArticles.slice(0,3)}
+                   pageArticles={topEntertainmentArticles.concat(entertainmentArticles.slice(47)).slice(20*index,20*(index+1))}
+                   totalPages={pageCount(topEntertainmentArticles.concat(entertainmentArticles.slice(47)).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/entertainment' element= {<Entertainment category='entertainment'/>} />
+            )
+          }
+
+
+          {
+            (educationArticles && educationArticles.length>0)?(
+              [...Array(pageCount(educationArticles.slice(3).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/education${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Education
+                   category='education'
+                   topHeadlines={educationArticles.slice(0,3)}
+                   pageArticles={educationArticles.slice(3).slice(20*index,20*(index+1))}
+                   totalPages={pageCount(educationArticles.slice(3).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/education' element= {<Education category='education'/>} />
+            )
+          }
+
+
+          {
+            (autoArticles && autoArticles.length>0)?(
+              [...Array(pageCount(autoArticles.slice(27).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/auto${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Auto
+                   category='auto'
+                   articles={autoArticles.slice(3,27)}
+                   topHeadlines={autoArticles.slice(0,3)}
+                   pageArticles={autoArticles.slice(27).slice(20*index,20*(index+1))}
+                   totalPages={pageCount(autoArticles.slice(27).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/auto' element= {<Auto category='auto'/>} />
+            )
+          }
+
+
+          {
+            (healthArticles && healthArticles.length>0)?(
+              [...Array(pageCount(topHealthArticles.slice(3).concat(healthArticles.slice(27)).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/health${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Health
+                   category='health'
+                   pageArticles={topHealthArticles.slice(3).concat(healthArticles.slice(27)).slice(20*index,20*(index+1))}
+                   articles={healthArticles.slice(0,20)}
+                   topHeadlines={topHealthArticles.slice(0,3)}
+                   totalPages={pageCount(topHealthArticles.slice(3).concat(healthArticles.slice(27)).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/health' element= {<Health category='health'/>} />
+            )
+          }
+
+
+          {
+            (movieArticles && movieArticles.length>0)?(
+              [...Array(pageCount(movieArticles.slice(75).length))].map((_,index)=>{
+                return (
+                  <Route 
+                  key={index}
+                  path={`/movie${(index>0)?('/'+(index+1)):''}`} 
+                  element=
+                  {<Movie
+                   category='movie'
+                   pageArticles={movieArticles.slice(75).slice(20*index,20*(index+1))}
+                   articles={movieArticles.slice(3,75)}
+                   topHeadlines={movieArticles.slice(0,3)}
+                   totalPages={pageCount(movieArticles.slice(75).length)}
+                   />} 
+                  />
+                )
+              })
+            ):(
+              <Route path='/movie' element= {<Movie category='movie'/>} />
+            )
+          }
+
+
         </Routes>
       </Router>
     </div>

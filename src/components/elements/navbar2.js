@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Dropdown from './nav-dropdown';
 
-export default function NavbarSecondary({ indiaArticles, politicsArticles, worldArticles, cricketArticles, techArticles, sportsArticles, businessArticles, entertainmentArticles, educationArticles, autoArticles, healthArticles }) {
+export default function NavbarSecondary({ indiaArticles, movieArticles, worldArticles, cricketArticles, techArticles, sportsArticles, businessArticles, entertainmentArticles, educationArticles, autoArticles, healthArticles }) {
   let [ isActive, setIsActive ] = useState(false); 
   let [ isChecked, setIsChecked ] = useState(false);
 
@@ -81,6 +81,7 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
                     )
                 }
             </div>
+            
             <div className="nav-elem">
                 <Link to='/cricket' className={(pathIsActive('/cricket'))?"active-nav-elem":''}>Cricket</Link>
                 {
@@ -91,6 +92,18 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
                     )
                 }
             </div>
+            
+            <div className="nav-elem">
+                <Link to='/movie' className={(pathIsActive('/movie'))?"active-nav-elem":''}>Movie</Link>
+                {
+                    (movieArticles && movieArticles.length>0)?(
+                        <Dropdown articles={movieArticles}/>
+                    ):(
+                        <Dropdown />
+                    )
+                }
+            </div>
+
             <div className="nav-elem">
                 <Link to='/entertainment' className={(pathIsActive('/entertainment'))?"active-nav-elem":''}>Entertainment</Link>
                 {
@@ -131,16 +144,7 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
                     )
                 }
             </div>
-            <div className="nav-elem">
-                <Link to='/politics' className={(pathIsActive('/politics'))?"active-nav-elem":''}>Politics</Link>
-                {
-                    (politicsArticles && politicsArticles.length>0)?(
-                        <Dropdown articles={politicsArticles}/>
-                    ):(
-                        <Dropdown />
-                    )
-                }
-            </div>
+            
         <div className='dropdown'>
             <input type='checkbox' id='input-checkbox' checked={isChecked} onChange={handleCheckboxChange}/>
             <label htmlFor='input-checkbox'  className='dropdown-button'>
@@ -158,7 +162,7 @@ export default function NavbarSecondary({ indiaArticles, politicsArticles, world
                 <div className="dropdown-elem"><Link to='/education'>Education</Link></div>
                 <div className="dropdown-elem"><Link to='/auto'>Auto</Link></div>
                 <div className="dropdown-elem"><Link to='/health'>Life & Health</Link></div>
-                <div className="dropdown-elem"><Link to='/politics'>Politics</Link></div>
+                <div className="dropdown-elem"><Link to='/movie'>Movie</Link></div>
             </div>
             </div>
         </div>
