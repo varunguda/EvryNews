@@ -24,8 +24,8 @@ export default function FirstSegment( { category, top, articles }) {
           <div className='container-1-grid'>
           {articles && articles.length > 0 ? (
             articles.slice(2,22).map((article) => {
-              return (<div className='grid-elem'>
-                <MiniDescCard key={article.url} height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
+              return (<div key={article.url} className='grid-elem'>
+                <MiniDescCard height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
               </div>)
             })
           ):
