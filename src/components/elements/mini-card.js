@@ -7,25 +7,29 @@ import './styles/mini-card.css';
 
 export default function MiniCard({direction, width, height, url, imageUrl, title, article }) {
   return (
-    <div className='mini-card-container' style={{height: height, width: width,flexDirection: direction?`${direction}`:`column`}}>
-      <div className="card-image-container" style={{ height: '68%', width: '100%'}}>
-          {
-            (article)?
-            (<img alt='mini-card' src={(imageUrl)?imageUrl:'./site-logo-b&w.png'} className='card-image'/>
-            ):(<div className="image-placeholder placeholder"></div>)
-          }
-      </div>
-        <div className='mini-card-caption' style={{height:'32%', width:'95%', marginLeft: (direction==='row')?'10px':''}}>
-          {
-            (article)?title
-            :(
-              <div>
-                <div className="text-placeholder placeholder"></div>
-                <div className="text-placeholder placeholder"></div>
-              </div>
-            )
-          }
+    <div className='mini-card'>
+      <a href={url} className='card-link' target='_blank' rel='noreferrer'>
+        <div className='mini-card-container' style={{height: height, width: width,flexDirection: direction?`${direction}`:`column`}}>
+          <div className="card-image-container" style={{ height: '67%', width: '100%'}}>
+            {
+              (article)?
+              (<img alt='mc' src={(imageUrl)?imageUrl:'./site-logo-b&w.png'} className='card-image'/>
+              ):(<div className="image-placeholder placeholder card-image"></div>)
+            }
+          </div>
+          <div className='mini-card-caption' style={{height:'33%', width:'95%', marginLeft: (direction==='row')?'6px':''}}>
+            {
+              (article)?title
+              :(
+                <div>
+                  <div className="text-placeholder placeholder"></div>
+                  <div className="text-placeholder placeholder"></div>
+                </div>
+              )
+            }
+          </div>
         </div>
+      </a>
     </div>
   )
 }

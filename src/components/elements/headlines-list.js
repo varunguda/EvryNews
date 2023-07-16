@@ -30,7 +30,12 @@ export default function HeadlinesList({ length, articles }) {
     {
       (articles)?(
         articles.map((article)=>{
-          return <div key={article.url} className="headlines-list-elem">{article.title}</div>
+          return (
+          <div key={article.url} className="headlines-list-elem">
+            <a href={article.url} className='card-link' target='_blank' rel='noreferrer'>
+              {article.title}
+            </a>
+          </div>)
         })
       )
       :(

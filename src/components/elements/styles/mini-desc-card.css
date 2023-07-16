@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: auto;
+    gap: 10px;
+    overflow: hidden;
     position: relative;
     line-height: 17px;
 }

@@ -64,7 +64,7 @@ export default function FirstSegment( { category, top, articles }) {
                 <HeadlinesList length={10} containerId={1}/>
               </div>
             )
-          }
+        }
     </div>
   )
 }

@@ -57,7 +57,7 @@ export default function FourthSegment({ category, top, articles }) {
                     {
                     (articles && articles.length>0)?(
                         (articles.slice(10).map((article)=>{
-                            return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%'/>
+                            return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%' article={article}/>
                         }))
                         ):(
                             [...Array(9)].map((_,index)=>{

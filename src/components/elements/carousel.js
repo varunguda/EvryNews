@@ -34,7 +34,7 @@ export default function NewsCarousel({ articles }){
         i+=1
       });
     }
-  }, [articles]);
+  }, []);
   
   [...Array(8)].map((_,index)=>{
     return items.push(

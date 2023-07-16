@@ -32,7 +32,7 @@ export default function SixthSegment({ category , top, articles }) {
                             {
                                 (articles && articles.length>0)?(
                                     articles.slice((index*4)+2, (index*4)+4).map((article)=>{
-                                        return <DescCard key={article.url} height='54px' width='100%' data={article.title} />
+                                        return <DescCard key={article.url} height='54px' width='100%' data={article.title} url={article.url}/>
                                     })
                                 ):(
                                     [...Array(2)].map((_,index)=>{

@@ -19,7 +19,7 @@ export default function Sports({ category, topHeadlines, pageArticles, totalPage
         (pageArticles && pageArticles.length>0)?(
           <TenthSegment top='180px' category={category} topHeadlines={topHeadlines} pageArticles={pageArticles} totalPages={totalPages}/>
         ):(
-          <TenthSegment top='40px' category={category}/>
+          <TenthSegment top='180px' category={category}/>
         )
       }
       <FooterSegment top='250px'/>

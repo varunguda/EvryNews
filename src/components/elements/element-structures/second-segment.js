@@ -8,7 +8,7 @@ import DescCard from '../desc-card';
 export default function SecondSegment({ top, techArticles, autoArticles, trendArticles }) {
   return (
     <div className='second-segment-container main-segment-container' style={{ top: top}}>
-      <div className='section'>
+      <div className='section-elem'>
         <div className='section-head second-section-head'>TECH</div>
           {
             (techArticles && techArticles.length>0)?(
@@ -30,7 +30,7 @@ export default function SecondSegment({ top, techArticles, autoArticles, trendAr
             )
           }
       </div>
-      <div className='section'>
+      <div className='section-elem'>
         <div className='section-head second-section-head'>AUTO</div>
         {
             (autoArticles && autoArticles.length>0)?(
@@ -52,7 +52,7 @@ export default function SecondSegment({ top, techArticles, autoArticles, trendAr
             )
           }
       </div>
-      <div className='section'>
+      <div className='section-elem'>
         <div className='section-head second-section-head'>TRENDING</div>
         {
             (trendArticles && trendArticles.length>0)?(

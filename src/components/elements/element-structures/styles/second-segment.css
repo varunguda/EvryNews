@@ -54,8 +54,8 @@
     transform: rotate(135deg);
 }
 
-.section{
-    flex: 1;
+.section-elem{
+    flex: 1 !important;
 }
 
 .sec-container{

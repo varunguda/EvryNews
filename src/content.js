@@ -108,39 +108,50 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
   return (
     <div className='main-container'>
       <Router>
-        <NavbarSecondary 
-          indiaArticles={popularArticles.slice(27,43)}
-          worldArticles={worldArticles.slice(10,25)}
-          cricketArticles={cricketArticles.slice(0,15)}
-          techArticles = {techArticles.slice(0,15)}
-          sportsArticles={topSportsArticles.slice(5,20)}
-          movieArticles={movieArticles.slice(20,35)}
-          educationArticles={educationArticles.slice(0,15)}
-          autoArticles={autoArticles.slice(30,45)}
-          healthArticles={topHealthArticles.slice(2,15).concat(healthArticles.slice(0,2))}
-          businessArticles={topBusinessArticles.slice(5,20)}
-          entertainmentArticles={topEntertainmentArticles.slice(0,15)}
-        />
+        {
+          (trendArticles && trendArticles.length>0 | popularArticles && popularArticles.length>0 | indiaArticles && indiaArticles.length>0)?(
+            <NavbarSecondary 
+              indiaArticles={popularArticles.slice(27,43)}
+              worldArticles={worldArticles.slice(10,25)}
+              cricketArticles={cricketArticles.slice(0,15)}
+              techArticles = {techArticles.slice(0,15)}
+              sportsArticles={topSportsArticles.slice(5,20)}
+              movieArticles={movieArticles.slice(20,35)}
+              educationArticles={educationArticles.slice(0,15)}
+              autoArticles={autoArticles.slice(30,45)}
+              healthArticles={topHealthArticles.slice(2,15).concat(healthArticles.slice(0,2))}
+              businessArticles={topBusinessArticles.slice(5,20)}
+              entertainmentArticles={topEntertainmentArticles.slice(0,15)}
+            />
+          ):(
+            <NavbarSecondary />
+          )
+        }
 
         <Routes>
-          <Route 
-          path='/' 
-          element=
-            {<Home 
-            movieArticles={movieArticles.slice(0,10)}
-            popularArticles={popularArticles.slice(0,27)}
-            trendArticles={trendArticles.slice(0,20)}
-            indiaArticles={indiaArticles.slice(0,10)}
-            entertainmentArticles={topEntertainmentArticles.slice(0,19)}
-            worldArticles={worldArticles.slice(0,10)}
-            cricketArticles={cricketArticles.slice(15,39)}
-            techArticles={techArticles.slice(0,20)}
-            sportsArticles={sportsArticles.slice(14,20)}
-            autoArticles={autoArticles.slice(18,28).concat(autoArticles.slice(0,3))}
-            healthArticles={topHealthArticles.slice(14,20)}
-            businessArticles={topBusinessArticles.slice(0,17)}
-            />}
-          />
+          {(trendArticles && trendArticles.length>0 | popularArticles && popularArticles.length>0 | indiaArticles && indiaArticles.length>0)?(
+            <Route 
+            path='/' 
+            element=
+              {<Home 
+              movieArticles={movieArticles.slice(0,10)}
+              popularArticles={popularArticles.slice(0,27)}
+              trendArticles={trendArticles.slice(0,20)}
+              indiaArticles={indiaArticles.slice(0,10)}
+              entertainmentArticles={topEntertainmentArticles.slice(0,19)}
+              worldArticles={worldArticles.slice(0,10)}
+              cricketArticles={cricketArticles.slice(15,39)}
+              techArticles={techArticles.slice(0,20)}
+              sportsArticles={sportsArticles.slice(14,20)}
+              autoArticles={autoArticles.slice(18,28).concat(autoArticles.slice(0,3))}
+              healthArticles={topHealthArticles.slice(14,20)}
+              businessArticles={topBusinessArticles.slice(0,17)}
+              />}
+            />
+          ):(
+            <Route path='' element= {<Home />} />
+          )
+          }
 
           {
             (popularArticles && popularArticles.length>0)?(
