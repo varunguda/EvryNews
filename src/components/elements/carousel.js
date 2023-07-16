@@ -19,7 +19,7 @@ export default function NewsCarousel({ articles }){
   useEffect(() => {
     if (articles) {
       let i=0;
-      articles.map((article) => {
+      articles.forEach((article) => {
         items[i]=(
           <MiniCard
             key={article.url}
@@ -34,7 +34,7 @@ export default function NewsCarousel({ articles }){
         i+=1
       });
     }
-  }, []);
+  });
   
   [...Array(8)].map((_,index)=>{
     return items.push(

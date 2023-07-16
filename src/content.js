@@ -23,8 +23,6 @@ import Movie from './components/layout/movie';
 
 export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}) {
 
-  const [politicsArticles, setPoliticsArticles] = useState([]);
-
   const [ trendArticles, setTrendArticles ] = useState([]);
 
   const [ popularArticles, setPopularArticles ] = useState([]);
@@ -64,8 +62,6 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
   useEffect(()=>{
 
-    fetchIoArticles('https://newsdata.io/api/1/news?apikey=pub_2602618a1488be33a36dd70a65f0f5fd279fd&category=politics&country=in&language=en',setPoliticsArticles);
-
     fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setIndiaArticles);
 
     fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
@@ -102,7 +98,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
     fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=538bf8f17b8e4aa884661289d0714ee1', setMovieArticles);
 
-  },[])
+  },[fetchNewsArticles])
 
 
   return (
