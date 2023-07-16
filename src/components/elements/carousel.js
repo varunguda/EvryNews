@@ -4,6 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 import MiniCard from './mini-card';
+import './styles/carousel.css'
 
 export default function NewsCarousel({ articles }){
   
@@ -35,7 +36,7 @@ export default function NewsCarousel({ articles }){
     }
   }, [articles]);
   
-  [...Array(10)].map((_,index)=>{
+  [...Array(8)].map((_,index)=>{
     return items.push(
       <MiniCard
         key={index}
@@ -46,11 +47,11 @@ export default function NewsCarousel({ articles }){
   })
 
   return (
-    <AliceCarousel 
-    mouseTracking 
-    items={items}
-    responsive={responsive}
-    disableDotsControls={true}
-    />
+      <AliceCarousel 
+      mouseTracking 
+      items={items}
+      responsive={responsive}
+      disableDotsControls={true}
+      />
   );
 }
