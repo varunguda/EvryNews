@@ -12,7 +12,7 @@ export default function FourthSegment({ category, top, articles }) {
     <div className='fourth-segment-container main-segment-container segment-container' style={{top:top}}>
         {category?(
             <div className='section-head fourth-segment-section-head'>
-                {category}
+                <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>
             </div>
         ):''}
         <div className='fourth-sec-container'>

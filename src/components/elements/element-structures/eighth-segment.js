@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/eighth-segment.css';
 
@@ -8,7 +9,7 @@ export default function EighthSegment({ category , top, articles  }) {
   return (
     <div className='eighth-segment-container main-segment-container segment-container' style={{top: top}}>
         {category?(<div className='section-head seventh-segment-section-head'>
-            {category}
+          <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>
         </div>):''}
         <div className="eighth-sec-container">
           {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/sixth-segment.css';
 import MainCard from '../main-card';
@@ -9,7 +10,7 @@ export default function SixthSegment({ category , top, articles }) {
   return (
     <div className='sixth-segment-container main-segment-container segment-container' style={{top:top}}>
         {(category)?<div className='section-head sixth-segment-section-head'>
-            {category}
+            <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>
         </div>:''}
         <div className='sixth-sec-container'>
 

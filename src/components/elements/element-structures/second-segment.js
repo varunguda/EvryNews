@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/second-segment.css';
 import MiniCard from '../mini-card.js';
@@ -9,7 +10,9 @@ export default function SecondSegment({ top, techArticles, autoArticles, trendAr
   return (
     <div className='second-segment-container main-segment-container' style={{ top: top}}>
       <div className='section-elem'>
-        <div className='section-head second-section-head'>TECH</div>
+        <div className='section-head second-section-head'>
+          <Link to='/tech' className='link-text'>TECH</Link>
+        </div>
           {
             (techArticles && techArticles.length>0)?(
               <div className='sec-container'>
@@ -31,7 +34,9 @@ export default function SecondSegment({ top, techArticles, autoArticles, trendAr
           }
       </div>
       <div className='section-elem'>
-        <div className='section-head second-section-head'>AUTO</div>
+        <div className='section-head second-section-head'>
+          <Link to='/auto' className='link-text'>AUTO</Link>
+        </div>
         {
             (autoArticles && autoArticles.length>0)?(
               <div className='sec-container'>
@@ -53,7 +58,9 @@ export default function SecondSegment({ top, techArticles, autoArticles, trendAr
           }
       </div>
       <div className='section-elem'>
-        <div className='section-head second-section-head'>TRENDING</div>
+        <div className='section-head second-section-head'>
+          <Link to='/india' className='link-text'>TRENDING</Link>
+        </div>
         {
             (trendArticles && trendArticles.length>0)?(
               <div className='sec-container'>

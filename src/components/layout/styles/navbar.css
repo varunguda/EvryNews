@@ -234,6 +234,11 @@
     position: absolute;
   }
 
+  .link-text{
+    color: var(--primary-text-color);
+    text-decoration: none;
+  }
+
 
   .dropdown-button span::after{
     top: 1rem;

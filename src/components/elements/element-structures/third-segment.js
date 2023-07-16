@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/third-segment.css';
 import NewsCarousel from '../carousel';
@@ -11,7 +12,7 @@ export default function ThirdSegment({ top, category, articles }) {
           {
             category?(
               <div className='section-head'>
-                {category}
+                <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>
               </div>
             ):''
           }
