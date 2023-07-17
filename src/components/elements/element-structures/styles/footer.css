@@ -2,11 +2,15 @@
 
 .footer-segment-container{
     height: auto;
+    position: relative;
+    left: 0;
+    margin-top: -85px;
+    width: 96%;
+    padding: 0 2%;
     padding-bottom: 20px;
-    padding-top: 40px;
     background-color: #fafafa;
+    padding-top: 40px;
 }
-
 
 .site-logo{
     display: flex;

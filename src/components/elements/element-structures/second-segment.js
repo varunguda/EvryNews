@@ -8,7 +8,7 @@ import DescCard from '../desc-card';
 
 export default function SecondSegment({ top, techArticles, autoArticles, trendArticles }) {
   return (
-    <div className='second-segment-container main-segment-container' style={{ top: top}}>
+    <div className='second-segment-container main-segment-container segment-container' style={{ marginTop: top}}>
       <div className='section-elem'>
         <div className='section-head second-section-head'>
           <Link to='/tech' className='link-text'>TECH</Link>

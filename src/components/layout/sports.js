@@ -17,12 +17,12 @@ export default function Sports({ category, topHeadlines, pageArticles, totalPage
       
       {
         (pageArticles && pageArticles.length>0)?(
-          <TenthSegment top='180px' category={category} topHeadlines={topHeadlines} pageArticles={pageArticles} totalPages={totalPages}/>
+          <TenthSegment category={category} topHeadlines={topHeadlines} pageArticles={pageArticles} totalPages={totalPages}/>
         ):(
-          <TenthSegment top='180px' category={category}/>
+          <TenthSegment category={category}/>
         )
       }
-      <FooterSegment top='250px'/>
+      <FooterSegment/>
     </>
   )
 }

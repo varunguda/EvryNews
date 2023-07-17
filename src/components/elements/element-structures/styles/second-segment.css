@@ -83,11 +83,6 @@
     top: -15px;
 }
 
-
-.second-segment-container::after{
-    bottom: -50px;
-}
-
 .sec-container-segment .description-card-container::after{
     content: '';
     position: absolute;

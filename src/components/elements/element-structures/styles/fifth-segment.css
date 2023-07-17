@@ -1,7 +1,7 @@
 
 .fifth-sec-container{
     display: flex;
-    gap: 4%;
+    gap: 40px;
 }
 
 .section-segment{
@@ -18,7 +18,7 @@
 
 .section-second-part{
     position: relative;
-    top: 20px;
+    margin-top: 20px;
     gap: 40px;
 }
 

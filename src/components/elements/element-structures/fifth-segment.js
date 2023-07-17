@@ -11,7 +11,7 @@ import DescCard from '../desc-card';
 export default function FifthSegment({ category, top, articles }){
     return(
 
-    <div className='fifth-segment-container main-segment-container  segment-container' style={{top: top}}>
+    <div className='fifth-segment-container main-segment-container  segment-container' style={{marginTop: top}}>
         {category?(
             <div className='section-head fifth-segment-section-head'>
                 <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>

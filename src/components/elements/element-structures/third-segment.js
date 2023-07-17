@@ -7,7 +7,7 @@ import NewsCarousel from '../carousel';
 
 export default function ThirdSegment({ top, category, articles }) {
   return (
-    <div className='third-segment-container main-segment-container' style={{top: top}}>
+    <div className='third-segment-container main-segment-container segment-container' style={{marginTop: top}}>
         <div className='third-seg-section'>
           {
             category?(

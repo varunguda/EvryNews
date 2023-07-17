@@ -11,16 +11,16 @@ export default function World({ category, articles, totalPages, pageArticles, to
         (articles && articles.length>0)?(
           <>
           <SixthSegment top='40px' articles={articles}/>
-          <TenthSegment top='160px' category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
+          <TenthSegment category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
           </>
         ):(
           <>
           <SixthSegment top='40px'/>
-          <TenthSegment top='160px' category={category}/>
+          <TenthSegment category={category}/>
           </>
         )
       }
-      <FooterSegment top='200px'/>
+      <FooterSegment/>
     </>
   )
 }

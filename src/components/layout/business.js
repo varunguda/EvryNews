@@ -14,7 +14,7 @@ export default function Business({ category, topHeadlines, pageArticles, totalPa
           <TenthSegment top='40px' category={category}/>
         )
       }
-      <FooterSegment top='100px'/>
+      <FooterSegment/>
     </>
   )
 }

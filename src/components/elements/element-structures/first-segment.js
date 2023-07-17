@@ -13,7 +13,7 @@ export default function FirstSegment( { category, top, articles }) {
   //needs 49 articles
   
   return (
-    <div className='first-segment-container main-segment-container' style={{top: top}}>
+    <div className='first-segment-container main-segment-container segment-container' style={{marginTop: top}}>
       
         <div className='content-container-1'>
           {(articles && articles.length>0)?
@@ -25,7 +25,7 @@ export default function FirstSegment( { category, top, articles }) {
           {articles && articles.length > 0 ? (
             articles.slice(2,22).map((article) => {
               return (<div key={article.url} className='grid-elem'>
-                <MiniDescCard height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article}/>
+                <MiniDescCard height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
               </div>)
             })
           ):

@@ -13,7 +13,7 @@ export default function Education({ category, pageArticles, topHeadlines, totalP
           <TenthSegment top='40px' category={category}/>
         )
       }
-      <FooterSegment top='100px'/>
+      <FooterSegment/>
     </>
   )
 }

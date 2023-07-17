@@ -11,20 +11,20 @@ export default function Movie({ category, articles, totalPages, pageArticles, to
         (articles && articles.length>0)?(
           <>
           <SixthSegment top='40px' articles={articles.slice(0,24)}/>
-          <SixthSegment top='180px' articles={articles.slice(24,48)}/>
-          <SixthSegment top='320px' articles={articles.slice(48,72)}/>
-          <TenthSegment top='440px' category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
+          <SixthSegment articles={articles.slice(24,48)}/>
+          <SixthSegment articles={articles.slice(48,72)}/>
+          <TenthSegment category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
           </>
         ):(
           <>
-          <SixthSegment top='40px'/>
-          <SixthSegment top='180px'/>
-          <SixthSegment top='320px'/>
-          <TenthSegment top='440px' category={category}/>
+          <SixthSegment top='40px' />
+          <SixthSegment/>
+          <SixthSegment />
+          <TenthSegment category={category}/>
           </>
         )
       }
-      <FooterSegment top='550px'/>
+      <FooterSegment/>
     </>
   )
 }

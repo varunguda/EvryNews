@@ -8,7 +8,7 @@ import DescCard from '../desc-card';
 export default function SixthSegment({ category , top, articles }) {
 
   return (
-    <div className='sixth-segment-container main-segment-container segment-container' style={{top:top}}>
+    <div className='sixth-segment-container main-segment-container segment-container' style={{marginTop:top}}>
         {(category)?<div className='section-head sixth-segment-section-head'>
             <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>
         </div>:''}

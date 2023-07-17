@@ -12,24 +12,24 @@ export default function Tech( { category, articles, topHeadlines, totalPages, pa
         (articles && articles.length>0)?(
           <>
             <NinthSegment articles={articles.slice(0,2).concat(articles.slice(8,19))}/>
-            <EighthSegment top='180px' category="trending" articles={articles.slice(2,8)}/>
+            <EighthSegment category="trending" articles={articles.slice(2,8)}/>
           </>
         ):(
           <>
             <NinthSegment />
-            <EighthSegment top='180px' category="trending"/>
+            <EighthSegment category="trending"/>
           </>
         )
       }
 
       {
         (topHeadlines && topHeadlines.length>0)?(
-          <TenthSegment  top='300px' category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
+          <TenthSegment category={category} totalPages={totalPages} pageArticles={pageArticles} topHeadlines={topHeadlines}/>
         ):(
-          <TenthSegment  top='300px' category={category}/>
+          <TenthSegment category={category}/>
         )
       }
-      <FooterSegment top='400px'/>
+      <FooterSegment/>
     </>
   )
 }

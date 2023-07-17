@@ -25,93 +25,93 @@ export default function Home({ movieArticles, popularArticles, trendArticles, in
 
       {
         (techArticles && techArticles.length>0 | trendArticles && trendArticles.length>0 | popularArticles && popularArticles.length>0)?(
-          <SecondSegment top='180px' techArticles={techArticles.slice(5,8)} trendArticles={trendArticles.slice(0,3)} autoArticles={autoArticles.slice(10,13)} />
+          <SecondSegment techArticles={techArticles.slice(5,8)} trendArticles={trendArticles.slice(0,3)} autoArticles={autoArticles.slice(10,13)} />
         ):(
-          <SecondSegment top='180px' />
+          <SecondSegment />
         )
       }
 
       {
         (indiaArticles && indiaArticles.length>0)?(
-          <ThirdSegment category='india' top='290px' articles={indiaArticles}/>
+          <ThirdSegment category='india' articles={indiaArticles}/>
         ):(
-          <ThirdSegment category='india' top='290px' />  
+          <ThirdSegment category='india' />  
         )
       }
 
       {
         (entertainmentArticles && entertainmentArticles.length>0)?(
-          <FourthSegment category='entertainment' top='420px' articles={entertainmentArticles}/>
+          <FourthSegment category='entertainment' articles={entertainmentArticles}/>
         ):(
-          <FourthSegment category='entertainment' top='420px'/>
+          <FourthSegment category='entertainment' />
         )
       }
 
       {
         (worldArticles && worldArticles.length>0)?(
-          <FifthSegment category="world" top='560px' articles={worldArticles}/>
+          <FifthSegment category="world" articles={worldArticles}/>
         ):(
-          <FifthSegment category="world" top='560px'/>
+          <FifthSegment category="world" />
         )
       }
 
       {
         (cricketArticles && cricketArticles.length>0)?(
-          <SixthSegment category='cricket' top='690px' articles={cricketArticles}/>
+          <SixthSegment category='cricket' articles={cricketArticles}/>
         ):(
-          <SixthSegment category='cricket' top='690px'/>
+          <SixthSegment category='cricket'/>
         )
       }
 
       {
         (movieArticles && movieArticles.length>0)?(
-          <ThirdSegment category='movie' top='820px' articles={movieArticles}/>
+          <ThirdSegment category='movie'articles={movieArticles}/>
         ):(
-          <ThirdSegment category='movie' top='820px'/>
+          <ThirdSegment category='movie'/>
         )
       }
 
       {
         (businessArticles && businessArticles.length>0)?(
-          <SeventhSegment category="Business" top='950px' articles={businessArticles}/>
+          <SeventhSegment category="Business" articles={businessArticles}/>
         ):(
-          <SeventhSegment category="Business" top='950px'/>
+          <SeventhSegment category="Business" />
         )
       }
 
       {
         (techArticles && techArticles.length>0)?(
-          <SeventhSegment category="Tech" top='1070px' articles={techArticles.slice(4)}/>
+          <SeventhSegment category="Tech" articles={techArticles.slice(4)}/>
         ):(
-          <SeventhSegment category="Tech" top='1070px'/>
+          <SeventhSegment category="Tech" />
         )
       }
 
       {
         (sportsArticles && sportsArticles.length>0)?(
-          <EighthSegment category='sports' top='1200px' articles={sportsArticles}/>
+          <EighthSegment category='sports'  articles={sportsArticles}/>
         ):(
-          <EighthSegment category='sports' top='1200px'/>
+          <EighthSegment category='sports' />
         )
       }
 
       {
         (autoArticles && autoArticles.length>0)?(
-          <FifthSegment category='Auto' top='1330px' articles={autoArticles}/>
+          <FifthSegment category='Auto' articles={autoArticles}/>
         ):(
-          <FifthSegment category='Auto' top='1330px'/>
+          <FifthSegment category='Auto' />
         )
       }
 
       {
         (healthArticles && healthArticles.length>0)?(
-          <EighthSegment category='Health' top="1460px" articles={healthArticles}/>
+          <EighthSegment category='Health' articles={healthArticles}/>
         ):(
-          <EighthSegment category='Health' top="1460px"/>
+          <EighthSegment category='Health' />
         )
       }
   
-      <FooterSegment top="1528px"/>
+      <FooterSegment/>
 
     </>
   )

@@ -3,11 +3,15 @@
     width: 96%;
     height: auto;
     position: relative;
-    top: 40px;
     padding: 0% 2%;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     gap: 30px;
+}
+
+.segment-container{
+    margin-bottom: 160px;
 }
 
 .content-container-1{
@@ -88,6 +92,6 @@
     border-top: 1px dotted  rgb(152, 152, 152);
     border-bottom: 1px dotted  rgb(152, 152, 152);
     position: absolute;
-    bottom: -70px;
+    bottom: -80px;
 }
 

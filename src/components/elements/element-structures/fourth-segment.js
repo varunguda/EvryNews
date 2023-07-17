@@ -9,7 +9,7 @@ import ImageCard from '../image-card';
 
 export default function FourthSegment({ category, top, articles }) {
   return (
-    <div className='fourth-segment-container main-segment-container segment-container' style={{top:top}}>
+    <div className='fourth-segment-container main-segment-container segment-container' style={{marginTop:top}}>
         {category?(
             <div className='section-head fourth-segment-section-head'>
                 <Link to={`/${category.toLowerCase()}`} className='link-text'>{category}</Link>

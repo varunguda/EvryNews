@@ -135,7 +135,7 @@ export default function NavbarSecondary({ indiaArticles, movieArticles, worldArt
                 }
             </div>
             <div className="nav-elem">
-                <Link to='/health' className={(pathIsActive('/lifestyle'))?"active-nav-elem":''}>Life & Health</Link>
+                <Link to='/health' className={(pathIsActive('/health'))?"active-nav-elem":''}>Life & Health</Link>
                 {
                     (healthArticles && healthArticles.length > 0)?(
                         <Dropdown articles={healthArticles}/>
