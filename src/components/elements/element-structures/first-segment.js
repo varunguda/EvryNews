@@ -22,33 +22,28 @@ export default function FirstSegment( { category, top, articles }) {
           }
 
           <div className='container-1-grid'>
-          {articles && articles.length > 0 ? (
-            articles.slice(2,22).map((article) => {
-              return (<div key={article.url} className='grid-elem'>
-                <MiniDescCard height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
-              </div>)
-            })
-          ):
-          (
-            [...Array(20)].map((_,index) => {
-              return <MiniDescCard key={index} height='54px' width='96%'/>
-            })
-          )
-          }
+            {
+              [...Array(20)].map((_, index) => {
+                const article = (articles && articles.length>0 && articles.slice(2,22)[index]) || {}; // Use an empty object if article doesn't exist at the current index
+            
+                return (
+                  <div key={article.url || index} className='grid-elem'>
+                    <MiniDescCard height='54px' width='96%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
 
         <div className='content-container-2'>
-        {articles && articles.length > 0 ? (
-            articles.slice(25,31).map((article) => {
-                return <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
+          {
+            [...Array(6)].map((_,index)=>{
+              const article = (articles && articles.length>0 && articles.slice(25,31)[index]) || {};
+
+              return <MiniCard key={article.url || index} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} article={article} url={article.url}/>
+
             })
-          ):
-          (
-            [...Array(6)].map((_,index) => {
-              return <MiniCard key={index} height='155px' width='100%' />
-            })
-          )
           }
         </div>
           {(articles && articles.length > 0)?

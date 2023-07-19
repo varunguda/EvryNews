@@ -23,7 +23,7 @@
     transition: 0.7s ease-out;
 }
 
-.main-card-image:hover{
+.main-card-container:hover .main-card-image{
     transform: scale(1.04);
 }
 

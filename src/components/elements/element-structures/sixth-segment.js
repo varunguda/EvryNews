@@ -31,15 +31,11 @@ export default function SixthSegment({ category , top, articles }) {
                         </div>
                         <div className="section-part section-second-part">
                             {
-                                (articles && articles.length>0)?(
-                                    articles.slice((index*4)+2, (index*4)+4).map((article)=>{
-                                        return <DescCard key={article.url} height='54px' width='100%' data={article.title} url={article.url}/>
-                                    })
-                                ):(
-                                    [...Array(2)].map((_,index)=>{
-                                        return <DescCard key={index} height='54px' width='100%' />
-                                    })
-                                )
+                                [...Array(2)].map((_,index2)=>{
+                                    const article = (articles && articles.length>0 && articles.slice((index*4)+2, (index*4)+4)[index2]) || {};
+
+                                    return <DescCard key={article.url || index2} height='54px' width='100%' data={article.title} url={article.url}/>
+                                })
                             }
                         </div>
                     </div>

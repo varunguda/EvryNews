@@ -10,27 +10,19 @@ export default function Dropdown({ articles }) {
     <div className='nav-elem-dropdown'>
       <div className="dropdown-grid">
         {
-          (articles && articles.length>0)?(
-            articles.slice(0,5).map((article)=>{
-              return <strong key={article.url}><MiniCard height='150px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title} article={article}/></strong>
-            })
-          ):(
             [...Array(5)].map((_,index)=>{
-              return <strong key={index}><MiniCard height='150px' width='100%'/></strong>
+              const article = (articles && articles.length>0 && articles.slice(0,5)[index]) || {};
+
+              return <strong key={article.url || index}><MiniCard height='154px' width='100%' imageUrl={article.urlToImage} url={article.url} title={article.title} article={article}/></strong>
             })
-          )
         }
 
         {
-          (articles && articles.length>0)?(
-            articles.slice(5,15).map((article)=>{
-              return <div className='desc-card' key={article.url}><DescCard height='50px' width='100%' data= {article.title}/></div>
-            })
-          ):(
             [...Array(10)].map((_,index)=>{
-              return <div className='desc-card' key={index}><DescCard height='50px' width='100%'/></div>
+              const article = (articles && articles.length>0 && articles.slice(5,15)[index]) || {};
+
+              return <div className='desc-card' key={article.url || index}><DescCard height='54px' width='100%' data= {article.title} url={article.url}/></div>
             })
-          )
         }
       </div>
     </div>

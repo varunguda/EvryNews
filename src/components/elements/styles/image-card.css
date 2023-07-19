@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-.image-card-image:hover{
+.image-card-container:hover .image-card-image{
     transform: scale(1.05);
 }
 

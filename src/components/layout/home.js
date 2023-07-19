@@ -16,9 +16,9 @@ export default function Home({ movieArticles, popularArticles, trendArticles, in
   return (
     <>
       {
-        (trendArticles && trendArticles.length>0 | popularArticles && popularArticles.length>0 | indiaArticles && indiaArticles.length>0)?(
-          <FirstSegment articles={indiaArticles.slice(0,2).concat(trendArticles.slice(0,20), popularArticles.slice(2,29))}/>
-        ):(
+        ((trendArticles && trendArticles.length > 0) || (popularArticles && popularArticles.length > 0) || (indiaArticles && indiaArticles.length > 0)) ? (
+          <FirstSegment articles={indiaArticles.slice(0, 2).concat(trendArticles.slice(0, 20), popularArticles.slice(2, 29))}/>
+        ) : (
           <FirstSegment/>    
         )
       }
@@ -81,7 +81,7 @@ export default function Home({ movieArticles, popularArticles, trendArticles, in
 
       {
         (techArticles && techArticles.length>0)?(
-          <SeventhSegment category="Tech" articles={techArticles.slice(4)}/>
+          <SeventhSegment category="Tech" articles={techArticles.slice(4).concat(techArticles.slice(3,4))}/>
         ):(
           <SeventhSegment category="Tech" />
         )

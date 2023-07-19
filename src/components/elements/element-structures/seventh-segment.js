@@ -40,29 +40,21 @@ export default function SeventhSegment({ category, top, articles }) {
                 </div>
                 <div className="section-part section-second-part">
                 {
-                    (articles && articles.length>0)?(
-                        articles.slice(2,6).map((article)=>{
-                            return <MiniCard key={article.url} height='155px' width='100%' article={article} imageUrl={article.urlToImage} url={article.url} title={article.title}/>
-                        })
-                    ):(
-                        [...Array(4)].map((_,index)=>{
-                            return <MiniCard key={index} height='155px' width='100%' />
-                        })
-                    )
+                    [...Array(4)].map((_,index)=>{
+                        const article = (articles && articles.length>0 && articles.slice(2,6)[index]) || {};
+                        
+                        return <MiniCard key={article.url || index} height='155px' width='100%' article={article} imageUrl={article.urlToImage} url={article.url} title={article.title}/>
+                    })
                 }
                 </div>
             </div>
             <div className="second-section">
                     {
-                        (articles && articles.length>0)?(
-                            articles.slice(12,17).map((article)=>{
-                                return <MiniDescCard key={article.url} height='54px' width='100%' imageUrl={article.urlToImage} title={article.title} article={article}/>
-                            })
-                        ):(
-                            [...Array(5)].map((_,index)=>{
-                                return <MiniDescCard key={index} height='54px' width='100%' />
-                            })
-                        )
+                        [...Array(5)].map((_,index)=>{
+                            const article = (articles && articles.length>0 && articles.slice(12,17)[index]) || {};
+
+                            return <MiniDescCard key={article.url || index} height='54px' width='100%' imageUrl={article.urlToImage} title={article.title} article={article}/>
+                        })
                     }
             </div>
         </div>

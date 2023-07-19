@@ -60,45 +60,45 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
   const [ movieArticles, setMovieArticles ] = useState([]);
 
 
-  // useEffect(()=>{
+  useEffect(()=>{
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setIndiaArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setIndiaArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTrendArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTrendArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopEntertainmentArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopEntertainmentArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopTechArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopTechArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=technology&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=technology&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopSportsArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopSportsArticles)
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
     
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopHealthArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopHealthArticles)
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=health&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=health&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
 
-  //   fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopBusinessArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopBusinessArticles)
     
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
+    // fetchNewsArticles('https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
 
-  //   fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=538bf8f17b8e4aa884661289d0714ee1', setMovieArticles);
+    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=538bf8f17b8e4aa884661289d0714ee1', setMovieArticles);
 
-  // },[fetchNewsArticles])
+  },[fetchNewsArticles])
 
 
   return (
@@ -125,7 +125,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
         }
 
         <Routes>
-          {(trendArticles && trendArticles.length>0 | popularArticles && popularArticles.length>0 | indiaArticles && indiaArticles.length>0)?(
+          {/* {(trendArticles & trendArticles.length>0 || popularArticles & popularArticles.length>0 || indiaArticles & indiaArticles.length>0)?( */}
             <Route 
             path='/' 
             element=
@@ -144,10 +144,8 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
               businessArticles={topBusinessArticles.slice(0,17)}
               />}
             />
-          ):(
-            <Route path='' element= {<Home />} />
-          )
-          }
+
+          
 
           {
             (popularArticles && popularArticles.length>0)?(

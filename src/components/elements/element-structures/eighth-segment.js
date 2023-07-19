@@ -13,15 +13,11 @@ export default function EighthSegment({ category , top, articles  }) {
         </div>):''}
         <div className="eighth-sec-container">
           {
-            (articles && articles.length>0)?(
-              articles.map((article)=>{
-                return <MiniCard key={article.url} height='150px' width='100%' article={article} imageUrl={article.urlToImage} title={article.title} url={article.url}/> 
-              })
-            ):(
               [...Array(6)].map((_,index)=>{
-                  return <MiniCard key={index} height='150px' width='100%'/>
+                const article = (articles && articles.length>0 && articles[index]) || {};
+                
+                return <MiniCard key={article.url || index} height='150px' width='100%' article={article} imageUrl={article.urlToImage} title={article.title} url={article.url}/>
               })
-            )
           }
         </div>
     </div>

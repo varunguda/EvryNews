@@ -41,15 +41,11 @@ export default function FifthSegment({ category, top, articles }){
                 </div>
                 <div className="section-part section-second-part">
                     {
-                        (articles && articles.length >0)?(
-                            articles.slice(2,5).map((article)=>{
-                                    return <DescCard key={article.url} height='54px' width='45%' data={article.title}/>
-                                })
-                        ):(
-                            [...Array(3)].map((_,index)=>{
-                                return <DescCard key={index} height='54px' width='45%' />
-                            })        
-                        )
+                        [...Array(3)].map((_,index)=>{
+                            const article = (articles && articles.length>0 && articles.slice(2,5)[index])||{};
+
+                            return <DescCard key={article.url || index} height='54px' width='45%' data={article.title}/>
+                        })   
                     }
                 </div>
             </div>

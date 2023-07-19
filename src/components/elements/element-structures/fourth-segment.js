@@ -27,13 +27,12 @@ export default function FourthSegment({ category, top, articles }) {
                     }
                     <div className='section-grid'>
                         {
-                            (articles && articles.length>0)?(articles.slice(2, 6).map((article) => (
-                                <MiniCard key={article.url} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url} article={article}/>
-                            ))):(
-                                [...Array(4)].map((_,index)=>{
-                                    return <MiniCard key={index} height='155px' width='100%'/>
-                                })
-                            )
+                            [...Array(4)].map((_,index)=>{
+                                const article = (articles && articles.length>0 && articles.slice(2,6)[index]) || {}
+
+                                    return <MiniCard key={article.url || index} height='155px' width='100%' imageUrl={article.urlToImage} title={article.title} url={article.url} article={article}/>
+
+                            })
                         }
                     </div>
                 </div>
@@ -50,20 +49,16 @@ export default function FourthSegment({ category, top, articles }) {
             <div className='section2'>
                 <div className='section-head fourth-segment-small-head'>
                     <span className="navigator-head" style={{fontSize: '13px', marginLeft: '0%'}}>
-                        <Link to='/'>EN</Link>
+                        <Link to='/entertainment'>EN</Link>
                     </span> TERTAINMENT PHOTOS
                 </div>
                 <div className='entertainment-section'>
                     {
-                    (articles && articles.length>0)?(
-                        (articles.slice(10).map((article)=>{
-                            return <ImageCard key={article.url} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%' article={article}/>
-                        }))
-                        ):(
-                            [...Array(9)].map((_,index)=>{
-                                return <ImageCard key={index} height='160px' width='100%'/>
-                            })
-                        )
+                        [...Array(9)].map((_,index)=>{
+                            const article = (articles && articles.length>0 && articles.slice(10)[index]) || {};
+
+                            return <ImageCard key={article.url || index} imageUrl={article.urlToImage} title={article.title} url={article.url} height='160px' width='100%' article={article}/>  
+                        })
                     }
                 </div>
             </div>

@@ -20,15 +20,11 @@ export default function NinthSegment({ articles }) {
             </div>
             <div className="description-grid">
                 {
-                  (articles && articles.length>0)?(
-                    articles.slice(2,13).map((article)=>{
-                      return <DescCard key={article.url} height='54px' width='100%' data={article.title} url={article.url}/>   
-                    })
-                  ):(
                     [...Array(11)].map((_,index)=>{
-                      return <DescCard key={index} height='54px' width='100%'/>
+                      const article = (articles && articles.length>0 && articles.slice(2,13)[index]) || {};
+
+                      return <DescCard key={article.url || index} height='54px' width='100%' data={article.title} url={article.url}/>
                     })
-                  )
                 }
             </div>
         </div>
