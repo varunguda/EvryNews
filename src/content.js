@@ -21,7 +21,7 @@ import Auto from './components/layout/auto';
 import Health from './components/layout/health';
 import Movie from './components/layout/movie';
 
-export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}) {
+export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount, apiKey}) {
 
   const [ trendArticles, setTrendArticles ] = useState([]);
 
@@ -62,43 +62,43 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount}
 
   useEffect(()=>{
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&apiKey=538bf8f17b8e4aa884661289d0714ee1',setIndiaArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`,setIndiaArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=538bf8f17b8e4aa884661289d0714ee1', setPopularArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=india&sortBy=popularity&apiKey=${apiKey}`, setPopularArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?q=india&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTrendArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?q=india&apiKey=${apiKey}`, setTrendArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopEntertainmentArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=${apiKey}`, setTopEntertainmentArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=entertainment&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEntertainmentArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?sortBy=relevance&q=entertainment&apiKey=${apiKey}`, setEntertainmentArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=538bf8f17b8e4aa884661289d0714ee1', setWorldArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?sortBy=popularity&q=world&apiKey=${apiKey}`, setWorldArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=538bf8f17b8e4aa884661289d0714ee1', setCricketArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?sortBy=relevance&q=cricket&apiKey=${apiKey}`, setCricketArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopTechArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${apiKey}`, setTopTechArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=technology&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTechArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=technology&sortBy=relevance&apiKey=${apiKey}`, setTechArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setSportsArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=sports&sortBy=relevance&apiKey=${apiKey}`, setSportsArticles);
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=sports&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopSportsArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&category=sports&sortBy=relevance&apiKey=${apiKey}`, setTopSportsArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setAutoArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=automobile&language=en&sortBy=relevance&apiKey=${apiKey}`, setAutoArticles)
     
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setEducationArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=education&language=en&sortBy=relevance&apiKey=${apiKey}`, setEducationArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopHealthArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${apiKey}`, setTopHealthArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=health&language=en&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setHealthArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=health&language=en&sortBy=relevance&apiKey=${apiKey}`, setHealthArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setTopBusinessArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&category=business&sortBy=relevance&apiKey=${apiKey}`, setTopBusinessArticles)
     
-    // fetchNewsArticles('https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=538bf8f17b8e4aa884661289d0714ee1', setBusinessArticles)
+    fetchNewsArticles(`https://newsapi.org/v2/everything?q=business&sortBy=relevance&apiKey=${apiKey}`, setBusinessArticles)
 
-    // fetchNewsArticles('https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=538bf8f17b8e4aa884661289d0714ee1', setMovieArticles);
+    fetchNewsArticles(`https://newsapi.org/v2/everything?sortBy=relevance&q=movie&apiKey=${apiKey}`, setMovieArticles);
 
-  },[fetchNewsArticles])
+  },[fetchNewsArticles, apiKey])
 
 
   return (

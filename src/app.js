@@ -8,6 +8,8 @@ import Content from './content';
 
 export default function App() {
 
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+
   const fetchNewsArticles = async (api, fetchFn) =>{
     try{
       let response = await fetch(api);
@@ -39,6 +41,7 @@ export default function App() {
         fetchNewsArticles={fetchNewsArticles}
         fetchIoArticles={fetchIoArticles}
         pageCount={pageCount}
+        apiKey={apiKey}
         />
       </div>
     )
