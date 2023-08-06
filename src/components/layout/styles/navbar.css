@@ -133,11 +133,11 @@
 
   .nav-elem a{
     text-decoration: none;
-    color: var(--primary-hover-color);
+    color: var(--primary-text-color);
   }
 
   .nav-elem a:hover{
-    color: black;
+    color: var(--primary-hover-color);
   }
 
   .navigator-head{
