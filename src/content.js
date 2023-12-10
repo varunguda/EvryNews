@@ -60,6 +60,7 @@ export default function Content({ fetchNewsArticles, fetchIoArticles, pageCount,
   const [ movieArticles, setMovieArticles ] = useState([]);
 
 
+  // Got to know that this is a terrible way to fetch data from an API, but I used to have a very mediocre knowledge about the working of useEffect hooks back then, I haven't changed it later on just to have a track of my learning progress. 
   useEffect(()=>{
 
     fetchNewsArticles(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`,setIndiaArticles);
